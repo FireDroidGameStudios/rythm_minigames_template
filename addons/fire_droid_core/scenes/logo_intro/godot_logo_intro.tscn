@@ -1,0 +1,1516 @@
+[gd_scene load_steps=367 format=3 uid="uid://dro7r65gpeidi"]
+
+[ext_resource type="PackedScene" uid="uid://x3ky66ytp5je" path="res://addons/fire_droid_core/scenes/logo_intro/logo_intro.tscn" id="1_fk86y"]
+[ext_resource type="Texture2D" uid="uid://cg743tlmlku3f" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00000.png" id="2_jdfqn"]
+[ext_resource type="Texture2D" uid="uid://weg7p2r0nnqb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00001.png" id="3_vdiqw"]
+[ext_resource type="Texture2D" uid="uid://dcfuql7fjjh80" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00002.png" id="4_snib3"]
+[ext_resource type="Texture2D" uid="uid://cl8kojnepb48i" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00003.png" id="5_shmp6"]
+[ext_resource type="Texture2D" uid="uid://bpgw0q1pqb76c" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00004.png" id="6_g667h"]
+[ext_resource type="Texture2D" uid="uid://vsiwn1h552of" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00005.png" id="7_os170"]
+[ext_resource type="Texture2D" uid="uid://ejmc5bpcg26t" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00006.png" id="8_iotsi"]
+[ext_resource type="Texture2D" uid="uid://ddlcvy1a23iu5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00007.png" id="9_101no"]
+[ext_resource type="Texture2D" uid="uid://cwe3lccg5k8xb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00008.png" id="10_0htmr"]
+[ext_resource type="Texture2D" uid="uid://byakn3p306h60" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00009.png" id="11_4rwtm"]
+[ext_resource type="Texture2D" uid="uid://f6j0k42vfnyj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00010.png" id="12_sbjck"]
+[ext_resource type="Texture2D" uid="uid://cplykrdhq63um" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00011.png" id="13_yk7mn"]
+[ext_resource type="Texture2D" uid="uid://cp0shf7ko70et" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00012.png" id="14_yfqoy"]
+[ext_resource type="Texture2D" uid="uid://dbgj1t6xd3wxi" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00013.png" id="15_yxa21"]
+[ext_resource type="Texture2D" uid="uid://qwvxdndwxdqr" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00014.png" id="16_opkpf"]
+[ext_resource type="Texture2D" uid="uid://bdpdwuhjrowl4" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00015.png" id="17_g6ksi"]
+[ext_resource type="Texture2D" uid="uid://nmabdcwtwrpc" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00016.png" id="18_nfnv0"]
+[ext_resource type="Texture2D" uid="uid://dtyo5y43omuxw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00017.png" id="19_lva1c"]
+[ext_resource type="Texture2D" uid="uid://cgvlasy0r0ke2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00018.png" id="20_hnvf2"]
+[ext_resource type="Texture2D" uid="uid://bw1qbigu2s6hw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00019.png" id="21_h323b"]
+[ext_resource type="Texture2D" uid="uid://cnb3qvm148v8f" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00020.png" id="22_o2l6q"]
+[ext_resource type="Texture2D" uid="uid://cixlukjppqraj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00021.png" id="23_b303v"]
+[ext_resource type="Texture2D" uid="uid://cqpjewpw5p2l1" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00022.png" id="24_xg25n"]
+[ext_resource type="Texture2D" uid="uid://w1kel6ft0vem" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00023.png" id="25_ovt7w"]
+[ext_resource type="Texture2D" uid="uid://deax721cqobqi" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00024.png" id="26_01q8p"]
+[ext_resource type="Texture2D" uid="uid://rbf2ou3njt0v" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00025.png" id="27_0ook6"]
+[ext_resource type="Texture2D" uid="uid://c7hiai3b5d3x6" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00026.png" id="28_extps"]
+[ext_resource type="Texture2D" uid="uid://dbo2gcpqadd8" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00027.png" id="29_xhtar"]
+[ext_resource type="Texture2D" uid="uid://3edsa64barg5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00028.png" id="30_hblj4"]
+[ext_resource type="Texture2D" uid="uid://b4ysbh7fm8mxo" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00029.png" id="31_giwhw"]
+[ext_resource type="Texture2D" uid="uid://d0i2d67vfwk8m" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00030.png" id="32_tbv0v"]
+[ext_resource type="Texture2D" uid="uid://cksk51a7dt1p6" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00031.png" id="33_vluh7"]
+[ext_resource type="Texture2D" uid="uid://citdfdgdij88u" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00032.png" id="34_o0b2p"]
+[ext_resource type="Texture2D" uid="uid://c4ouh4f7hefvm" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00033.png" id="35_tc54x"]
+[ext_resource type="Texture2D" uid="uid://cfhjelhl1kxfu" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00034.png" id="36_wh37t"]
+[ext_resource type="Texture2D" uid="uid://dfo8rcf4ykq8" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00035.png" id="37_s7tcp"]
+[ext_resource type="Texture2D" uid="uid://c6eoaojbhqffi" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00036.png" id="38_n61ea"]
+[ext_resource type="Texture2D" uid="uid://dn2uv5p3bg5r3" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00037.png" id="39_7c4cw"]
+[ext_resource type="Texture2D" uid="uid://c3w4utm4cr1wh" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00038.png" id="40_2dnnk"]
+[ext_resource type="Texture2D" uid="uid://clnedm7bnhdlk" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00039.png" id="41_314pf"]
+[ext_resource type="Texture2D" uid="uid://ckwkecx2m27gh" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00040.png" id="42_o08lh"]
+[ext_resource type="Texture2D" uid="uid://cxf6ccife5pu1" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00041.png" id="43_vduor"]
+[ext_resource type="Texture2D" uid="uid://c4054poliva8y" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00042.png" id="44_nh66t"]
+[ext_resource type="Texture2D" uid="uid://ba7hmonppicet" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00043.png" id="45_0gu1v"]
+[ext_resource type="Texture2D" uid="uid://by6twkxrygair" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00044.png" id="46_tae51"]
+[ext_resource type="Texture2D" uid="uid://bxqvwe8c0vsvi" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00045.png" id="47_56ngv"]
+[ext_resource type="Texture2D" uid="uid://b0gqjl4xowc0o" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00046.png" id="48_squqe"]
+[ext_resource type="Texture2D" uid="uid://owrny30vhw3q" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00047.png" id="49_6hp5v"]
+[ext_resource type="Texture2D" uid="uid://m05iyxvj4f7h" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00048.png" id="50_a3grd"]
+[ext_resource type="Texture2D" uid="uid://m13v02aw58pv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00049.png" id="51_uge4f"]
+[ext_resource type="Texture2D" uid="uid://6trsxnt13we2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00050.png" id="52_tlob6"]
+[ext_resource type="Texture2D" uid="uid://b3732q0e53v68" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00051.png" id="53_twwfh"]
+[ext_resource type="Texture2D" uid="uid://bd1ciwl8hupqb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00052.png" id="54_psipg"]
+[ext_resource type="Texture2D" uid="uid://c3qeqg4vgfjpg" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00053.png" id="55_rcnkl"]
+[ext_resource type="Texture2D" uid="uid://dk847cofij62b" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00054.png" id="56_sxv8y"]
+[ext_resource type="Texture2D" uid="uid://bb4u3r1lcv77j" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00055.png" id="57_rsajt"]
+[ext_resource type="Texture2D" uid="uid://m6nxdu3sashn" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00056.png" id="58_vmbhu"]
+[ext_resource type="Texture2D" uid="uid://2j307dlnn2xj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00057.png" id="59_7i8qt"]
+[ext_resource type="Texture2D" uid="uid://5ts8hw8i835c" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00058.png" id="60_mf81x"]
+[ext_resource type="Texture2D" uid="uid://cghbfv8ir3asd" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00059.png" id="61_osa8y"]
+[ext_resource type="Texture2D" uid="uid://c1h72g4pbh6hh" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00060.png" id="62_lnixk"]
+[ext_resource type="Texture2D" uid="uid://dx8al6j7meef3" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00061.png" id="63_fywny"]
+[ext_resource type="Texture2D" uid="uid://cqcaq0k02p5o1" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00062.png" id="64_56enq"]
+[ext_resource type="Texture2D" uid="uid://vh0bdvi15meb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00063.png" id="65_5t2dm"]
+[ext_resource type="Texture2D" uid="uid://djpy42n6jf8fj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00064.png" id="66_d88ao"]
+[ext_resource type="Texture2D" uid="uid://crsoxltd33twh" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00065.png" id="67_34gpc"]
+[ext_resource type="Texture2D" uid="uid://c6j368rvdimlh" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00066.png" id="68_p16nj"]
+[ext_resource type="Texture2D" uid="uid://f4nqskpnl1ok" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00067.png" id="69_17em8"]
+[ext_resource type="Texture2D" uid="uid://dn4mo43wgo7qo" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00068.png" id="70_2lycg"]
+[ext_resource type="Texture2D" uid="uid://b50hqlmpb8jxc" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00069.png" id="71_l7jcg"]
+[ext_resource type="Texture2D" uid="uid://xmc71bt4xxbq" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00070.png" id="72_tnapt"]
+[ext_resource type="Texture2D" uid="uid://ka5snne2vv20" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00071.png" id="73_mbeic"]
+[ext_resource type="Texture2D" uid="uid://iyng4lobl0x5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00072.png" id="74_fc6re"]
+[ext_resource type="Texture2D" uid="uid://dubgpggageo7t" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00073.png" id="75_twkx7"]
+[ext_resource type="Texture2D" uid="uid://xq2e22onu3u0" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00074.png" id="76_fnf5d"]
+[ext_resource type="Texture2D" uid="uid://bys0xfvvfsgb2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00075.png" id="77_c8027"]
+[ext_resource type="Texture2D" uid="uid://cc4skyoylqvwd" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00076.png" id="78_53n3x"]
+[ext_resource type="Texture2D" uid="uid://ccb4xo8kmhgt4" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00077.png" id="79_vv2mk"]
+[ext_resource type="Texture2D" uid="uid://1xcp7g2lkdtc" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00078.png" id="80_hspgy"]
+[ext_resource type="Texture2D" uid="uid://ngdf6cttxv4c" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00079.png" id="81_xwtt2"]
+[ext_resource type="Texture2D" uid="uid://dts8l7gllh83o" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00080.png" id="82_0ho8m"]
+[ext_resource type="Texture2D" uid="uid://cl1o52glxne3a" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00081.png" id="83_siucp"]
+[ext_resource type="Texture2D" uid="uid://dt7iope1rqln6" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00082.png" id="84_scqmq"]
+[ext_resource type="Texture2D" uid="uid://bkjsia8pn2kin" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00083.png" id="85_tm42q"]
+[ext_resource type="Texture2D" uid="uid://cq227y775cfje" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00084.png" id="86_a40r8"]
+[ext_resource type="Texture2D" uid="uid://8nf2ua0xtegw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00085.png" id="87_v1s7x"]
+[ext_resource type="Texture2D" uid="uid://na35memd142t" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00086.png" id="88_2aatn"]
+[ext_resource type="Texture2D" uid="uid://bbpx5mfjkpqug" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00087.png" id="89_a1npj"]
+[ext_resource type="Texture2D" uid="uid://bbh4fy6eqtgmu" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00088.png" id="90_iu2bh"]
+[ext_resource type="Texture2D" uid="uid://dvwuxjh1ao5kd" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00089.png" id="91_iur2u"]
+[ext_resource type="Texture2D" uid="uid://c52rs8l2gc0rr" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00090.png" id="92_vs3ia"]
+[ext_resource type="Texture2D" uid="uid://dipg2ow1tirkk" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00091.png" id="93_henoe"]
+[ext_resource type="Texture2D" uid="uid://d05hg5h88gp2r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00092.png" id="94_5haso"]
+[ext_resource type="Texture2D" uid="uid://jcqaox8eib3k" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00093.png" id="95_2memb"]
+[ext_resource type="Texture2D" uid="uid://csxch8o1fbdjj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00094.png" id="96_4lg1t"]
+[ext_resource type="Texture2D" uid="uid://dv8gpo0axn26g" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00095.png" id="97_62om4"]
+[ext_resource type="Texture2D" uid="uid://coeybi5iuxydw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00096.png" id="98_d43s7"]
+[ext_resource type="Texture2D" uid="uid://6d0fr1jg2xi8" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00097.png" id="99_6770a"]
+[ext_resource type="Texture2D" uid="uid://dg4hmy4bl27b4" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00098.png" id="100_ro2tr"]
+[ext_resource type="Texture2D" uid="uid://dd1n4lb1d8nck" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00099.png" id="101_0jahf"]
+[ext_resource type="Texture2D" uid="uid://wteikjkh0yvu" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00100.png" id="102_qmbhs"]
+[ext_resource type="Texture2D" uid="uid://7bpsfvto1o3i" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00101.png" id="103_oye1q"]
+[ext_resource type="Texture2D" uid="uid://dmefaato66eat" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00102.png" id="104_i3qdw"]
+[ext_resource type="Texture2D" uid="uid://bd8dw3xvedmvg" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00103.png" id="105_xd5td"]
+[ext_resource type="Texture2D" uid="uid://dct6x6a6ioayq" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00104.png" id="106_2gj4c"]
+[ext_resource type="Texture2D" uid="uid://fbmjdx2iwdx8" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00105.png" id="107_2knmn"]
+[ext_resource type="Texture2D" uid="uid://cw05rhsd6yfit" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00106.png" id="108_03d2i"]
+[ext_resource type="Texture2D" uid="uid://cgchd7ked6eq7" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00107.png" id="109_v2bqc"]
+[ext_resource type="Texture2D" uid="uid://3320xpv6b66f" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00108.png" id="110_er5mf"]
+[ext_resource type="Texture2D" uid="uid://bqv38ira8tbh4" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00109.png" id="111_8t6ap"]
+[ext_resource type="Texture2D" uid="uid://cgfuim0chhe6x" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00110.png" id="112_rjlw8"]
+[ext_resource type="Texture2D" uid="uid://dio5pjikjkevr" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00111.png" id="113_voo24"]
+[ext_resource type="Texture2D" uid="uid://kd8d5kef862i" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00112.png" id="114_g7bvi"]
+[ext_resource type="Texture2D" uid="uid://bpkmvxkwkokah" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00113.png" id="115_dvd8c"]
+[ext_resource type="Texture2D" uid="uid://cjgwx7xkkfr2g" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00114.png" id="116_qlvb5"]
+[ext_resource type="Texture2D" uid="uid://ddyyrwd68oags" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00115.png" id="117_yhux6"]
+[ext_resource type="Texture2D" uid="uid://bjxc5eo3nfu50" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00116.png" id="118_4gjs7"]
+[ext_resource type="Texture2D" uid="uid://d2v81rvg4t4fp" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00117.png" id="119_0i1dh"]
+[ext_resource type="Texture2D" uid="uid://cfe4mccajvyaf" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00118.png" id="120_mkj2u"]
+[ext_resource type="Texture2D" uid="uid://cn0nd8w4xovbm" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00119.png" id="121_apelk"]
+[ext_resource type="Texture2D" uid="uid://c5ggygfj0gq51" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00120.png" id="122_ri8mc"]
+[ext_resource type="Texture2D" uid="uid://gbqv6pplgqvu" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00121.png" id="123_t5eeb"]
+[ext_resource type="Texture2D" uid="uid://bss6oxtbttoxf" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00122.png" id="124_fm0v0"]
+[ext_resource type="Texture2D" uid="uid://cmiil7xsbtqb0" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00123.png" id="125_gqvro"]
+[ext_resource type="Texture2D" uid="uid://ctoxai0pu7pt" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00124.png" id="126_gpkgr"]
+[ext_resource type="Texture2D" uid="uid://csolxffgr8xuk" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00125.png" id="127_uhx2c"]
+[ext_resource type="Texture2D" uid="uid://ccywvia8dgv2c" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00126.png" id="128_ky70a"]
+[ext_resource type="Texture2D" uid="uid://byxbo4jevq0go" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00127.png" id="129_dfr1y"]
+[ext_resource type="Texture2D" uid="uid://bmf62x32x1epf" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00128.png" id="130_4h4op"]
+[ext_resource type="Texture2D" uid="uid://hlhad0l846ak" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00129.png" id="131_pl1pc"]
+[ext_resource type="Texture2D" uid="uid://56407loqe4mf" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00130.png" id="132_l0kun"]
+[ext_resource type="Texture2D" uid="uid://bvu3ao8i7f2co" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00131.png" id="133_uo83j"]
+[ext_resource type="Texture2D" uid="uid://dq4asdh47r3w1" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00132.png" id="134_5bbn8"]
+[ext_resource type="Texture2D" uid="uid://bk82d55uy73yv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00133.png" id="135_7a4fn"]
+[ext_resource type="Texture2D" uid="uid://b1nsbjb7y3psf" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00134.png" id="136_mn02v"]
+[ext_resource type="Texture2D" uid="uid://vwk6hmrjyrht" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00135.png" id="137_qh6hf"]
+[ext_resource type="Texture2D" uid="uid://clt2rum477ek2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00136.png" id="138_hccwh"]
+[ext_resource type="Texture2D" uid="uid://cshyfp78o3pak" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00137.png" id="139_7r3qd"]
+[ext_resource type="Texture2D" uid="uid://clxk46kmerefg" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00138.png" id="140_xgbt1"]
+[ext_resource type="Texture2D" uid="uid://dy3jhefwe8yjv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00139.png" id="141_x4dqj"]
+[ext_resource type="Texture2D" uid="uid://cwi73j1sngp0j" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00140.png" id="142_fohg3"]
+[ext_resource type="Texture2D" uid="uid://chacxgekoet0d" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00141.png" id="143_58mpx"]
+[ext_resource type="Texture2D" uid="uid://ckx4354bftoq3" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00142.png" id="144_nouho"]
+[ext_resource type="Texture2D" uid="uid://cyjml45jdpfqn" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00143.png" id="145_aux52"]
+[ext_resource type="Texture2D" uid="uid://bfsrriqpf082n" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00144.png" id="146_8sw4o"]
+[ext_resource type="Texture2D" uid="uid://c0hq4oau6ty8r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00145.png" id="147_6n4sa"]
+[ext_resource type="Texture2D" uid="uid://dqgnfx0k8q68d" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00146.png" id="148_p3ewa"]
+[ext_resource type="Texture2D" uid="uid://khwd17n7rlws" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00147.png" id="149_lm6jj"]
+[ext_resource type="Texture2D" uid="uid://bwja7r5p7mabw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00148.png" id="150_0h0h3"]
+[ext_resource type="Texture2D" uid="uid://b5s7frixgc4yl" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00149.png" id="151_o5lvb"]
+[ext_resource type="Texture2D" uid="uid://8psuqha3twlw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00150.png" id="152_yaoct"]
+[ext_resource type="Texture2D" uid="uid://dqi7a1rkt26l" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00151.png" id="153_7snan"]
+[ext_resource type="Texture2D" uid="uid://qnmrtu6wkvuj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00152.png" id="154_h2h4f"]
+[ext_resource type="Texture2D" uid="uid://dfdocub1pnaep" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00153.png" id="155_t8ba1"]
+[ext_resource type="Texture2D" uid="uid://3w4cikdw7l0g" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00154.png" id="156_hi6ct"]
+[ext_resource type="Texture2D" uid="uid://15mh4iyva1wu" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00155.png" id="157_kqme5"]
+[ext_resource type="Texture2D" uid="uid://buwv1ku0ot4a7" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00156.png" id="158_aqp18"]
+[ext_resource type="Texture2D" uid="uid://cm36o5fw6rdj1" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00157.png" id="159_dxvnx"]
+[ext_resource type="Texture2D" uid="uid://cdqpiv5j67q4w" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00158.png" id="160_lawsr"]
+[ext_resource type="Texture2D" uid="uid://cqritlonl5gox" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00159.png" id="161_3bx6p"]
+[ext_resource type="Texture2D" uid="uid://86ku4hfcfwbt" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00160.png" id="162_oqw3x"]
+[ext_resource type="Texture2D" uid="uid://c8thn0l2xhmso" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00161.png" id="163_2r0y5"]
+[ext_resource type="Texture2D" uid="uid://dtegpplpedpn5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00162.png" id="164_1j5p7"]
+[ext_resource type="Texture2D" uid="uid://8wi6co7inp86" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00163.png" id="165_qg0pb"]
+[ext_resource type="Texture2D" uid="uid://bvljjaimve8ij" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00164.png" id="166_wg76p"]
+[ext_resource type="Texture2D" uid="uid://coi5dj1qdnmse" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00165.png" id="167_jnwab"]
+[ext_resource type="Texture2D" uid="uid://c6gxlii6xx161" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00166.png" id="168_yvkmd"]
+[ext_resource type="Texture2D" uid="uid://e212jyunsv5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00167.png" id="169_r8jps"]
+[ext_resource type="Texture2D" uid="uid://8h5jk8i5te8v" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00168.png" id="170_mara0"]
+[ext_resource type="Texture2D" uid="uid://opsc35tbwnp" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00169.png" id="171_4g0cr"]
+[ext_resource type="Texture2D" uid="uid://crory2hr3n30r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00170.png" id="172_k1qtb"]
+[ext_resource type="Texture2D" uid="uid://dvqjqf6eq463r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00171.png" id="173_eg50b"]
+[ext_resource type="Texture2D" uid="uid://dld0uq6x72iqo" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00172.png" id="174_77g6k"]
+[ext_resource type="Texture2D" uid="uid://cud47gw3425rb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00173.png" id="175_qlngw"]
+[ext_resource type="Texture2D" uid="uid://blhw0xfirdmje" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00174.png" id="176_s8rbn"]
+[ext_resource type="Texture2D" uid="uid://c3jdiahtt0kbl" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00175.png" id="177_8p1yg"]
+[ext_resource type="Texture2D" uid="uid://ckc1dsr88t0f3" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00176.png" id="178_8nh4y"]
+[ext_resource type="Texture2D" uid="uid://br1cwjgryekhu" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00177.png" id="179_tmpfw"]
+[ext_resource type="Texture2D" uid="uid://cuvcopyoyxtdx" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00178.png" id="180_xy1pb"]
+[ext_resource type="Texture2D" uid="uid://btkqm3s0jdubi" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00179.png" id="181_42tw7"]
+[ext_resource type="Texture2D" uid="uid://bnfpias3g46o1" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00180.png" id="182_cqrts"]
+[ext_resource type="Texture2D" uid="uid://bm4m6vjtwgesp" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00181.png" id="183_6bopf"]
+[ext_resource type="Texture2D" uid="uid://cbibsg063qhqv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00182.png" id="184_8v0vx"]
+[ext_resource type="Texture2D" uid="uid://cxnd03bnmj1yc" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00183.png" id="185_0hexe"]
+[ext_resource type="Texture2D" uid="uid://c0trj6xa7npdt" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00184.png" id="186_4cyvw"]
+[ext_resource type="Texture2D" uid="uid://1bfhau3rq2bx" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00185.png" id="187_huttx"]
+[ext_resource type="Texture2D" uid="uid://geny85qb2wsf" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00186.png" id="188_c2say"]
+[ext_resource type="Texture2D" uid="uid://baimyo3uxg4tb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00187.png" id="189_48md8"]
+[ext_resource type="Texture2D" uid="uid://dm1n78vnori0i" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00188.png" id="190_ejby5"]
+[ext_resource type="Texture2D" uid="uid://bwoq6h15vqp0c" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00189.png" id="191_0rdwf"]
+[ext_resource type="Texture2D" uid="uid://0onld4iow7cr" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00190.png" id="192_p6k4q"]
+[ext_resource type="Texture2D" uid="uid://cr1f11opi1itj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00191.png" id="193_7ghpj"]
+[ext_resource type="Texture2D" uid="uid://dyu7rdoob34ge" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00192.png" id="194_7yd6p"]
+[ext_resource type="Texture2D" uid="uid://7jw4a3404usg" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00193.png" id="195_hmu5w"]
+[ext_resource type="Texture2D" uid="uid://dld7fparr3fmj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00194.png" id="196_6bwcn"]
+[ext_resource type="Texture2D" uid="uid://dt2l7djs8m6tl" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00195.png" id="197_gablp"]
+[ext_resource type="Texture2D" uid="uid://cgit5cbexpfuh" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00196.png" id="198_mep0f"]
+[ext_resource type="Texture2D" uid="uid://ccvw7niipxksv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00197.png" id="199_iv0b3"]
+[ext_resource type="Texture2D" uid="uid://dalbso2m3sgkf" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00198.png" id="200_1q62l"]
+[ext_resource type="Texture2D" uid="uid://catt7x4dute00" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00199.png" id="201_ngit8"]
+[ext_resource type="Texture2D" uid="uid://c4u83eksgife0" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00200.png" id="202_hrwmw"]
+[ext_resource type="Texture2D" uid="uid://c0eufvf8e4jq6" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00201.png" id="203_ydjm8"]
+[ext_resource type="Texture2D" uid="uid://8db7td00eemk" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00202.png" id="204_54lmq"]
+[ext_resource type="Texture2D" uid="uid://dh1tb18esvsr5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00203.png" id="205_qhy3b"]
+[ext_resource type="Texture2D" uid="uid://dhxysk1ydofcl" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00204.png" id="206_bojp1"]
+[ext_resource type="Texture2D" uid="uid://cicmngqj1r8ac" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00205.png" id="207_bt0h3"]
+[ext_resource type="Texture2D" uid="uid://biu51alobaaki" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00206.png" id="208_re1hn"]
+[ext_resource type="Texture2D" uid="uid://ckj853a708kwu" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00207.png" id="209_ftl8f"]
+[ext_resource type="Texture2D" uid="uid://d0h5yxxxayy7b" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00208.png" id="210_bs3vh"]
+[ext_resource type="Texture2D" uid="uid://cpn4glj8ci7r6" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00209.png" id="211_cbk2v"]
+[ext_resource type="Texture2D" uid="uid://cl1xwye418x1w" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00210.png" id="212_r7xdr"]
+[ext_resource type="Texture2D" uid="uid://dflanmtf61kru" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00211.png" id="213_ajy4o"]
+[ext_resource type="Texture2D" uid="uid://b81bjy2mgmvc8" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00212.png" id="214_di4yd"]
+[ext_resource type="Texture2D" uid="uid://bwnhp6mp622nj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00213.png" id="215_biu05"]
+[ext_resource type="Texture2D" uid="uid://0qlo8h0jbdgb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00214.png" id="216_jluwj"]
+[ext_resource type="Texture2D" uid="uid://d31k5kkvu3rv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00215.png" id="217_r63rp"]
+[ext_resource type="Texture2D" uid="uid://fbdd5wvaff0j" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00216.png" id="218_ydr2r"]
+[ext_resource type="Texture2D" uid="uid://cgmsosni8uq1s" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00217.png" id="219_rbxem"]
+[ext_resource type="Texture2D" uid="uid://bxa0r6a8x2j2x" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00218.png" id="220_qsri6"]
+[ext_resource type="Texture2D" uid="uid://bw2fjq0aabend" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00219.png" id="221_vsd3r"]
+[ext_resource type="Texture2D" uid="uid://cags0b3rvlr70" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00220.png" id="222_iwl2c"]
+[ext_resource type="Texture2D" uid="uid://bvxsvp7k0cdas" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00221.png" id="223_dddsc"]
+[ext_resource type="Texture2D" uid="uid://dwieve83tti2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00222.png" id="224_2lypo"]
+[ext_resource type="Texture2D" uid="uid://bcsbtwek4qb3l" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00223.png" id="225_ywr0y"]
+[ext_resource type="Texture2D" uid="uid://smhmmjxgqybi" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00224.png" id="226_q5spb"]
+[ext_resource type="Texture2D" uid="uid://d0onixni00v0t" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00225.png" id="227_12eug"]
+[ext_resource type="Texture2D" uid="uid://cpxk12617qn2n" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00226.png" id="228_7f5kl"]
+[ext_resource type="Texture2D" uid="uid://bbfrj1qnty5vg" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00227.png" id="229_elw40"]
+[ext_resource type="Texture2D" uid="uid://dusymba8j50bj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00228.png" id="230_4ldas"]
+[ext_resource type="Texture2D" uid="uid://c7xapoe7yfsyc" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00229.png" id="231_int6j"]
+[ext_resource type="Texture2D" uid="uid://bm1s8emt5y4y0" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00230.png" id="232_iyot5"]
+[ext_resource type="Texture2D" uid="uid://dduigh33sp8q2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00231.png" id="233_73egx"]
+[ext_resource type="Texture2D" uid="uid://ckgvnxp87eiy4" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00232.png" id="234_8e6e5"]
+[ext_resource type="Texture2D" uid="uid://ceords485ct8" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00233.png" id="235_iqlmg"]
+[ext_resource type="Texture2D" uid="uid://buglq5rsoexyx" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00234.png" id="236_rrxkt"]
+[ext_resource type="Texture2D" uid="uid://mnnn0rwfa041" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00235.png" id="237_5awjc"]
+[ext_resource type="Texture2D" uid="uid://dkg3ut5k66jvm" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00236.png" id="238_xltsm"]
+[ext_resource type="Texture2D" uid="uid://dvjjkdbtquuo6" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00237.png" id="239_84pie"]
+[ext_resource type="Texture2D" uid="uid://c34lseksmdmbk" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00238.png" id="240_f5tdd"]
+[ext_resource type="Texture2D" uid="uid://du4qoeki75gi4" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00239.png" id="241_ehy7t"]
+[ext_resource type="Texture2D" uid="uid://bf8egr30y1i5r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00240.png" id="242_27okt"]
+[ext_resource type="Texture2D" uid="uid://j00n7egdhuls" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00241.png" id="243_nlk5f"]
+[ext_resource type="Texture2D" uid="uid://0nars0sfwmr2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00242.png" id="244_lmwk4"]
+[ext_resource type="Texture2D" uid="uid://d0vcqo4aeyicd" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00243.png" id="245_qdqyj"]
+[ext_resource type="Texture2D" uid="uid://bn0ahqwvb85n6" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00244.png" id="246_vac5w"]
+[ext_resource type="Texture2D" uid="uid://c6ab2f4p1t1a0" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00245.png" id="247_38w8f"]
+[ext_resource type="Texture2D" uid="uid://d3tvqgyjynatl" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00246.png" id="248_b74pn"]
+[ext_resource type="Texture2D" uid="uid://puk4pr81bpjp" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00247.png" id="249_5wo1m"]
+[ext_resource type="Texture2D" uid="uid://cm0se0x5grtbs" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00248.png" id="250_v0jdb"]
+[ext_resource type="Texture2D" uid="uid://dje7vnodox6rx" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00249.png" id="251_7i1c0"]
+[ext_resource type="Texture2D" uid="uid://dpqkflv0hy0sh" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00250.png" id="252_g4cqy"]
+[ext_resource type="Texture2D" uid="uid://b3pqrfde6l67s" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00251.png" id="253_blawl"]
+[ext_resource type="Texture2D" uid="uid://bdv8fwy4atmyn" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00252.png" id="254_pnxm8"]
+[ext_resource type="Texture2D" uid="uid://c5y0a2wtkr2uv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00253.png" id="255_2khxt"]
+[ext_resource type="Texture2D" uid="uid://kdwlwyl4fc8f" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00254.png" id="256_nlh3b"]
+[ext_resource type="Texture2D" uid="uid://bdkw1icndwmyl" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00255.png" id="257_6qimq"]
+[ext_resource type="Texture2D" uid="uid://cjfjaoib7odcx" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00256.png" id="258_ifr2g"]
+[ext_resource type="Texture2D" uid="uid://bofc8kp6d6f4a" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00257.png" id="259_pueqw"]
+[ext_resource type="Texture2D" uid="uid://1r3ldrs2uk2r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00258.png" id="260_v81x5"]
+[ext_resource type="Texture2D" uid="uid://ctkmwi7u4wn0r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00259.png" id="261_2mq4c"]
+[ext_resource type="Texture2D" uid="uid://7x4pkfltbwcw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00260.png" id="262_th3p7"]
+[ext_resource type="Texture2D" uid="uid://ysf7mcojmhkm" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00261.png" id="263_xsevi"]
+[ext_resource type="Texture2D" uid="uid://d0gf1acnujcrp" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00262.png" id="264_nfyon"]
+[ext_resource type="Texture2D" uid="uid://63jyehniwios" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00263.png" id="265_0swm2"]
+[ext_resource type="Texture2D" uid="uid://0lh11x8artlj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00264.png" id="266_wmlg5"]
+[ext_resource type="Texture2D" uid="uid://dnm8ab34uiw3f" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00265.png" id="267_j5mnf"]
+[ext_resource type="Texture2D" uid="uid://b2yxoxr3nqpbi" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00266.png" id="268_t6uuv"]
+[ext_resource type="Texture2D" uid="uid://cgx1ogq3reyqb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00267.png" id="269_v6e8b"]
+[ext_resource type="Texture2D" uid="uid://doull465nmyqs" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00268.png" id="270_dxylp"]
+[ext_resource type="Texture2D" uid="uid://btl07ac18hp4v" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00269.png" id="271_pudh1"]
+[ext_resource type="Texture2D" uid="uid://dmc76ig76ye6" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00270.png" id="272_glqsa"]
+[ext_resource type="Texture2D" uid="uid://6di58apirag7" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00271.png" id="273_0khoi"]
+[ext_resource type="Texture2D" uid="uid://bhv553wm7jxwx" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00272.png" id="274_arggg"]
+[ext_resource type="Texture2D" uid="uid://c6oy3ns7xhfol" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00273.png" id="275_35cla"]
+[ext_resource type="Texture2D" uid="uid://cjys627s17utv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00274.png" id="276_wlksu"]
+[ext_resource type="Texture2D" uid="uid://neu5yyk1e2x5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00275.png" id="277_m64al"]
+[ext_resource type="Texture2D" uid="uid://bewbuqas7tncq" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00276.png" id="278_nufll"]
+[ext_resource type="Texture2D" uid="uid://counqpbyhf6hk" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00277.png" id="279_ioemy"]
+[ext_resource type="Texture2D" uid="uid://btnh2e2pgd6mb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00278.png" id="280_7uor0"]
+[ext_resource type="Texture2D" uid="uid://byyxc2qxon3p5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00279.png" id="281_ugeih"]
+[ext_resource type="Texture2D" uid="uid://ba65f622b8uw2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00280.png" id="282_1lb5y"]
+[ext_resource type="Texture2D" uid="uid://duxhahmh1707p" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00281.png" id="283_tms7h"]
+[ext_resource type="Texture2D" uid="uid://ccp80hmi0m36" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00282.png" id="284_lee6p"]
+[ext_resource type="Texture2D" uid="uid://bjjwqkiojsk15" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00283.png" id="285_61ye8"]
+[ext_resource type="Texture2D" uid="uid://d1y3k0eywp53m" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00284.png" id="286_26tcn"]
+[ext_resource type="Texture2D" uid="uid://by0h1f4p781xn" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00285.png" id="287_vw2a3"]
+[ext_resource type="Texture2D" uid="uid://bw1lyrbgxus0c" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00286.png" id="288_kl2cp"]
+[ext_resource type="Texture2D" uid="uid://gewnsdb5pyxn" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00287.png" id="289_8rwnm"]
+[ext_resource type="Texture2D" uid="uid://ckymdvrlb51mv" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00288.png" id="290_277xk"]
+[ext_resource type="Texture2D" uid="uid://c3jaayijipecf" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00289.png" id="291_p83er"]
+[ext_resource type="Texture2D" uid="uid://diowagylj5bb8" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00290.png" id="292_xx71m"]
+[ext_resource type="Texture2D" uid="uid://p5nl2jmjb17p" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00291.png" id="293_n7e6v"]
+[ext_resource type="Texture2D" uid="uid://gxg56rir0rh5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00292.png" id="294_sqjlw"]
+[ext_resource type="Texture2D" uid="uid://dwk0th0odg1ej" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00293.png" id="295_fopk1"]
+[ext_resource type="Texture2D" uid="uid://tcj3nq3bjk3m" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00294.png" id="296_88g6g"]
+[ext_resource type="Texture2D" uid="uid://b0pi6ab4fla3" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00295.png" id="297_wx4iq"]
+[ext_resource type="Texture2D" uid="uid://bvvprfa8d1g4w" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00296.png" id="298_t60ja"]
+[ext_resource type="Texture2D" uid="uid://cpm8pkwhwnc67" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00297.png" id="299_vk8lr"]
+[ext_resource type="Texture2D" uid="uid://d0ti3o5xejrc7" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00298.png" id="300_cuij0"]
+[ext_resource type="Texture2D" uid="uid://tey52qjqgbyi" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00299.png" id="301_1wxhh"]
+[ext_resource type="Texture2D" uid="uid://cil1jarjxm7no" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00300.png" id="302_7o7hk"]
+[ext_resource type="Texture2D" uid="uid://7is6j5b8si5i" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00301.png" id="303_bhrxe"]
+[ext_resource type="Texture2D" uid="uid://dyg8qdoumyqaw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00302.png" id="304_ikuwu"]
+[ext_resource type="Texture2D" uid="uid://b0kraholj72oj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00303.png" id="305_dv053"]
+[ext_resource type="Texture2D" uid="uid://dfox28eqxy10t" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00304.png" id="306_sehlf"]
+[ext_resource type="Texture2D" uid="uid://bdkpdddu2jj4q" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00305.png" id="307_tqw1w"]
+[ext_resource type="Texture2D" uid="uid://k0aqun53ogmt" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00306.png" id="308_84fpm"]
+[ext_resource type="Texture2D" uid="uid://b1b7qvr8m422v" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00307.png" id="309_ngl43"]
+[ext_resource type="Texture2D" uid="uid://d4danv41pfc4a" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00308.png" id="310_145d1"]
+[ext_resource type="Texture2D" uid="uid://4i2u7xkbe4i2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00309.png" id="311_rbhde"]
+[ext_resource type="Texture2D" uid="uid://bpwplvahgcm63" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00310.png" id="312_w31bv"]
+[ext_resource type="Texture2D" uid="uid://bpdp21g6lujd5" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00311.png" id="313_c2cbw"]
+[ext_resource type="Texture2D" uid="uid://bvglklhj4ub5e" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00312.png" id="314_c20jv"]
+[ext_resource type="Texture2D" uid="uid://cm5ta6tmnjlsb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00313.png" id="315_k14aq"]
+[ext_resource type="Texture2D" uid="uid://ch5c48ix4arju" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00314.png" id="316_jgww2"]
+[ext_resource type="Texture2D" uid="uid://ct887jth6tyl" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00315.png" id="317_q5h74"]
+[ext_resource type="Texture2D" uid="uid://dght3e80jkiul" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00316.png" id="318_akqaa"]
+[ext_resource type="Texture2D" uid="uid://dn27y582l0ffj" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00317.png" id="319_a8ctg"]
+[ext_resource type="Texture2D" uid="uid://ccotg0ypoae37" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00318.png" id="320_eudd7"]
+[ext_resource type="Texture2D" uid="uid://dl6or1wwwlrrg" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00319.png" id="321_5srf8"]
+[ext_resource type="Texture2D" uid="uid://d275tqttd871y" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00320.png" id="322_tvqv2"]
+[ext_resource type="Texture2D" uid="uid://m3r3u5bxkuy7" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00321.png" id="323_bfpnt"]
+[ext_resource type="Texture2D" uid="uid://b0scf7piod3fb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00322.png" id="324_5je4x"]
+[ext_resource type="Texture2D" uid="uid://73kys6872vau" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00323.png" id="325_orpcq"]
+[ext_resource type="Texture2D" uid="uid://xgy24jkcb1sm" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00324.png" id="326_skgdk"]
+[ext_resource type="Texture2D" uid="uid://dxhq61hjfx4fa" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00325.png" id="327_2hvmq"]
+[ext_resource type="Texture2D" uid="uid://nyiyys4bj201" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00326.png" id="328_s8468"]
+[ext_resource type="Texture2D" uid="uid://qfrxafbwxpb" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00327.png" id="329_2otvb"]
+[ext_resource type="Texture2D" uid="uid://dwinjfgm5fs7r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00328.png" id="330_pb2m4"]
+[ext_resource type="Texture2D" uid="uid://bkeyiuqfo0beg" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00329.png" id="331_4d2pd"]
+[ext_resource type="Texture2D" uid="uid://b0jw3wwlxgox" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00330.png" id="332_6vinw"]
+[ext_resource type="Texture2D" uid="uid://ddijk0jdum2av" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00331.png" id="333_nmkcb"]
+[ext_resource type="Texture2D" uid="uid://qbq4k0big6qh" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00332.png" id="334_r2qfh"]
+[ext_resource type="Texture2D" uid="uid://4hcsfay8cg0d" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00333.png" id="335_vv4un"]
+[ext_resource type="Texture2D" uid="uid://clg0iftjmuka0" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00334.png" id="336_j24mq"]
+[ext_resource type="Texture2D" uid="uid://co2qv65hiqdhw" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00335.png" id="337_r8dsk"]
+[ext_resource type="Texture2D" uid="uid://cny53yojhne1r" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00336.png" id="338_pu6h8"]
+[ext_resource type="Texture2D" uid="uid://dtleytlp4p8xp" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00337.png" id="339_dgus8"]
+[ext_resource type="Texture2D" uid="uid://c21lcux7wi8b1" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00338.png" id="340_bi6m0"]
+[ext_resource type="Texture2D" uid="uid://dbgtfrsmqd8wq" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00339.png" id="341_1uejj"]
+[ext_resource type="Texture2D" uid="uid://c350001pay8w2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00340.png" id="342_8sw2p"]
+[ext_resource type="Texture2D" uid="uid://b5u4pxvgmmag2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00341.png" id="343_mvc2l"]
+[ext_resource type="Texture2D" uid="uid://dbwr4qm3idqww" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00342.png" id="344_26ife"]
+[ext_resource type="Texture2D" uid="uid://cf6nefdnxk3k2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00343.png" id="345_3to5y"]
+[ext_resource type="Texture2D" uid="uid://d0i7h4m0pq0po" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00344.png" id="346_4into"]
+[ext_resource type="Texture2D" uid="uid://cgo112552svlr" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00345.png" id="347_fgdj1"]
+[ext_resource type="Texture2D" uid="uid://b1f38g2r07qxl" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00346.png" id="348_6bwtk"]
+[ext_resource type="Texture2D" uid="uid://3lhj6ir1uu5b" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00347.png" id="349_btpex"]
+[ext_resource type="Texture2D" uid="uid://buo331b8wgokc" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00348.png" id="350_jthej"]
+[ext_resource type="Texture2D" uid="uid://cqhkpqekyuaxk" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00349.png" id="351_j2uao"]
+[ext_resource type="Texture2D" uid="uid://b8kr85tna78uq" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00350.png" id="352_5adbn"]
+[ext_resource type="Texture2D" uid="uid://nb524h0hqb8j" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00351.png" id="353_4dda8"]
+[ext_resource type="Texture2D" uid="uid://oevb24441d68" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00352.png" id="354_lnuu1"]
+[ext_resource type="Texture2D" uid="uid://b05t68bfdn0od" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00353.png" id="355_ft2ia"]
+[ext_resource type="Texture2D" uid="uid://chu08nlwjwgqg" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00354.png" id="356_6leul"]
+[ext_resource type="Texture2D" uid="uid://h6fr4lcq2qta" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00355.png" id="357_a82at"]
+[ext_resource type="Texture2D" uid="uid://ytaqrllfjaci" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00356.png" id="358_gx2pd"]
+[ext_resource type="Texture2D" uid="uid://yb2kyrvcuur7" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00357.png" id="359_rci6y"]
+[ext_resource type="Texture2D" uid="uid://clvt3va7ixtk2" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00358.png" id="360_fexni"]
+[ext_resource type="Texture2D" uid="uid://dqoiu5lvh426d" path="res://addons/fire_droid_core/media/godot_logo_opening/frames/godot-logo-animated-transparent-bg_frame-00359.png" id="361_sg14b"]
+[ext_resource type="AudioStream" uid="uid://bcdq6648h5sp4" path="res://addons/fire_droid_core/media/godot_logo_opening/godot-logo-animated-audio.ogg" id="362_dbyd6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mlvdw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jdfqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vdiqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_snib3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_shmp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g667h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_os170")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iotsi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_101no")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0htmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4rwtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_sbjck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yk7mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yfqoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yxa21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_opkpf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_g6ksi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nfnv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_lva1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hnvf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_h323b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_o2l6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_b303v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_xg25n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ovt7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_01q8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_0ook6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_extps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xhtar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_hblj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_giwhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_tbv0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vluh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_o0b2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tc54x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_wh37t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_s7tcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_n61ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_7c4cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_2dnnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_314pf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_o08lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_vduor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_nh66t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_0gu1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_tae51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_56ngv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_squqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_6hp5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_a3grd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_uge4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_tlob6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_twwfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_psipg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_rcnkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_sxv8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_rsajt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_vmbhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_7i8qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_mf81x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_osa8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_lnixk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_fywny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_56enq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_5t2dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_d88ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_34gpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_p16nj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_17em8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_2lycg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_l7jcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_tnapt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_mbeic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_fc6re")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_twkx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_fnf5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_c8027")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_53n3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_vv2mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_hspgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_xwtt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_0ho8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_siucp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_scqmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_tm42q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_a40r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_v1s7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_2aatn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_a1npj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_iu2bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_iur2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_vs3ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_henoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_5haso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_2memb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_4lg1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_62om4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_d43s7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_6770a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_ro2tr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_0jahf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_qmbhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_oye1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_i3qdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_xd5td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_2gj4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_2knmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_03d2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_v2bqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_er5mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_8t6ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_rjlw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_voo24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_g7bvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_dvd8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_qlvb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_yhux6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_4gjs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_0i1dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_mkj2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_apelk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_ri8mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_t5eeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_fm0v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_gqvro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_gpkgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_uhx2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_ky70a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_dfr1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_4h4op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_pl1pc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_l0kun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_uo83j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_5bbn8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_7a4fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_mn02v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_qh6hf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_hccwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_7r3qd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_xgbt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_x4dqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_fohg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_58mpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_nouho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_aux52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_8sw4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_6n4sa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_p3ewa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_lm6jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_0h0h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_o5lvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_yaoct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_7snan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_h2h4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_t8ba1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_hi6ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_kqme5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_aqp18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_dxvnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_lawsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_3bx6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_oqw3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_2r0y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_1j5p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_qg0pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_wg76p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_jnwab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_yvkmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_r8jps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_mara0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_4g0cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_k1qtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_eg50b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_77g6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_qlngw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_s8rbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_8p1yg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_8nh4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_tmpfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_xy1pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_42tw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_cqrts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_6bopf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_8v0vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_0hexe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_4cyvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_huttx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_c2say")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_48md8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_ejby5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_0rdwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_p6k4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_7ghpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_7yd6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_hmu5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_6bwcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_gablp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_mep0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_iv0b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_1q62l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_ngit8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_hrwmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_ydjm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_54lmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_qhy3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_bojp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_bt0h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_re1hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_ftl8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_bs3vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_cbk2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_r7xdr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_ajy4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_di4yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_biu05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_jluwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_r63rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_ydr2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_rbxem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_qsri6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_vsd3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_iwl2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_dddsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_2lypo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_ywr0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_q5spb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_12eug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_7f5kl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_elw40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_4ldas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_int6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_iyot5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_73egx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_8e6e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_iqlmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_rrxkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_5awjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_xltsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_84pie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_f5tdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_ehy7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_27okt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_nlk5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_lmwk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_qdqyj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_vac5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_38w8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_b74pn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_5wo1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_v0jdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_7i1c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_g4cqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_blawl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_pnxm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_2khxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_nlh3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("257_6qimq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_ifr2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_pueqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_v81x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_2mq4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_th3p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_xsevi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_nfyon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_0swm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("266_wmlg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_j5mnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_t6uuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_v6e8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_dxylp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_pudh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_glqsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_0khoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_arggg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_35cla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_wlksu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_m64al")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_nufll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_ioemy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_7uor0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_ugeih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_1lb5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_tms7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_lee6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_61ye8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_26tcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_vw2a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_kl2cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_8rwnm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_277xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_p83er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_xx71m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_n7e6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_sqjlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_fopk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_88g6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_wx4iq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_t60ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_vk8lr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_cuij0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_1wxhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_7o7hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_bhrxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_ikuwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_dv053")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_sehlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_tqw1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_84fpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_ngl43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_145d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_rbhde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_w31bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_c2cbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_c20jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("315_k14aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_jgww2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_q5h74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_akqaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_a8ctg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_eudd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_5srf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("322_tvqv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_bfpnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_5je4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("325_orpcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("326_skgdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("327_2hvmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_s8468")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_2otvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_pb2m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_4d2pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_6vinw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_nmkcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_r2qfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("335_vv4un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_j24mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_r8dsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_pu6h8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_dgus8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_bi6m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_1uejj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_8sw2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_mvc2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_26ife")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_3to5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_4into")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_fgdj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_6bwtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_btpex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_jthej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_j2uao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_5adbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_4dda8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_lnuu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_ft2ia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_6leul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_a82at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_gx2pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_rci6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_fexni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_sg14b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_1w27c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("103_oye1q")]
+}
+
+[sub_resource type="Animation" id="Animation_borw8"]
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0166667, 0.0333333, 0.05, 0.0666667, 0.0833333, 0.1, 0.116667, 0.133333, 0.15, 0.166667, 0.183333, 0.2, 0.216667, 0.233333, 0.25, 0.266667, 0.283333, 0.3, 0.316667, 0.333333, 0.35, 0.366667, 0.383333, 0.4, 0.416667, 0.433333, 0.45, 0.466667, 0.483333, 0.5, 0.516667, 0.533333, 0.55, 0.566667, 0.583333, 0.6, 0.616667, 0.633333, 0.65, 0.666667, 0.683333, 0.7, 0.716667, 0.733333, 0.75, 0.766667, 0.783333, 0.8, 0.816667, 0.833333, 0.85, 0.866667, 0.883333, 0.9, 0.916667, 0.933333, 0.95, 0.966667, 0.983333, 1, 1.01667, 1.03333, 1.05, 1.06667, 1.08333, 1.1, 1.11667, 1.13333, 1.15, 1.16667, 1.18333, 1.2, 1.21667, 1.23333, 1.25, 1.26667, 1.28333, 1.3, 1.31667, 1.33333, 1.35, 1.36667, 1.38333, 1.4, 1.41667, 1.43333, 1.45, 1.46667, 1.48333, 1.5, 1.51667, 1.53333, 1.55, 1.56667, 1.58333, 1.6, 1.61667, 1.63333, 1.65, 1.66667, 1.68333, 1.7, 1.71667, 1.73333, 1.75, 1.76667, 1.78333, 1.8, 1.81667, 1.83333, 1.85, 1.86667, 1.88333, 1.9, 1.91667, 1.93333, 1.95, 1.96667, 1.98333, 2, 2.01667, 2.03333, 2.05, 2.06667, 2.08333, 2.1, 2.11667, 2.13333, 2.15, 2.16667, 2.18333, 2.2, 2.21667, 2.23333, 2.25, 2.26667, 2.28333, 2.3, 2.31667, 2.33333, 2.35, 2.36667, 2.38333, 2.4, 2.41667, 2.43333, 2.45, 2.46667, 2.48333, 2.5, 2.51667, 2.53333, 2.55, 2.56667, 2.58333, 2.6, 2.61667, 2.63333, 2.65, 2.66667, 2.68333, 2.7, 2.71667, 2.73333, 2.75, 2.76667, 2.78333, 2.8, 2.81667, 2.83333, 2.85, 2.86667, 2.88333, 2.9, 2.91667, 2.93333, 2.95, 2.96667, 2.98333, 3, 3.01667, 3.03333, 3.05, 3.06667, 3.08333, 3.1, 3.11667, 3.13333, 3.15, 3.16667, 3.18333, 3.2, 3.21667, 3.23333, 3.25, 3.26667, 3.28333, 3.3, 3.31667, 3.33333, 3.35, 3.36667, 3.38333, 3.4, 3.41667, 3.43333, 3.45, 3.46667, 3.48333, 3.5, 3.51667, 3.53333, 3.55, 3.56667, 3.58333, 3.6, 3.61667, 3.63333, 3.65, 3.66667, 3.68333, 3.7, 3.71667, 3.73333, 3.75, 3.76667, 3.78333, 3.8, 3.81667, 3.83333, 3.85, 3.86667, 3.88333, 3.9, 3.91667, 3.93333, 3.95, 3.96667, 3.98333, 4, 4.01667, 4.03333, 4.05, 4.06667, 4.08333, 4.1, 4.11667, 4.13333, 4.15, 4.16667, 4.18333, 4.2, 4.21667, 4.23333, 4.25, 4.26667, 4.28333, 4.3, 4.31667, 4.33333, 4.35, 4.36667, 4.38333, 4.4, 4.41667, 4.43333, 4.45, 4.46667, 4.48333, 4.5, 4.51667, 4.53333, 4.55, 4.56667, 4.58333, 4.6, 4.61667, 4.63333, 4.65, 4.66667, 4.68333, 4.7, 4.71667, 4.73333, 4.75, 4.76667, 4.78333, 4.8, 4.81667, 4.83333, 4.85, 4.86667, 4.88333, 4.9, 4.91667, 4.93333, 4.95, 4.96667, 4.98333, 5, 5.01667, 5.03333, 5.05, 5.06667, 5.08333, 5.1, 5.11667, 5.13333, 5.15, 5.16667, 5.18333, 5.2, 5.21667, 5.23333, 5.25, 5.26667, 5.28333, 5.3, 5.31667, 5.33333, 5.35, 5.36667, 5.38333, 5.4, 5.41667, 5.43333, 5.45, 5.46667, 5.48333, 5.5, 5.51667, 5.53333, 5.55, 5.56667, 5.58333, 5.6, 5.61667, 5.63333, 5.65, 5.66667, 5.68333, 5.7, 5.71667, 5.73333, 5.75, 5.76667, 5.78333, 5.8, 5.81667, 5.83333, 5.85, 5.86667, 5.88333, 5.9, 5.91667, 5.93333, 5.95, 5.96667, 5.98333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [ExtResource("2_jdfqn"), ExtResource("3_vdiqw"), ExtResource("4_snib3"), ExtResource("5_shmp6"), ExtResource("6_g667h"), ExtResource("7_os170"), ExtResource("8_iotsi"), ExtResource("9_101no"), ExtResource("10_0htmr"), ExtResource("11_4rwtm"), ExtResource("12_sbjck"), ExtResource("13_yk7mn"), ExtResource("14_yfqoy"), ExtResource("15_yxa21"), ExtResource("16_opkpf"), ExtResource("17_g6ksi"), ExtResource("18_nfnv0"), ExtResource("19_lva1c"), ExtResource("20_hnvf2"), ExtResource("21_h323b"), ExtResource("22_o2l6q"), ExtResource("23_b303v"), ExtResource("24_xg25n"), ExtResource("25_ovt7w"), ExtResource("26_01q8p"), ExtResource("27_0ook6"), ExtResource("28_extps"), ExtResource("29_xhtar"), ExtResource("30_hblj4"), ExtResource("31_giwhw"), ExtResource("32_tbv0v"), ExtResource("33_vluh7"), ExtResource("34_o0b2p"), ExtResource("35_tc54x"), ExtResource("36_wh37t"), ExtResource("37_s7tcp"), ExtResource("38_n61ea"), ExtResource("39_7c4cw"), ExtResource("40_2dnnk"), ExtResource("41_314pf"), ExtResource("42_o08lh"), ExtResource("43_vduor"), ExtResource("44_nh66t"), ExtResource("45_0gu1v"), ExtResource("46_tae51"), ExtResource("47_56ngv"), ExtResource("48_squqe"), ExtResource("49_6hp5v"), ExtResource("50_a3grd"), ExtResource("51_uge4f"), ExtResource("52_tlob6"), ExtResource("53_twwfh"), ExtResource("54_psipg"), ExtResource("55_rcnkl"), ExtResource("56_sxv8y"), ExtResource("57_rsajt"), ExtResource("58_vmbhu"), ExtResource("59_7i8qt"), ExtResource("60_mf81x"), ExtResource("61_osa8y"), ExtResource("62_lnixk"), ExtResource("63_fywny"), ExtResource("64_56enq"), ExtResource("65_5t2dm"), ExtResource("66_d88ao"), ExtResource("67_34gpc"), ExtResource("68_p16nj"), ExtResource("69_17em8"), ExtResource("70_2lycg"), ExtResource("71_l7jcg"), ExtResource("72_tnapt"), ExtResource("73_mbeic"), ExtResource("74_fc6re"), ExtResource("75_twkx7"), ExtResource("76_fnf5d"), ExtResource("77_c8027"), ExtResource("78_53n3x"), ExtResource("79_vv2mk"), ExtResource("80_hspgy"), ExtResource("81_xwtt2"), ExtResource("82_0ho8m"), ExtResource("83_siucp"), ExtResource("84_scqmq"), ExtResource("85_tm42q"), ExtResource("86_a40r8"), ExtResource("87_v1s7x"), ExtResource("88_2aatn"), ExtResource("89_a1npj"), ExtResource("90_iu2bh"), ExtResource("91_iur2u"), ExtResource("92_vs3ia"), ExtResource("93_henoe"), ExtResource("94_5haso"), ExtResource("95_2memb"), ExtResource("96_4lg1t"), ExtResource("97_62om4"), ExtResource("98_d43s7"), ExtResource("99_6770a"), ExtResource("100_ro2tr"), ExtResource("101_0jahf"), ExtResource("102_qmbhs"), ExtResource("103_oye1q"), ExtResource("104_i3qdw"), ExtResource("105_xd5td"), ExtResource("106_2gj4c"), ExtResource("107_2knmn"), ExtResource("108_03d2i"), ExtResource("109_v2bqc"), ExtResource("110_er5mf"), ExtResource("111_8t6ap"), ExtResource("112_rjlw8"), ExtResource("113_voo24"), ExtResource("114_g7bvi"), ExtResource("115_dvd8c"), ExtResource("116_qlvb5"), ExtResource("117_yhux6"), ExtResource("118_4gjs7"), ExtResource("119_0i1dh"), ExtResource("120_mkj2u"), ExtResource("121_apelk"), ExtResource("122_ri8mc"), ExtResource("123_t5eeb"), ExtResource("124_fm0v0"), ExtResource("125_gqvro"), ExtResource("126_gpkgr"), ExtResource("127_uhx2c"), ExtResource("128_ky70a"), ExtResource("129_dfr1y"), ExtResource("130_4h4op"), ExtResource("131_pl1pc"), ExtResource("132_l0kun"), ExtResource("133_uo83j"), ExtResource("134_5bbn8"), ExtResource("135_7a4fn"), ExtResource("136_mn02v"), ExtResource("137_qh6hf"), ExtResource("138_hccwh"), ExtResource("139_7r3qd"), ExtResource("140_xgbt1"), ExtResource("141_x4dqj"), ExtResource("142_fohg3"), ExtResource("143_58mpx"), ExtResource("144_nouho"), ExtResource("145_aux52"), ExtResource("146_8sw4o"), ExtResource("147_6n4sa"), ExtResource("148_p3ewa"), ExtResource("149_lm6jj"), ExtResource("150_0h0h3"), ExtResource("151_o5lvb"), ExtResource("152_yaoct"), ExtResource("153_7snan"), ExtResource("154_h2h4f"), ExtResource("155_t8ba1"), ExtResource("156_hi6ct"), ExtResource("157_kqme5"), ExtResource("158_aqp18"), ExtResource("159_dxvnx"), ExtResource("160_lawsr"), ExtResource("161_3bx6p"), ExtResource("162_oqw3x"), ExtResource("163_2r0y5"), ExtResource("164_1j5p7"), ExtResource("165_qg0pb"), ExtResource("166_wg76p"), ExtResource("167_jnwab"), ExtResource("168_yvkmd"), ExtResource("169_r8jps"), ExtResource("170_mara0"), ExtResource("171_4g0cr"), ExtResource("172_k1qtb"), ExtResource("173_eg50b"), ExtResource("174_77g6k"), ExtResource("175_qlngw"), ExtResource("176_s8rbn"), ExtResource("177_8p1yg"), ExtResource("178_8nh4y"), ExtResource("179_tmpfw"), ExtResource("180_xy1pb"), ExtResource("181_42tw7"), ExtResource("182_cqrts"), ExtResource("183_6bopf"), ExtResource("184_8v0vx"), ExtResource("185_0hexe"), ExtResource("186_4cyvw"), ExtResource("187_huttx"), ExtResource("188_c2say"), ExtResource("189_48md8"), ExtResource("190_ejby5"), ExtResource("191_0rdwf"), ExtResource("192_p6k4q"), ExtResource("193_7ghpj"), ExtResource("194_7yd6p"), ExtResource("195_hmu5w"), ExtResource("196_6bwcn"), ExtResource("197_gablp"), ExtResource("198_mep0f"), ExtResource("199_iv0b3"), ExtResource("200_1q62l"), ExtResource("201_ngit8"), ExtResource("202_hrwmw"), ExtResource("203_ydjm8"), ExtResource("204_54lmq"), ExtResource("205_qhy3b"), ExtResource("206_bojp1"), ExtResource("207_bt0h3"), ExtResource("208_re1hn"), ExtResource("209_ftl8f"), ExtResource("210_bs3vh"), ExtResource("211_cbk2v"), ExtResource("212_r7xdr"), ExtResource("213_ajy4o"), ExtResource("214_di4yd"), ExtResource("215_biu05"), ExtResource("216_jluwj"), ExtResource("217_r63rp"), ExtResource("218_ydr2r"), ExtResource("219_rbxem"), ExtResource("220_qsri6"), ExtResource("221_vsd3r"), ExtResource("222_iwl2c"), ExtResource("223_dddsc"), ExtResource("224_2lypo"), ExtResource("225_ywr0y"), ExtResource("226_q5spb"), ExtResource("227_12eug"), ExtResource("228_7f5kl"), ExtResource("229_elw40"), ExtResource("230_4ldas"), ExtResource("231_int6j"), ExtResource("232_iyot5"), ExtResource("233_73egx"), ExtResource("234_8e6e5"), ExtResource("235_iqlmg"), ExtResource("236_rrxkt"), ExtResource("237_5awjc"), ExtResource("238_xltsm"), ExtResource("239_84pie"), ExtResource("240_f5tdd"), ExtResource("241_ehy7t"), ExtResource("242_27okt"), ExtResource("243_nlk5f"), ExtResource("244_lmwk4"), ExtResource("245_qdqyj"), ExtResource("246_vac5w"), ExtResource("247_38w8f"), ExtResource("248_b74pn"), ExtResource("249_5wo1m"), ExtResource("250_v0jdb"), ExtResource("251_7i1c0"), ExtResource("252_g4cqy"), ExtResource("253_blawl"), ExtResource("254_pnxm8"), ExtResource("255_2khxt"), ExtResource("256_nlh3b"), ExtResource("257_6qimq"), ExtResource("258_ifr2g"), ExtResource("259_pueqw"), ExtResource("260_v81x5"), ExtResource("261_2mq4c"), ExtResource("262_th3p7"), ExtResource("263_xsevi"), ExtResource("264_nfyon"), ExtResource("265_0swm2"), ExtResource("266_wmlg5"), ExtResource("267_j5mnf"), ExtResource("268_t6uuv"), ExtResource("269_v6e8b"), ExtResource("270_dxylp"), ExtResource("271_pudh1"), ExtResource("272_glqsa"), ExtResource("273_0khoi"), ExtResource("274_arggg"), ExtResource("275_35cla"), ExtResource("276_wlksu"), ExtResource("277_m64al"), ExtResource("278_nufll"), ExtResource("279_ioemy"), ExtResource("280_7uor0"), ExtResource("281_ugeih"), ExtResource("282_1lb5y"), ExtResource("283_tms7h"), ExtResource("284_lee6p"), ExtResource("285_61ye8"), ExtResource("286_26tcn"), ExtResource("287_vw2a3"), ExtResource("288_kl2cp"), ExtResource("289_8rwnm"), ExtResource("290_277xk"), ExtResource("291_p83er"), ExtResource("292_xx71m"), ExtResource("293_n7e6v"), ExtResource("294_sqjlw"), ExtResource("295_fopk1"), ExtResource("296_88g6g"), ExtResource("297_wx4iq"), ExtResource("298_t60ja"), ExtResource("299_vk8lr"), ExtResource("300_cuij0"), ExtResource("301_1wxhh"), ExtResource("302_7o7hk"), ExtResource("303_bhrxe"), ExtResource("304_ikuwu"), ExtResource("305_dv053"), ExtResource("306_sehlf"), ExtResource("307_tqw1w"), ExtResource("308_84fpm"), ExtResource("309_ngl43"), ExtResource("310_145d1"), ExtResource("311_rbhde"), ExtResource("312_w31bv"), ExtResource("313_c2cbw"), ExtResource("314_c20jv"), ExtResource("315_k14aq"), ExtResource("316_jgww2"), ExtResource("317_q5h74"), ExtResource("318_akqaa"), ExtResource("319_a8ctg"), ExtResource("320_eudd7"), ExtResource("321_5srf8"), ExtResource("322_tvqv2"), ExtResource("323_bfpnt"), ExtResource("324_5je4x"), ExtResource("325_orpcq"), ExtResource("326_skgdk"), ExtResource("327_2hvmq"), ExtResource("328_s8468"), ExtResource("329_2otvb"), ExtResource("330_pb2m4"), ExtResource("331_4d2pd"), ExtResource("332_6vinw"), ExtResource("333_nmkcb"), ExtResource("334_r2qfh"), ExtResource("335_vv4un"), ExtResource("336_j24mq"), ExtResource("337_r8dsk"), ExtResource("338_pu6h8"), ExtResource("339_dgus8"), ExtResource("340_bi6m0"), ExtResource("341_1uejj"), ExtResource("342_8sw2p"), ExtResource("343_mvc2l"), ExtResource("344_26ife"), ExtResource("345_3to5y"), ExtResource("346_4into"), ExtResource("347_fgdj1"), ExtResource("348_6bwtk"), ExtResource("349_btpex"), ExtResource("350_jthej"), ExtResource("351_j2uao"), ExtResource("352_5adbn"), ExtResource("353_4dda8"), ExtResource("354_lnuu1"), ExtResource("355_ft2ia"), ExtResource("356_6leul"), ExtResource("357_a82at"), ExtResource("358_gx2pd"), ExtResource("359_rci6y"), ExtResource("360_fexni"), ExtResource("361_sg14b")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_57tns"]
+_data = {
+"RESET": SubResource("Animation_1w27c"),
+"default": SubResource("Animation_borw8")
+}
+
+[node name="GodotLogoIntro" instance=ExtResource("1_fk86y")]
+background_color = Color(0.227451, 0.254902, 0.345098, 1)
+transition_override_properties = {
+"duration_out": 0.8
+}
+frames = SubResource("SpriteFrames_mlvdw")
+audio_stream_delay = 1.5
+
+[node name="BackgroundColorRect" parent="." index="0"]
+color = Color(0.227451, 0.254902, 0.345098, 1)
+
+[node name="MarginContainer" parent="." index="1"]
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" parent="MarginContainer" index="0"]
+texture = ExtResource("103_oye1q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_57tns")
+}
+
+[node name="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("362_dbyd6")

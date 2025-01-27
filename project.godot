@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Project Template"
+run/main_scene="res://addons/fire_droid_core/scenes/defaults/main.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+FDCore="*res://addons/fire_droid_core/scenes/fd_core.gd"
+FDLoad="*res://addons/fire_droid_core/scenes/fd_load.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/fire_droid_core/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

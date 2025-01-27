@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://x3ky66ytp5je"]
+
+[ext_resource type="Script" path="res://addons/fire_droid_core/scenes/logo_intro/logo_intro.gd" id="1_cgtve"]
+
+[node name="LogoIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cgtve")
+
+[node name="BackgroundColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="TimerStartAnimation" type="Timer" parent="."]
+one_shot = true
+
+[node name="TimerEndAnimation" type="Timer" parent="."]
+one_shot = true
+
+[node name="TimerPlaySound" type="Timer" parent="."]
+one_shot = true
+
+[node name="TimerSkipDelay" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="TimerStartAnimation" to="." method="_on_timer_start_animation_timeout"]
+[connection signal="timeout" from="TimerEndAnimation" to="." method="_on_timer_end_animation_timeout"]
+[connection signal="timeout" from="TimerPlaySound" to="." method="_on_timer_play_sound_timeout"]
+[connection signal="timeout" from="TimerSkipDelay" to="." method="_on_timer_skip_delay_timeout"]

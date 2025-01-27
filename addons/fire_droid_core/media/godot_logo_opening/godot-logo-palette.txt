@@ -1,0 +1,8 @@
+Background:
+	Dark:	#1c1f2a
+	Light:	#3a4158
+Logo:
+	Face:	#3a4158
+	Iris:	#414042
+	Eyes:	#ffffff
+Text:		#e8e8e8

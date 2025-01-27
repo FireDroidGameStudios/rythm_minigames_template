@@ -1,0 +1,6 @@
+Background:	#4f4a45
+Droid:
+	Body:	#ed7d31
+	Eyes:	#f6f1ee
+MainTitle:	#f6f1ee
+Subtitle:	#1a1a1a
