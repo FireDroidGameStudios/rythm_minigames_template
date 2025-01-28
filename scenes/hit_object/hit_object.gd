@@ -2,6 +2,9 @@ class_name HitObject
 extends Node2D
 
 
+signal reached_hit_time(hit_object: HitObject)
+
+
 ## Time to [member ratio] reach the value of [member target_ratio]. Can define
 ## the speed of the HitObject and takes the level timeline as the time reference.
 var hit_time: float = 0.0
@@ -11,16 +14,51 @@ var hit_time: float = 0.0
 var speed: float = 0.5
 
 
+var timeline: Timeline = null
+
+
+## Flag to quick check if HitObject has spawned. This flag must be set by Timeline
+## when the object is spawned
+var _has_spawned: bool = false
+
+## Flag to quick check if HitObject has emitted hit signal.
+var _has_notified_hit: bool = false
+
+
+func _init(hit_time: float = 0.0, speed: float = 0.5) -> void:
+	self.hit_time = hit_time
+	self.speed = speed
+
+
 func _ready() -> void:
 	pass
 
 
 func _process(_delta: float) -> void:
-	pass
+	_handle_signal_notify()
 
 
 func _physics_process(_delta: float) -> void:
 	pass
+
+
+func _to_string() -> String:
+	var string: String = "(HitTime:%.3f|Speed:%.3f|SpawnTime:%.3f)" % [
+		hit_time, speed, get_spawn_time()
+	]
+	return string
+
+
+## Sets the spawned flag. This is used by timeline to keep control of wich
+## HitObjects have already spawned.
+func spawn() -> void:
+	_has_spawned = true
+
+
+## Return the value of the spawned flag. This is used by timeline to keep
+## control of wich HitObjects have already spawned.
+func has_spawned() -> bool:
+	return _has_spawned
 
 
 ## Return the current ratio of HitObject based on [param current_time] and
@@ -40,3 +78,11 @@ func get_spawn_time() -> float:
 	if spawn_time < 0.0:
 		return 0.0
 	return spawn_time
+
+
+func _handle_signal_notify() -> void:
+	if not timeline or not _has_spawned or _has_notified_hit:
+		return
+	if timeline.get_current_time() >= hit_time:
+		_has_notified_hit = true
+		reached_hit_time.emit(self)

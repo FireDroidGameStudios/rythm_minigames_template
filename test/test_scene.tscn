@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcw6gprj0hqd3"]
+
+[ext_resource type="Script" path="res://test/test_scene.gd" id="1_i55yu"]
+[ext_resource type="Script" path="res://scenes/sync_core/timeline.gd" id="2_qkb1k"]
+[ext_resource type="AudioStream" uid="uid://n0ijv3b4gvbs" path="res://test/holiday_weasel.ogg" id="3_08r70"]
+
+[sub_resource type="GDScript" id="GDScript_uwvrs"]
+script/source = "extends Label
+
+
+func _ready() -> void:
+	pass
+
+
+func _process(delta: float) -> void:
+	text = str(get_parent().get_current_time())
+
+
+func _physics_process(delta: float) -> void:
+	pass
+"
+
+[node name="TestScene" type="Node2D"]
+script = ExtResource("1_i55yu")
+
+[node name="Timeline" type="Node" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("2_qkb1k")
+audio_player = NodePath("../AudioStreamPlayer")
+
+[node name="Label" type="Label" parent="Timeline"]
+offset_left = 330.0
+offset_top = 92.0
+offset_right = 957.0
+offset_bottom = 167.0
+theme_override_font_sizes/font_size = 46
+text = "Time:"
+script = SubResource("GDScript_uwvrs")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_08r70")
+autoplay = true

@@ -17,6 +17,16 @@ var clickable_radius: float = 0.0
 var perfect_click_tolerance: float = 0.0
 
 
+func _init(
+	hit_time: float = 0.0, speed: float = 0.5,
+	clickable_radius: float = 0.0, perfect_click_tolerance: float = 0.0
+) -> void:
+	self.hit_time = hit_time
+	self.speed = speed
+	self.clickable_radius = clickable_radius
+	self.perfect_click_tolerance = perfect_click_tolerance
+
+
 func _ready() -> void:
 	pass
 
@@ -27,6 +37,16 @@ func _process(_delta: float) -> void:
 
 func _physics_process(_delta: float) -> void:
 	pass
+
+
+func _to_string() -> String:
+	var string: String = (
+		"(HitTime:%.3f|Speed:%.3f|SpawnTime:%.3f|Radius:%.3f|Tolerance:%.3f)" % [
+			hit_time, speed, get_spawn_time(),
+			clickable_radius, perfect_click_tolerance
+		]
+	)
+	return string
 
 
 func _input(event: InputEvent) -> void:
