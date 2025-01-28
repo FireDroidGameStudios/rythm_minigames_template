@@ -1,5 +1,5 @@
 class_name HitObject
-extends Node
+extends Node2D
 
 
 ## Time to [member ratio] reach the value of [member target_ratio]. Can define
