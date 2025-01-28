@@ -23,6 +23,13 @@ func _physics_process(_delta: float) -> void:
 	pass
 
 
+func _to_string() -> String:
+	var string: String = "(HitTime:%.3f|Speed:%.3f|SpawnTime:%.3f)" % [
+		hit_time, speed, get_spawn_time()
+	]
+	return string
+
+
 ## Return the current ratio of HitObject based on [param current_time] and
 ## [member hit_time].
 func get_ratio(current_time: float) -> float:

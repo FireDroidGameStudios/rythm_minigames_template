@@ -29,6 +29,16 @@ func _physics_process(_delta: float) -> void:
 	pass
 
 
+func _to_string() -> String:
+	var string: String = (
+		"(HitTime:%.3f|Speed:%.3f|SpawnTime:%.3f|Radius:%.3f|Tolerance:%.3f)" % [
+			hit_time, speed, get_spawn_time(),
+			clickable_radius, perfect_click_tolerance
+		]
+	)
+	return string
+
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		var is_just_pressed: bool = event.is_pressed() and not event.is_echo()
