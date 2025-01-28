@@ -11,6 +11,11 @@ var hit_time: float = 0.0
 var speed: float = 0.5
 
 
+func _init(hit_time: float = 0.0, speed: float = 0.5) -> void:
+	self.hit_time = hit_time
+	self.speed = speed
+
+
 func _ready() -> void:
 	pass
 

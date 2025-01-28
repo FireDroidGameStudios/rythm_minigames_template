@@ -17,6 +17,16 @@ var clickable_radius: float = 0.0
 var perfect_click_tolerance: float = 0.0
 
 
+func _init(
+	hit_time: float = 0.0, speed: float = 0.5,
+	clickable_radius: float = 0.0, perfect_click_tolerance: float = 0.0
+) -> void:
+	self.hit_time = hit_time
+	self.speed = speed
+	self.clickable_radius = clickable_radius
+	self.perfect_click_tolerance = perfect_click_tolerance
+
+
 func _ready() -> void:
 	pass
 
