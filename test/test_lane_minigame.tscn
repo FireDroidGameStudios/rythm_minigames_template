@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceospd5qxmosv"]
+
+[ext_resource type="PackedScene" uid="uid://derhm4barxqjd" path="res://scenes/minigame/lane_minigame/lane_minigame.tscn" id="1_3t6qa"]
+[ext_resource type="Script" path="res://scenes/minigame/lane_minigame/hit_lane.gd" id="2_43pd5"]
+
+[sub_resource type="Curve2D" id="Curve2D_2oge4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 131, 206, -132.936, 0, 132.936, 0, 336, 104, -135.765, -1.41421, 135.765, 1.41421, 598, 213, -123.037, -8.48528, 123.037, 8.48528, 864, 107, 0, 0, 0, 0, 1439, 247)
+}
+point_count = 5
+
+[node name="TestLaneMinigame" instance=ExtResource("1_3t6qa")]
+
+[node name="HitLane" type="Path2D" parent="Lanes" index="0"]
+curve = SubResource("Curve2D_2oge4")
+script = ExtResource("2_43pd5")
