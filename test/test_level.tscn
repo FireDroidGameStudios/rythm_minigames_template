@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2ca8mtbol5ag"]
+[gd_scene load_steps=19 format=3 uid="uid://d2ca8mtbol5ag"]
 
 [ext_resource type="PackedScene" uid="uid://c7kjmkwnf5um3" path="res://scenes/level/level.tscn" id="1_2m27j"]
 [ext_resource type="Script" path="res://scenes/level/resources/hit_object_info.gd" id="2_1i7lb"]
@@ -17,7 +17,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_bfulo"]
 script = ExtResource("2_1i7lb")
 hit_time = 4.9
-speed = 0.8
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
@@ -26,7 +26,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_yt3yv"]
 script = ExtResource("2_1i7lb")
 hit_time = 5.7
-speed = 0.8
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
@@ -68,6 +68,51 @@ scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
 spawn_position = Vector2(0, 0)
 
+[sub_resource type="Resource" id="Resource_jad16"]
+script = ExtResource("2_1i7lb")
+hit_time = 10.64
+speed = 0.8
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_1ipg8"]
+script = ExtResource("2_1i7lb")
+hit_time = 11.46
+speed = 0.8
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_ul80i"]
+script = ExtResource("2_1i7lb")
+hit_time = 12.32
+speed = 1.0
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_nkiqy"]
+script = ExtResource("2_1i7lb")
+hit_time = 12.72
+speed = 1.0
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_vpgg6"]
+script = ExtResource("2_1i7lb")
+hit_time = 13.11
+speed = 1.0
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
 [sub_resource type="Gradient" id="Gradient_36uwa"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_w2nuo"]
@@ -77,7 +122,7 @@ height = 648
 fill_to = Vector2(0, 1)
 
 [node name="TestLevel" instance=ExtResource("1_2m27j")]
-_hit_objects_infos = Array[ExtResource("2_1i7lb")]([SubResource("Resource_iv1j4"), SubResource("Resource_bfulo"), SubResource("Resource_yt3yv"), SubResource("Resource_5b6ft"), SubResource("Resource_cfewr"), SubResource("Resource_j5u5g"), SubResource("Resource_lr28o")])
+_hit_objects_infos = Array[ExtResource("2_1i7lb")]([SubResource("Resource_iv1j4"), SubResource("Resource_bfulo"), SubResource("Resource_yt3yv"), SubResource("Resource_5b6ft"), SubResource("Resource_cfewr"), SubResource("Resource_j5u5g"), SubResource("Resource_lr28o"), SubResource("Resource_jad16"), SubResource("Resource_1ipg8"), SubResource("Resource_ul80i"), SubResource("Resource_nkiqy"), SubResource("Resource_vpgg6")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 texture = SubResource("GradientTexture2D_w2nuo")
@@ -87,8 +132,6 @@ centered = false
 stream = ExtResource("3_i8wa8")
 
 [node name="TestLaneMinigame" parent="Minigames" index="0" instance=ExtResource("2_wmxoe")]
-
-[node name="TestLaneMinigame2" parent="Minigames" index="1" instance=ExtResource("2_wmxoe")]
 
 [node name="LabelTime" type="Label" parent="." index="4"]
 offset_right = 40.0
