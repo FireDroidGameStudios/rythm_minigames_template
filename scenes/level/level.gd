@@ -4,6 +4,9 @@ extends Node
 
 signal finished_minigames
 
+
+@export var _hit_objects_infos: Array[HitObjectInfo] = []
+
 var _current_minigame_index: int = 0
 
 @onready var timeline: Timeline = get_node("Timeline")
