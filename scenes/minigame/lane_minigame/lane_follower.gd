@@ -23,11 +23,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not hit_object or not level:
 		return
-	progress_ratio = remap(
-		hit_object.get_ratio(level.timeline.get_current_time()),
-		0.0, lane.hit_ratio, 0.0, 1.0
-	)
-	#progress_ratio += speed * delta
+	progress_ratio = hit_object.get_ratio()
 
 
 func _physics_process(delta: float) -> void:
