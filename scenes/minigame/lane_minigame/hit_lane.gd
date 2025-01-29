@@ -7,7 +7,7 @@ const HIT_RATIO_VISUALIZER: PackedScene = (
 	preload("res://scenes/minigame/lane_minigame/hit_ratio_visualizer.tscn")
 )
 
-@export_range(0.0, 1.0, 0.01, "or_greater") var hit_ratio: float = 0.7
+@export_range(0.0, 1.0, 0.001, "or_greater") var hit_ratio: float = 0.7
 
 var _hit_ratio_visualizer: PathFollow2D = null
 
