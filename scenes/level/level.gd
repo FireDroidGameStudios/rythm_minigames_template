@@ -53,3 +53,24 @@ func _change_to_minigame(index: int) -> void:
 	for minigame: Minigame in minigames.get_children():
 		minigame.disable()
 	minigames.get_child(index).enable()
+
+
+func _update_timeline_hit_objects() -> void:
+	var index: int = 0
+	var hit_objects: Array[HitObject] = []
+	hit_objects.resize(_hit_objects_infos.size())
+	for info: HitObjectInfo in _hit_objects_infos:
+		#var hit_object: LaneHitObject = LaneHitObject.new()
+		print("Attempting to load \"" + info.scene_path + "\"")
+		var loaded_object = load(info.scene_path)
+		if loaded_object == null:
+			FDCore.warning("Could not load scene \"" + info.scene_path + "\"")
+			continue
+		var hit_object = (loaded_object as PackedScene).instantiate()
+		hit_object.hit_time = info.hit_time
+		hit_object.speed = info.speed
+		hit_object.lane_index = info.lane_index
+		hit_objects[index] = hit_object
+		index += 1
+	print(hit_objects)
+	timeline.set_hit_objects(hit_objects)
