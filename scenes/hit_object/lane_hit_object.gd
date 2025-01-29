@@ -8,3 +8,4 @@ extends HitObject
 func _init(hit_time: float = 0.0, speed: float = 0.5, lane_index: int = 0) -> void:
 	self.hit_time = hit_time
 	self.speed = speed
+	self.lane_index = lane_index
