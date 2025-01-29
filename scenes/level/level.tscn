@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7kjmkwnf5um3"]
+
+[ext_resource type="Script" path="res://scenes/sync_core/timeline.gd" id="1_hxj1j"]
+[ext_resource type="Script" path="res://scenes/level/level.gd" id="1_luni7"]
+
+[node name="Level" type="Node"]
+script = ExtResource("1_luni7")
+
+[node name="Timeline" type="Node" parent="." node_paths=PackedStringArray("audio_player")]
+script = ExtResource("1_hxj1j")
+audio_player = NodePath("../AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Minigames" type="Node" parent="."]
