@@ -27,18 +27,6 @@ func _init(
 	self.perfect_click_tolerance = perfect_click_tolerance
 
 
-func _ready() -> void:
-	pass
-
-
-func _process(_delta: float) -> void:
-	pass
-
-
-func _physics_process(_delta: float) -> void:
-	pass
-
-
 func _to_string() -> String:
 	var string: String = (
 		"(HitTime:%.3f|Speed:%.3f|SpawnTime:%.3f|Radius:%.3f|Tolerance:%.3f)" % [
