@@ -15,6 +15,7 @@ var _current_minigame_index: int = 0
 
 
 func _ready() -> void:
+	start()
 	pass
 
 
@@ -27,7 +28,16 @@ func _physics_process(delta: float) -> void:
 
 
 func start() -> void:
-	pass
+	if minigames.get_child_count() == 0:
+		FDCore.warning("Level: Could not start level because it has no minigames.")
+		return
+	for minigame: Minigame in minigames.get_children():
+		minigame.level = self
+	await _update_timeline_hit_objects()
+	_current_minigame_index = 0
+	_change_to_minigame(_current_minigame_index)
+	audio_player.play()
+	timeline.start()
 
 
 func current_minigame() -> Minigame:
