@@ -9,6 +9,10 @@ signal reached_hit_time(hit_object: HitObject)
 ## the speed of the HitObject and takes the level timeline as the time reference.
 var hit_time: float = 0.0
 
+## Ratio equivalent to time (in seconds) that the HitObject reaches [member hit_time].
+## This must be a value between 0.0 and 1.0.
+var target_ratio: float = 1.0
+
 ## Speed of ratio increase, measured in ratio/seconds. This property also affects
 ## spawn time (see [method get_spawn_time]).
 var speed: float = 0.5
@@ -63,21 +67,27 @@ func has_spawned() -> bool:
 
 ## Return the current ratio of HitObject based on [param current_time] and
 ## [member hit_time].
-func get_ratio(current_time: float) -> float:
-	return remap(current_time, get_spawn_time(), hit_time, 0.0, 1.0)
+func get_ratio() -> float:
+	if not timeline:
+		return 0.0
+	return remap(
+		timeline.get_current_time(),
+		get_spawn_time(), hit_time,0.0, target_ratio
+	)
 
 
 ## Calculate and return the spawn time for this HitObject. The spawn time is
 ## the time moment (in seconds) that an HitObject can be spawned to reach the
 ## ratio [code]1.0[/code] at [member hit_time].
 func get_spawn_time() -> float:
+	return _get_spawn_time()
+
+
+func _get_spawn_time() -> float:
 	if is_zero_approx(speed):
 		return 0.0
-	var total_time: float = 1.0 / speed
-	var spawn_time: float = hit_time - (total_time / speed)
-	if spawn_time < 0.0:
-		return 0.0
-	return spawn_time
+	var spawn_time: float = hit_time - (target_ratio / speed)
+	return max(spawn_time, 0.0)
 
 
 func _handle_signal_notify() -> void:
