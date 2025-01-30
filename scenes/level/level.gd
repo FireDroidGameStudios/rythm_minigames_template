@@ -20,7 +20,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	pass
+	$LabelTime.text = "Time: " + str(timeline.get_current_time()) + "s"
 
 
 func _physics_process(delta: float) -> void:
