@@ -7,9 +7,12 @@ extends Node
 ## Sorted array of HitObjects. Sorting takes spawn_time as value to sort.
 var _hit_objects: Array[HitObject] = []
 
+@onready var level: Level = get_parent()
+
 
 func _ready() -> void:
-	pass
+	set_process(false)
+	set_physics_process(false)
 
 
 func _process(delta: float) -> void:
@@ -18,6 +21,11 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	pass
+
+
+func start() -> void:
+	set_process(true)
+	print("Starting timeline")
 
 
 func get_current_time() -> float:
@@ -62,7 +70,13 @@ func _handle_spawns() -> void:
 			return # Reached end of timeline time
 		elif not hit_object.has_spawned():
 			hit_object.spawn()
-			add_child(hit_object) # DEBUG
+			var current_minigame: Minigame = level.current_minigame()
+			if not current_minigame:
+				FDCore.warning(
+					"Timeline: Couldn't spawn HitObject because no minigame was set! "
+				)
+				return
+			current_minigame.spawn_hit_object(hit_object)
 
 
 func _insert_hit_object_sorted(hit_object: HitObject) -> void:
