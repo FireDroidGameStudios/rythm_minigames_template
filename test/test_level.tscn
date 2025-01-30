@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d2ca8mtbol5ag"]
+[gd_scene load_steps=26 format=3 uid="uid://d2ca8mtbol5ag"]
 
 [ext_resource type="PackedScene" uid="uid://c7kjmkwnf5um3" path="res://scenes/level/level.tscn" id="1_2m27j"]
 [ext_resource type="Script" path="res://scenes/level/resources/hit_object_info.gd" id="2_1i7lb"]
@@ -35,7 +35,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_5b6ft"]
 script = ExtResource("2_1i7lb")
 hit_time = 6.5
-speed = 0.8
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
@@ -44,7 +44,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_cfewr"]
 script = ExtResource("2_1i7lb")
 hit_time = 7.3
-speed = 0.8
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
@@ -53,7 +53,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_j5u5g"]
 script = ExtResource("2_1i7lb")
 hit_time = 8.2
-speed = 0.8
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
@@ -62,7 +62,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_lr28o"]
 script = ExtResource("2_1i7lb")
 hit_time = 9.0
-speed = 0.8
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
@@ -71,7 +71,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_jad16"]
 script = ExtResource("2_1i7lb")
 hit_time = 10.64
-speed = 0.8
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 1
@@ -80,7 +80,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_1ipg8"]
 script = ExtResource("2_1i7lb")
 hit_time = 11.46
-speed = 0.8
+speed = 0.6
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
@@ -89,7 +89,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_ul80i"]
 script = ExtResource("2_1i7lb")
 hit_time = 12.32
-speed = 1.0
+speed = 0.8
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 1
@@ -98,7 +98,7 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_nkiqy"]
 script = ExtResource("2_1i7lb")
 hit_time = 12.72
-speed = 1.0
+speed = 0.8
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 1
@@ -107,7 +107,70 @@ spawn_position = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_vpgg6"]
 script = ExtResource("2_1i7lb")
 hit_time = 13.11
-speed = 1.0
+speed = 0.4
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_h53oa"]
+script = ExtResource("2_1i7lb")
+hit_time = 13.91
+speed = 0.4
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_eot1i"]
+script = ExtResource("2_1i7lb")
+hit_time = 14.33
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_l8pc0"]
+script = ExtResource("2_1i7lb")
+hit_time = 14.76
+speed = 0.4
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_ot2s8"]
+script = ExtResource("2_1i7lb")
+hit_time = 15.18
+speed = 0.4
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_ew27n"]
+script = ExtResource("2_1i7lb")
+hit_time = 15.55
+speed = 0.4
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_tiwbk"]
+script = ExtResource("2_1i7lb")
+hit_time = 15.99
+speed = 0.4
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_ps4im"]
+script = ExtResource("2_1i7lb")
+hit_time = 16.39
+speed = 0.3
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 1
@@ -122,7 +185,7 @@ height = 648
 fill_to = Vector2(0, 1)
 
 [node name="TestLevel" instance=ExtResource("1_2m27j")]
-_hit_objects_infos = Array[ExtResource("2_1i7lb")]([SubResource("Resource_iv1j4"), SubResource("Resource_bfulo"), SubResource("Resource_yt3yv"), SubResource("Resource_5b6ft"), SubResource("Resource_cfewr"), SubResource("Resource_j5u5g"), SubResource("Resource_lr28o"), SubResource("Resource_jad16"), SubResource("Resource_1ipg8"), SubResource("Resource_ul80i"), SubResource("Resource_nkiqy"), SubResource("Resource_vpgg6")])
+_hit_objects_infos = Array[ExtResource("2_1i7lb")]([SubResource("Resource_iv1j4"), SubResource("Resource_bfulo"), SubResource("Resource_yt3yv"), SubResource("Resource_5b6ft"), SubResource("Resource_cfewr"), SubResource("Resource_j5u5g"), SubResource("Resource_lr28o"), SubResource("Resource_jad16"), SubResource("Resource_1ipg8"), SubResource("Resource_ul80i"), SubResource("Resource_nkiqy"), SubResource("Resource_vpgg6"), SubResource("Resource_h53oa"), SubResource("Resource_eot1i"), SubResource("Resource_l8pc0"), SubResource("Resource_ot2s8"), SubResource("Resource_ew27n"), SubResource("Resource_tiwbk"), SubResource("Resource_ps4im")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 texture = SubResource("GradientTexture2D_w2nuo")
