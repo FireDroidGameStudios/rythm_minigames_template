@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4xd7y06s28dg"]
+
+[ext_resource type="Script" path="res://scenes/minigame/lane_minigame/lane_hit_area.gd" id="1_xk0re"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnf4r"]
+resource_local_to_scene = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvydo"]
+resource_local_to_scene = true
+size = Vector2(10, 10)
+
+[node name="LaneHitArea" type="Node2D"]
+script = ExtResource("1_xk0re")
+_rectangle_shape_size = Vector2(20, 20)
+_perfect_hit_rectangle_shape_size = Vector2(10, 10)
+
+[node name="FullArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FullArea"]
+shape = SubResource("RectangleShape2D_pnf4r")
+
+[node name="PerfectHitArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerfectHitArea"]
+shape = SubResource("RectangleShape2D_cvydo")
+debug_color = Color(0.782052, 0.435604, 1.73271e-06, 0.42)
