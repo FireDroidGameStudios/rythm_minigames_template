@@ -3,6 +3,10 @@ class_name LaneHitArea
 extends Node2D
 
 
+signal hit_missed
+signal hit_succeeded(hit_info: Dictionary)
+
+
 enum AreaShape {
 	CIRCLE,
 	RECTANGLE,
@@ -11,6 +15,7 @@ enum AreaShape {
 @export var shape: AreaShape = AreaShape.RECTANGLE:
 	set = set_shape
 @export_range(0, 10, 1, "or_greater") var lane_index: int = 0
+@export var input_action: StringName = &""
 
 var _touching_objects: Array[LaneHitObject] = []
 
@@ -41,7 +46,8 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	pass
+	if not Engine.is_editor_hint():
+		_handle_input()
 
 
 func _property_can_revert(property: StringName) -> bool:
@@ -129,6 +135,66 @@ func set_perfect_hit_rectangle_shape_size(value: Vector2) -> void:
 		value.clamp(Vector2.ZERO, _rectangle_shape_size)
 	)
 	_update_perfect_hit_area_shape()
+
+
+func _handle_input() -> void:
+	if Input.is_action_just_pressed(input_action):
+		_on_hit_attempt()
+
+
+func _on_hit_attempt() -> void:
+	if _touching_objects.is_empty():
+		hit_missed.emit()
+		return
+	var hit_info: Dictionary = {} # Key = HitObject | Value = hit_ratio
+	for object: LaneHitObject in _touching_objects:
+		hit_info[object] = _calculate_hit_ratio(object)
+	hit_succeeded.emit(hit_info)
+
+
+func _calculate_hit_ratio(hit_object: LaneHitObject) -> float:
+	var distance: float = hit_object.global_position.distance_to(global_position)
+	if shape == AreaShape.CIRCLE:
+		return smoothstep(
+			_circle_shape_radius,
+			_perfect_hit_circle_shape_radius,
+			distance
+		)
+	elif shape == AreaShape.RECTANGLE:
+		var full_area_point: Vector2 = _get_closest_point_to_rectangle(
+			_rectangle_shape_size, hit_object
+		)
+		var perfect_hit_point: Vector2 = _get_closest_point_to_rectangle(
+			_perfect_hit_rectangle_shape_size, hit_object
+		)
+		var full_area_distance: float = global_position.distance_to(full_area_point)
+		var perfect_distance: float = global_position.distance_to(perfect_hit_point)
+		return remap(
+			clamp(distance, perfect_distance, full_area_distance),
+			global_position.distance_to(full_area_point),
+			global_position.distance_to(perfect_hit_point),
+			0.0, 1.0
+		)
+	return 0.0
+
+
+func _get_closest_point_to_rectangle(size: Vector2, target: Node2D) -> Vector2:
+	const SIDE_SEGMENTS_OFFSET: Array[Array] = [
+		[Vector2(-1, -1), Vector2(1, -1)],
+		[Vector2(1, -1), Vector2(1, 1)],
+		[Vector2(1, 1), Vector2(-1, 1)],
+		[Vector2(-1, 1), Vector2(-1, -1)],
+	]
+	for offset: PackedVector2Array in SIDE_SEGMENTS_OFFSET:
+		var intersection = Geometry2D.segment_intersects_segment(
+			global_position,
+			global_position + target.global_position.normalized() * (size.x + size.y),
+			global_position + (offset[0] * size / 2.0),
+			global_position + (offset[1] * size / 2.0)
+		)
+		if intersection:
+			return intersection
+	return target.global_position
 
 
 func _update_area_shapes(reset_shape: bool = false) -> void:
