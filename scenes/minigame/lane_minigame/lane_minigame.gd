@@ -5,6 +5,7 @@ extends Minigame
 var level: Level = null
 
 @onready var lanes: Node2D = get_node("Lanes")
+@onready var hit_areas: Node2D = get_node("HitAreas")
 
 
 func _ready() -> void:
