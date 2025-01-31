@@ -27,9 +27,8 @@ var _perfect_hit_rectangle_shape_size: Vector2 = Vector2(20.0, 20.0):
 @onready var full_area_collision_shape: CollisionShape2D = (
 	get_node("FullArea/CollisionShape2D")
 )
-@onready var perfect_hit_area: Area2D = get_node("PerfectHitArea")
-@onready var perfect_hit_area_collision_shape: CollisionShape2D = (
-	get_node("PerfectHitArea/CollisionShape2D")
+@onready var perfect_hit_area_visualizer: MeshInstance2D = (
+	get_node("PerfectHitAreaVisualizer")
 )
 
 
@@ -156,17 +155,18 @@ func _update_full_area_shape(reset_shape: bool = false) -> void:
 func _update_perfect_hit_area_shape(reset_shape: bool = false) -> void:
 	if not is_node_ready():
 		return
-	var area_shape: Shape2D = perfect_hit_area_collision_shape.get_shape()
+	var mesh: Mesh = perfect_hit_area_visualizer.get_mesh()
 	if shape == AreaShape.CIRCLE:
-		if not area_shape is CircleShape2D or reset_shape:
-			area_shape = CircleShape2D.new()
-		area_shape.radius = _perfect_hit_circle_shape_radius
+		if not mesh is SphereMesh or reset_shape:
+			mesh = SphereMesh.new()
+		mesh.radius = _perfect_hit_circle_shape_radius
+		mesh.height = 2 * _perfect_hit_circle_shape_radius
 	elif shape == AreaShape.RECTANGLE:
-		if not area_shape is RectangleShape2D or reset_shape:
-			area_shape = RectangleShape2D.new()
-		area_shape.size = _perfect_hit_rectangle_shape_size
-	area_shape.resource_local_to_scene = true
-	perfect_hit_area_collision_shape.set_shape(area_shape)
+		if not mesh is QuadMesh or reset_shape:
+			mesh = QuadMesh.new()
+		mesh.size = _perfect_hit_rectangle_shape_size
+	mesh.resource_local_to_scene = true
+	perfect_hit_area_visualizer.set_mesh(mesh)
 
 
 func _on_full_area_area_entered(area: Area2D) -> void:
