@@ -32,6 +32,11 @@ single_key_hit={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="hit_object"
+2d_physics/layer_2="hit_area"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
