@@ -12,6 +12,8 @@ enum AreaShape {
 	set = set_shape
 @export_range(0, 10, 1, "or_greater") var lane_index: int = 0
 
+var _touching_objects: Array[LaneHitObject] = []
+
 var _circle_shape_radius: float = 10.0:
 	set = set_circle_shape_radius
 var _rectangle_shape_size: Vector2 = Vector2(20.0, 20.0):
@@ -165,3 +167,15 @@ func _update_perfect_hit_area_shape(reset_shape: bool = false) -> void:
 		area_shape.size = _perfect_hit_rectangle_shape_size
 	area_shape.resource_local_to_scene = true
 	perfect_hit_area_collision_shape.set_shape(area_shape)
+
+
+func _on_full_area_area_entered(area: Area2D) -> void:
+	var object = area.get_parent()
+	if object is LaneHitObject and object.lane_index == lane_index:
+		_touching_objects.append(object)
+
+
+func _on_full_area_area_exited(area: Area2D) -> void:
+	var object = area.get_parent()
+	if object is LaneHitObject and object.lane_index == lane_index:
+		_touching_objects.erase(object)
