@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceospd5qxmosv"]
+[gd_scene load_steps=6 format=3 uid="uid://ceospd5qxmosv"]
 
 [ext_resource type="PackedScene" uid="uid://derhm4barxqjd" path="res://scenes/minigame/lane_minigame/lane_minigame.tscn" id="1_3t6qa"]
 [ext_resource type="Script" path="res://scenes/minigame/lane_minigame/hit_lane.gd" id="2_43pd5"]
-[ext_resource type="PackedScene" uid="uid://cxewl7q4l3lxr" path="res://test/test_lane_hit_object.tscn" id="3_lt2md"]
 [ext_resource type="PackedScene" uid="uid://c4xd7y06s28dg" path="res://scenes/minigame/lane_minigame/lane_hit_area.tscn" id="3_nh2tm"]
 
 [sub_resource type="Curve2D" id="Curve2D_2oge4"]
@@ -26,65 +25,6 @@ points = PackedVector2Array(960, 0, 960, 648)
 curve = SubResource("Curve2D_2oge4")
 script = ExtResource("2_43pd5")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Lanes/HitLane" index="0"]
-visible = false
-position = Vector2(898.972, 101.201)
-rotation = -0.0579059
-progress = 860.679
-rotates = false
-loop = false
-
-[node name="Fora" parent="Lanes/HitLane/PathFollow2D" index="0" instance=ExtResource("3_lt2md")]
-
-[node name="PathFollow2D2" type="PathFollow2D" parent="Lanes/HitLane" index="1"]
-visible = false
-position = Vector2(933.96, 99.5332)
-rotation = -0.0579059
-progress = 895.722
-rotates = false
-loop = false
-
-[node name="Pouco" parent="Lanes/HitLane/PathFollow2D2" index="0" instance=ExtResource("3_lt2md")]
-
-[node name="PathFollow2D3" type="PathFollow2D" parent="Lanes/HitLane" index="2"]
-visible = false
-position = Vector2(940.679, 99.5936)
-rotation = -0.0579059
-progress = 902.441
-rotates = false
-loop = false
-
-[node name="Medio" parent="Lanes/HitLane/PathFollow2D3" index="0" instance=ExtResource("3_lt2md")]
-
-[node name="PathFollow2D4" type="PathFollow2D" parent="Lanes/HitLane" index="3"]
-position = Vector2(949.241, 99.8275)
-rotation = -0.0579059
-progress = 911.005
-rotates = false
-loop = false
-
-[node name="Perto" parent="Lanes/HitLane/PathFollow2D4" index="0" instance=ExtResource("3_lt2md")]
-
-[node name="PathFollow2D5" type="PathFollow2D" parent="Lanes/HitLane" index="4"]
-visible = false
-position = Vector2(951.871, 99.9332)
-rotation = -0.0579059
-progress = 913.639
-rotates = false
-loop = false
-
-[node name="PoucoDentro" parent="Lanes/HitLane/PathFollow2D5" index="0" instance=ExtResource("3_lt2md")]
-
-[node name="PathFollow2D6" type="PathFollow2D" parent="Lanes/HitLane" index="5"]
-visible = false
-position = Vector2(959.766, 100.342)
-rotation = -0.0579059
-progress = 921.544
-rotates = false
-loop = false
-
-[node name="MuitoDentro" parent="Lanes/HitLane/PathFollow2D6" index="0" instance=ExtResource("3_lt2md")]
-
 [node name="HitLane2" type="Path2D" parent="Lanes" index="1"]
 curve = SubResource("Curve2D_lr5sr")
 script = ExtResource("2_43pd5")
@@ -92,6 +32,13 @@ hit_ratio = 0.697
 
 [node name="LaneHitArea" parent="HitAreas" index="0" instance=ExtResource("3_nh2tm")]
 position = Vector2(960, 100)
+input_action = &"single_key_hit"
+_rectangle_shape_size = Vector2(55, 50)
+_perfect_hit_rectangle_shape_size = Vector2(20, 40)
+
+[node name="LaneHitArea2" parent="HitAreas" index="1" instance=ExtResource("3_nh2tm")]
+position = Vector2(960, 308)
+lane_index = 1
 input_action = &"single_key_hit"
 _rectangle_shape_size = Vector2(55, 50)
 _perfect_hit_rectangle_shape_size = Vector2(20, 40)
