@@ -2,6 +2,11 @@ class_name Minigame
 extends Node2D
 
 
+signal failed_hit
+signal success_hit(ratios: Dictionary)
+signal missed_hit(hit_object: HitObject)
+
+
 var _is_enabled: bool = false
 
 
