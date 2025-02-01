@@ -25,7 +25,6 @@ func _physics_process(delta: float) -> void:
 
 func start() -> void:
 	set_process(true)
-	print("Starting timeline")
 
 
 func get_current_time() -> float:
@@ -48,6 +47,14 @@ func get_hit_objects() -> Array[HitObject]:
 
 func add_hit_object(hit_object: HitObject) -> void:
 	_hit_objects.append(hit_object)
+
+
+func remove_hit_object(hit_object: HitObject, is_missed: bool) -> void:
+	var found_index: int = _hit_objects.find(hit_object)
+	if found_index == -1:
+		return
+	var found_object: HitObject = _hit_objects.pop_at(found_index)
+	found_object.despawn(is_missed)
 
 
 func get_hit_object(index: int) -> HitObject:
@@ -81,9 +88,9 @@ func _handle_spawns() -> void:
 
 func _insert_hit_object_sorted(hit_object: HitObject) -> void:
 	hit_object.timeline = self
-	hit_object.reached_hit_time.connect(
-		func(object: HitObject): print(">> Hit: ", hit_object)
-	)
+	#hit_object.reached_hit_time.connect(
+		#func(object: HitObject): print(">> Hit: ", hit_object)
+	#)
 	var index = 0
 	var spawn_time: float = hit_object.get_spawn_time()
 	var aux_spawn_time: float = _hit_objects[index].get_spawn_time()
