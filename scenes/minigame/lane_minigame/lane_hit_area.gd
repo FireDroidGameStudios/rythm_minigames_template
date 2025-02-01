@@ -3,10 +3,6 @@ class_name LaneHitArea
 extends Node2D
 
 
-signal hit_missed
-signal hit_succeeded(hit_info: Dictionary)
-
-
 enum AreaShape {
 	CIRCLE,
 	RECTANGLE,
@@ -46,8 +42,7 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if not Engine.is_editor_hint():
-		_handle_input()
+	pass
 
 
 func _property_can_revert(property: StringName) -> bool:
@@ -100,6 +95,19 @@ func _get_property_list() -> Array[Dictionary]:
 	return property_list
 
 
+## Return a dictionary containing all [HitObject]s inside this area and their
+## ratio (with tolerance applied). Dictionary keys are references to the
+## [HitObject]s, and values are the ratio (between 0.0 and 1.0, according to
+## the distance to perfect_hit_area.[br][br]If the returned dictionary is empty,
+## no object is inside this area.
+func attempt_hit() -> Dictionary:
+	return _get_hit_attempt_info_dictionary()
+
+
+func has_hit_objects_in_area() -> bool:
+	return not _touching_objects.is_empty()
+
+
 func set_shape(new_shape: AreaShape) -> void:
 	shape = new_shape
 	notify_property_list_changed()
@@ -137,19 +145,13 @@ func set_perfect_hit_rectangle_shape_size(value: Vector2) -> void:
 	_update_perfect_hit_area_shape()
 
 
-func _handle_input() -> void:
-	if Input.is_action_just_pressed(input_action):
-		_on_hit_attempt()
-
-
-func _on_hit_attempt() -> void:
+func _get_hit_attempt_info_dictionary() -> Dictionary:
 	if _touching_objects.is_empty():
-		hit_missed.emit()
-		return
+		return {}
 	var hit_info: Dictionary = {} # Key = HitObject | Value = hit_ratio
 	for object: LaneHitObject in _touching_objects:
 		hit_info[object] = _calculate_hit_ratio(object)
-	hit_succeeded.emit(hit_info)
+	return hit_info
 
 
 func _calculate_hit_ratio(hit_object: LaneHitObject) -> float:
