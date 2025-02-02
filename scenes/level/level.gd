@@ -10,7 +10,7 @@ signal finished_minigames
 var _current_minigame_index: int = 0
 
 @onready var timeline: Timeline = get_node("Timeline")
-@onready var audio_player: AudioStreamPlayer = get_node("AudioStreamPlayer")
+@onready var music_player: AudioStreamPlayer = get_node("MusicPlayer")
 @onready var minigames: Node = get_node("Minigames")
 
 
@@ -39,7 +39,7 @@ func start() -> void:
 	await _update_timeline_hit_objects()
 	_current_minigame_index = 0
 	_change_to_minigame(_current_minigame_index)
-	audio_player.play()
+	music_player.play()
 	timeline.start()
 
 
