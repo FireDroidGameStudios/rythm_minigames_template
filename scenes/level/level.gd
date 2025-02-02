@@ -12,6 +12,7 @@ var _current_minigame_index: int = 0
 @onready var timeline: Timeline = get_node("Timeline")
 @onready var music_player: AudioStreamPlayer = get_node("MusicPlayer")
 @onready var minigames: Node = get_node("Minigames")
+@onready var sound_effects: Node = get_node("SoundEffects")
 
 
 func _ready() -> void:
@@ -64,6 +65,18 @@ func go_to_next_minigame() -> void:
 
 func remove_hit_object_from_timeline(hit_object: HitObject, is_missed: bool) -> void:
 	timeline.remove_hit_object(hit_object, is_missed)
+
+
+func play_sound_effect(sound_effect: AudioStream) -> void:
+	if not sound_effect:
+		return
+	var sound_player: AudioStreamPlayer = AudioStreamPlayer.new()
+	sound_player.stream = sound_effect
+	sound_effects.add_child(sound_player)
+	sound_player.play()
+	await sound_player.finished
+	sound_effects.remove_child(sound_player)
+	sound_player.queue_free()
 
 
 func _on_minigame_missed_hit() -> void:
