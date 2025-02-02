@@ -6,6 +6,7 @@ signal finished_minigames
 
 
 @export var _hit_objects_infos: Array[HitObjectInfo] = []
+@export var _transition_infos: Array[MinigameTransitionInfo] = []
 
 var _current_minigame_index: int = 0
 
@@ -38,6 +39,7 @@ func start() -> void:
 		minigame.success_hit.connect(_on_minigame_success_hit)
 		minigame.failed_hit.connect(_on_minigame_failed_hit)
 	await _update_timeline_hit_objects()
+	await _update_timeline_transitions()
 	_current_minigame_index = 0
 	_change_to_minigame(_current_minigame_index)
 	music_player.play()
@@ -118,3 +120,20 @@ func _update_timeline_hit_objects() -> void:
 		index += 1
 	print(hit_objects)
 	timeline.set_hit_objects(hit_objects)
+
+
+func _update_timeline_transitions() -> void:
+	var index: int = 0
+	var transitions: Array[MinigameTransition] = []
+	transitions.resize(_transition_infos.size())
+	for info: MinigameTransitionInfo in _transition_infos:
+		print("Attempting to load \"" + info.scene_path + "\"")
+		var loaded_object = load(info.scene_path)
+		if loaded_object == null:
+			FDCore.warning("Could not load scene \"" + info.scene_path + "\"")
+			continue
+		var transition: MinigameTransition = (loaded_object as PackedScene).instantiate()
+		transition.update_transition(info)
+		index += 1
+	print(transitions)
+	timeline.set_transitions(transitions)
