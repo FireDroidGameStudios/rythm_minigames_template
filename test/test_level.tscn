@@ -1,9 +1,12 @@
-[gd_scene load_steps=54 format=3 uid="uid://d2ca8mtbol5ag"]
+[gd_scene load_steps=57 format=3 uid="uid://d2ca8mtbol5ag"]
 
 [ext_resource type="PackedScene" uid="uid://c7kjmkwnf5um3" path="res://scenes/level/level.tscn" id="1_2m27j"]
 [ext_resource type="Script" path="res://scenes/level/resources/hit_object_info.gd" id="2_1i7lb"]
 [ext_resource type="PackedScene" uid="uid://ceospd5qxmosv" path="res://test/test_single_key_minigame.tscn" id="2_wmxoe"]
 [ext_resource type="AudioStream" uid="uid://n0ijv3b4gvbs" path="res://test/holiday_weasel.ogg" id="3_i8wa8"]
+[ext_resource type="Script" path="res://scenes/level/resources/minigame_transition_info.gd" id="3_ppyrm"]
+[ext_resource type="Script" path="res://scenes/minigame/lane_minigame/lane_minigame.gd" id="5_jwruu"]
+[ext_resource type="PackedScene" uid="uid://cmw70pxlc43iq" path="res://test/test_multi_key_minigame.tscn" id="6_1lc5a"]
 
 [sub_resource type="Resource" id="Resource_dubkq"]
 script = ExtResource("2_1i7lb")
@@ -438,6 +441,7 @@ fill_to = Vector2(0, 1)
 
 [node name="TestLevel" instance=ExtResource("1_2m27j")]
 _hit_objects_infos = Array[ExtResource("2_1i7lb")]([SubResource("Resource_dubkq"), SubResource("Resource_kh1iu"), SubResource("Resource_iaolx"), SubResource("Resource_3noxh"), SubResource("Resource_mst38"), SubResource("Resource_i6l6g"), SubResource("Resource_lp1k5"), SubResource("Resource_eq8ha"), SubResource("Resource_tauwe"), SubResource("Resource_llk2f"), SubResource("Resource_ia41a"), SubResource("Resource_a3eif"), SubResource("Resource_o8qdm"), SubResource("Resource_0p553"), SubResource("Resource_r7pgp"), SubResource("Resource_x77y4"), SubResource("Resource_ixasb"), SubResource("Resource_k64kr"), SubResource("Resource_81q3p"), SubResource("Resource_or4bv"), SubResource("Resource_7xod2"), SubResource("Resource_3w7ms"), SubResource("Resource_pwlkc"), SubResource("Resource_vx4cd"), SubResource("Resource_cdvkg"), SubResource("Resource_1n61h"), SubResource("Resource_v7p6k"), SubResource("Resource_gsi7a"), SubResource("Resource_pqwt7"), SubResource("Resource_cnvo0"), SubResource("Resource_agkof"), SubResource("Resource_msmme"), SubResource("Resource_0ojic"), SubResource("Resource_1wafx"), SubResource("Resource_y562r"), SubResource("Resource_h46xg"), SubResource("Resource_ifjjw"), SubResource("Resource_0pxdd"), SubResource("Resource_7fji0"), SubResource("Resource_5tkt7"), SubResource("Resource_165fn"), SubResource("Resource_runik"), SubResource("Resource_cmfab"), SubResource("Resource_txavk"), SubResource("Resource_r5u0n"), SubResource("Resource_caec1"), SubResource("Resource_jxa7j")])
+_transition_infos = Array[ExtResource("3_ppyrm")]([null, null])
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 texture = SubResource("GradientTexture2D_w2nuo")
@@ -446,9 +450,12 @@ centered = false
 [node name="MusicPlayer" parent="." index="2"]
 stream = ExtResource("3_i8wa8")
 
-[node name="TestLaneMinigame" parent="Minigames" index="0" instance=ExtResource("2_wmxoe")]
+[node name="TestSingleKeyMinigame" parent="Minigames" index="0" instance=ExtResource("2_wmxoe")]
+script = ExtResource("5_jwruu")
 
-[node name="LabelTime" type="Label" parent="." index="4"]
-offset_right = 40.0
+[node name="TestMultiKeyMinigame" parent="Minigames" index="1" instance=ExtResource("6_1lc5a")]
+
+[node name="LabelTime" type="Label" parent="." index="5"]
+offset_right = 78.0
 offset_bottom = 23.0
 text = "Time: 0.0s"
