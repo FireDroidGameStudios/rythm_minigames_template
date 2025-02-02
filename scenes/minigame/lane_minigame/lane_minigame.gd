@@ -3,20 +3,23 @@ extends Minigame
 
 
 var level: Level = null
+var _hit_areas_groups: Dictionary = {} # Grouped by input_action: {&"action": [area1, area2, ...]}
+var _total_time: float = 0.0
 
 @onready var lanes: Node2D = get_node("Lanes")
+@onready var hit_areas: Node2D = get_node("HitAreas")
 
 
 func _ready() -> void:
-	pass
+	_setup_hit_areas()
 
 
 func _process(_delta: float) -> void:
-	pass
+	_total_time += _delta
 
 
 func _physics_process(_delta: float) -> void:
-	pass
+	_handle_input()
 
 
 func _on_spawn_hit_object(hit_object: HitObject, args: Dictionary = {}) -> void:
@@ -36,3 +39,24 @@ func _on_spawn_hit_object(hit_object: HitObject, args: Dictionary = {}) -> void:
 	lane.add_child(lane_follower)
 	hit_object.target_ratio = lane.hit_ratio
 	lane_follower.add_child(hit_object)
+
+
+func _setup_hit_areas() -> void:
+	for hit_area: LaneHitArea in hit_areas.get_children():
+		if not _hit_areas_groups.has(hit_area.input_action):
+			_hit_areas_groups[hit_area.input_action] = []
+		_hit_areas_groups[hit_area.input_action].append(hit_area)
+
+
+func _handle_input() -> void:
+	for input_action: StringName in _hit_areas_groups.keys():
+		if not Input.is_action_just_pressed(input_action):
+			continue
+		var detected_hits: Dictionary = {}
+		for hit_area: LaneHitArea in _hit_areas_groups[input_action]:
+			detected_hits.merge(hit_area.attempt_hit())
+		if detected_hits.is_empty():
+			missed_hit.emit()
+			return
+		success_hit.emit(detected_hits)
+	#

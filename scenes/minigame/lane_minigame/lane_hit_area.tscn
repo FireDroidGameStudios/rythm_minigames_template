@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4xd7y06s28dg"]
+
+[ext_resource type="Script" path="res://scenes/minigame/lane_minigame/lane_hit_area.gd" id="1_xk0re"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md84s"]
+resource_local_to_scene = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_1t6ht"]
+resource_local_to_scene = true
+size = Vector2(10, 10)
+
+[sub_resource type="Gradient" id="Gradient_xxgxu"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.780392, 0.435294, 0, 0.419608)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fc32a"]
+gradient = SubResource("Gradient_xxgxu")
+
+[node name="LaneHitArea" type="Node2D"]
+script = ExtResource("1_xk0re")
+_rectangle_shape_size = Vector2(20, 20)
+_perfect_hit_rectangle_shape_size = Vector2(10, 10)
+
+[node name="FullArea" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FullArea"]
+shape = SubResource("RectangleShape2D_md84s")
+
+[node name="PerfectHitAreaVisualizer" type="MeshInstance2D" parent="."]
+mesh = SubResource("QuadMesh_1t6ht")
+texture = SubResource("GradientTexture1D_fc32a")
+
+[connection signal="area_entered" from="FullArea" to="." method="_on_full_area_area_entered"]
+[connection signal="area_exited" from="FullArea" to="." method="_on_full_area_area_exited"]

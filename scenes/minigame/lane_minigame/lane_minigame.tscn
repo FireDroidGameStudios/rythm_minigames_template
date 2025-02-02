@@ -6,3 +6,5 @@
 script = ExtResource("1_nam73")
 
 [node name="Lanes" type="Node2D" parent="."]
+
+[node name="HitAreas" type="Node2D" parent="."]

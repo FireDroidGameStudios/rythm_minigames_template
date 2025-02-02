@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ceospd5qxmosv"]
+[gd_scene load_steps=6 format=3 uid="uid://ceospd5qxmosv"]
 
 [ext_resource type="PackedScene" uid="uid://derhm4barxqjd" path="res://scenes/minigame/lane_minigame/lane_minigame.tscn" id="1_3t6qa"]
 [ext_resource type="Script" path="res://scenes/minigame/lane_minigame/hit_lane.gd" id="2_43pd5"]
+[ext_resource type="PackedScene" uid="uid://c4xd7y06s28dg" path="res://scenes/minigame/lane_minigame/lane_hit_area.tscn" id="3_nh2tm"]
 
 [sub_resource type="Curve2D" id="Curve2D_2oge4"]
 _data = {
@@ -28,3 +29,16 @@ script = ExtResource("2_43pd5")
 curve = SubResource("Curve2D_lr5sr")
 script = ExtResource("2_43pd5")
 hit_ratio = 0.697
+
+[node name="LaneHitArea" parent="HitAreas" index="0" instance=ExtResource("3_nh2tm")]
+position = Vector2(960, 100)
+input_action = &"single_key_hit"
+_rectangle_shape_size = Vector2(55, 50)
+_perfect_hit_rectangle_shape_size = Vector2(20, 40)
+
+[node name="LaneHitArea2" parent="HitAreas" index="1" instance=ExtResource("3_nh2tm")]
+position = Vector2(960, 308)
+lane_index = 1
+input_action = &"single_key_hit"
+_rectangle_shape_size = Vector2(55, 50)
+_perfect_hit_rectangle_shape_size = Vector2(20, 40)

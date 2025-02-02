@@ -53,6 +53,16 @@ func _to_string() -> String:
 	return string
 
 
+## Despawn the object and free it. It is possible to customize despawn behaviour
+## by overriding [method _on_despawn]. Parameter [param is_missed] allows to
+## specify the reason of despawn (by a hit, when [param is_missed] is
+## [code]false[/code], or when the player miss a hit, when [param is_missed]
+## is [code]true[/code]).
+func despawn(is_missed: bool) -> void:
+	await _on_despawn(is_missed)
+	queue_free()
+
+
 ## Sets the spawned flag. This is used by timeline to keep control of wich
 ## HitObjects have already spawned.
 func spawn() -> void:
@@ -81,6 +91,17 @@ func get_ratio() -> float:
 ## ratio [code]1.0[/code] at [member hit_time].
 func get_spawn_time() -> float:
 	return _get_spawn_time()
+
+
+## [b]Overridable method.[/b][br][br]This method is called by [method despawn]
+## and defines the behaviour of the HitObject during despawn, such as changing
+## animation, emitting sound or any other custom action.[br][br]Parameter
+## [param is_missed] allows to customize behaviour when the object is despawned
+## by a hit (when [param is_missed] is [code]false[/code]) or when the player
+## miss a hit (when [param is_missed] is [code]true[/code]).[br][br]Calling
+## [method queue_free] inside this method may cause errors.
+func _on_despawn(is_missed: bool) -> void:
+	pass
 
 
 func _get_spawn_time() -> float:

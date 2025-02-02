@@ -33,6 +33,9 @@ func start() -> void:
 		return
 	for minigame: Minigame in minigames.get_children():
 		minigame.level = self
+		minigame.missed_hit.connect(_on_minigame_missed_hit)
+		minigame.success_hit.connect(_on_minigame_success_hit)
+		minigame.failed_hit.connect(_on_minigame_failed_hit)
 	await _update_timeline_hit_objects()
 	_current_minigame_index = 0
 	_change_to_minigame(_current_minigame_index)
@@ -59,6 +62,25 @@ func go_to_next_minigame() -> void:
 	_current_minigame_index += 1
 
 
+func remove_hit_object_from_timeline(hit_object: HitObject, is_missed: bool) -> void:
+	timeline.remove_hit_object(hit_object, is_missed)
+
+
+func _on_minigame_missed_hit() -> void:
+	print("Missed hit!")
+
+
+func _on_minigame_success_hit(ratios: Dictionary) -> void:
+	print("Success hit! Ratios: ", ratios)
+	for hit_object: HitObject in ratios.keys():
+		# <-- Here must calculate score or storage ratio to later calculation
+		remove_hit_object_from_timeline(hit_object, false)
+
+
+func _on_minigame_failed_hit() -> void:
+	print("Failed hit!")
+
+
 func _change_to_minigame(index: int) -> void:
 	for minigame: Minigame in minigames.get_children():
 		minigame.disable()
@@ -70,7 +92,6 @@ func _update_timeline_hit_objects() -> void:
 	var hit_objects: Array[HitObject] = []
 	hit_objects.resize(_hit_objects_infos.size())
 	for info: HitObjectInfo in _hit_objects_infos:
-		#var hit_object: LaneHitObject = LaneHitObject.new()
 		print("Attempting to load \"" + info.scene_path + "\"")
 		var loaded_object = load(info.scene_path)
 		if loaded_object == null:
