@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ceospd5qxmosv"]
 
-[ext_resource type="PackedScene" uid="uid://derhm4barxqjd" path="res://scenes/minigame/lane_minigame/lane_minigame.tscn" id="1_3t6qa"]
+[ext_resource type="PackedScene" uid="uid://c3lo4i2kyvar6" path="res://scenes/minigame/types/single_key_minigame.tscn" id="1_3t6qa"]
 [ext_resource type="Script" path="res://scenes/minigame/lane_minigame/hit_lane.gd" id="2_43pd5"]
 [ext_resource type="PackedScene" uid="uid://c4xd7y06s28dg" path="res://scenes/minigame/lane_minigame/lane_hit_area.tscn" id="3_nh2tm"]
 
@@ -16,7 +16,7 @@ _data = {
 }
 point_count = 5
 
-[node name="TestLaneMinigame" instance=ExtResource("1_3t6qa")]
+[node name="TestSingleKeyMinigame" instance=ExtResource("1_3t6qa")]
 
 [node name="Line2D" type="Line2D" parent="." index="0"]
 points = PackedVector2Array(960, 0, 960, 648)
