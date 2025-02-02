@@ -8,8 +8,10 @@ script = ExtResource("1_luni7")
 
 [node name="Timeline" type="Node" parent="." node_paths=PackedStringArray("audio_player")]
 script = ExtResource("1_hxj1j")
-audio_player = NodePath("../AudioStreamPlayer")
+audio_player = NodePath("../MusicPlayer")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="Minigames" type="Node" parent="."]
+
+[node name="SoundEffects" type="Node" parent="."]
