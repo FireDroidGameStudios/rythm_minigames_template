@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://chf8mnv2ks1gw"]
+
+[ext_resource type="PackedScene" uid="uid://derhm4barxqjd" path="res://scenes/minigame/lane_minigame/lane_minigame.tscn" id="1_8mo86"]
+[ext_resource type="Script" path="res://scenes/minigame/types/multi_key_minigame.gd" id="2_415oq"]
+
+[node name="MultiKeyMinigame" instance=ExtResource("1_8mo86")]
+script = ExtResource("2_415oq")
