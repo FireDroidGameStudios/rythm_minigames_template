@@ -17,7 +17,6 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	_handle_transitions()
 	_handle_spawns()
 
 
@@ -26,6 +25,7 @@ func _physics_process(delta: float) -> void:
 
 
 func start() -> void:
+	_handle_transitions()
 	set_process(true)
 
 
@@ -54,7 +54,9 @@ func set_transitions(transitions: Array[MinigameTransition]) -> void:
 	)
 	for transition: MinigameTransition in _transitions:
 		transition.timeline = self
-		transition.reached_start_time.connect(level.go_to_next_minigame)
+		if is_zero_approx(transition.start_time):
+			continue
+		transition.reached_start_time.connect(level.transition_to_next_minigame)
 
 
 func get_hit_objects() -> Array[HitObject]:
@@ -92,8 +94,6 @@ func get_hit_object(index: int) -> HitObject:
 
 
 func get_transition(index: int) -> MinigameTransition:
-	if index >= _hit_objects.size() or index <= -_hit_objects.size():
-		return null
 	return _transitions[index]
 
 
@@ -127,12 +127,13 @@ func _insert_hit_object_sorted(hit_object: HitObject) -> void:
 
 
 func _handle_transitions() -> void:
-	pass
+	for transition: MinigameTransition in _transitions:
+		level.transition_objects.add_child(transition)
 
 
 func _insert_transition_sorted(transition: MinigameTransition) -> void:
 	transition.timeline = self
-	transition.reached_start_time.connect(level.go_to_next_minigame)
+	transition.reached_start_time.connect(level.transition_to_next_minigame)
 	var index = 0
 	var start_time: float = transition.start_time
 	var aux_start_time: float = _transitions[index].start_time
