@@ -44,16 +44,8 @@ func disable() -> void:
 	set_visible(false)
 
 
-func get_transition() -> Transition:
-	return _get_transition()
-
-
 func get_type() -> Type:
 	return _get_type()
-
-
-func _get_transition() -> Transition:
-	return DiamondsTransition.new()
 
 
 func _on_spawn_hit_object(hit_object: HitObject) -> void:
