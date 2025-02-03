@@ -2,7 +2,7 @@ class_name MinigameTransition
 extends Node
 
 
-signal reached_start_time(transition: MinigameTransition)
+signal reached_start_time
 
 
 var transition: Transition = null
@@ -27,10 +27,10 @@ func _physics_process(delta: float) -> void:
 func update_transition(info: MinigameTransitionInfo) -> void:
 	start_time = info.start_time
 	type_screen_duration = info.type_screen_duration
-	var transition_scene = load(info.scene_path)
-	if transition_scene == null:
+	var loaded_resource = load(info.scene_path)
+	if loaded_resource == null:
 		return
-	transition = (transition_scene as PackedScene).instantiate()
+	transition = loaded_resource.new()
 	transition.duration_in = info.duration_in
 	transition.ease_type_in = info.ease_type_in
 	transition.trans_type_in = info.trans_type_in
@@ -48,4 +48,4 @@ func _handle_signal_notify() -> void:
 		return
 	if timeline.get_current_time() >= start_time:
 		_has_notified_start = true
-		reached_start_time.emit(self)
+		reached_start_time.emit()
