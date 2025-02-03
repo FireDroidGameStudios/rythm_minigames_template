@@ -15,3 +15,7 @@ audio_player = NodePath("../MusicPlayer")
 [node name="Minigames" type="Node" parent="."]
 
 [node name="SoundEffects" type="Node" parent="."]
+
+[node name="TypeSceneRoot" type="Node" parent="."]
+
+[node name="TransitionObjects" type="Node" parent="."]
