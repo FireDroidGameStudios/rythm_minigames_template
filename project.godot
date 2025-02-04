@@ -24,6 +24,11 @@ FDLoad="*res://addons/fire_droid_core/scenes/fd_load.gd"
 
 enabled=PackedStringArray("res://addons/fire_droid_core/plugin.cfg")
 
+[fd_core]
+
+intro_paths=[]
+initial_scene="res://test/test_level.tscn"
+
 [input]
 
 single_key_hit={
