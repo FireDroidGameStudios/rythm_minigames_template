@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmw70pxlc43iq"]
+
+[ext_resource type="PackedScene" uid="uid://chf8mnv2ks1gw" path="res://scenes/minigame/types/multi_key_minigame.tscn" id="1_0nu3w"]
+[ext_resource type="Script" path="res://scenes/minigame/lane_minigame/hit_lane.gd" id="2_06ox4"]
+[ext_resource type="PackedScene" uid="uid://c4xd7y06s28dg" path="res://scenes/minigame/lane_minigame/lane_hit_area.tscn" id="3_gkqia"]
+
+[sub_resource type="Curve2D" id="Curve2D_at6pf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 320, 448, 65.0356, 65.0356, -65.0356, -65.0356, 320, 256, 0, 0, 0, 0, 384, 64)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_tq3pk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 448, 448, -66.6708, 65.0834, 66.6708, -65.0834, 448, 256, 0, 0, 0, 0, 448, 64)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_vflq2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 536, 448, 65.0356, 65.0356, -65.0356, -65.0356, 576, 256, 0, 0, 0, 0, 608, 64)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_hiod1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 704, 448, -59.5558, 64.0917, 59.5558, -64.0917, 680, 264, 0, 0, 0, 0, 664, 64)
+}
+point_count = 3
+
+[node name="TestMultiKeyMinigame" instance=ExtResource("1_0nu3w")]
+
+[node name="Line2D" type="Line2D" parent="." index="0"]
+points = PackedVector2Array(192, 128, 960, 128)
+
+[node name="HitLane" type="Path2D" parent="Lanes" index="0"]
+curve = SubResource("Curve2D_at6pf")
+script = ExtResource("2_06ox4")
+hit_ratio = 0.805
+
+[node name="HitLane2" type="Path2D" parent="Lanes" index="1"]
+curve = SubResource("Curve2D_tq3pk")
+script = ExtResource("2_06ox4")
+hit_ratio = 0.832
+
+[node name="HitLane3" type="Path2D" parent="Lanes" index="2"]
+curve = SubResource("Curve2D_vflq2")
+script = ExtResource("2_06ox4")
+hit_ratio = 0.825
+
+[node name="HitLane4" type="Path2D" parent="Lanes" index="3"]
+curve = SubResource("Curve2D_hiod1")
+script = ExtResource("2_06ox4")
+hit_ratio = 0.83
+
+[node name="LaneHitArea" parent="HitAreas" index="0" instance=ExtResource("3_gkqia")]
+position = Vector2(332, 128)
+input_action = &"multi_key_hit_1"
+_rectangle_shape_size = Vector2(50, 40)
+_perfect_hit_rectangle_shape_size = Vector2(25, 25)
+
+[node name="LaneHitArea2" parent="HitAreas" index="1" instance=ExtResource("3_gkqia")]
+position = Vector2(471, 128)
+lane_index = 1
+input_action = &"multi_key_hit_2"
+_rectangle_shape_size = Vector2(50, 40)
+_perfect_hit_rectangle_shape_size = Vector2(25, 25)
+
+[node name="LaneHitArea3" parent="HitAreas" index="2" instance=ExtResource("3_gkqia")]
+position = Vector2(571, 128)
+lane_index = 2
+input_action = &"multi_key_hit_3"
+_rectangle_shape_size = Vector2(50, 40)
+_perfect_hit_rectangle_shape_size = Vector2(25, 25)
+
+[node name="LaneHitArea4" parent="HitAreas" index="3" instance=ExtResource("3_gkqia")]
+position = Vector2(691, 128)
+lane_index = 3
+input_action = &"multi_key_hit_4"
+_rectangle_shape_size = Vector2(50, 40)
+_perfect_hit_rectangle_shape_size = Vector2(25, 25)

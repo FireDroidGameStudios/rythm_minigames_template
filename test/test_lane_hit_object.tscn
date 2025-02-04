@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxewl7q4l3lxr"]
 
-[ext_resource type="Script" path="res://scenes/hit_object/lane_hit_object.gd" id="1_4k6i5"]
+[ext_resource type="Script" path="res://test/test_lane_hit_object.gd" id="1_fkpet"]
 
 [sub_resource type="Gradient" id="Gradient_4oy1b"]
 offsets = PackedFloat32Array(0.548611, 0.625, 0.701389)
@@ -18,7 +18,7 @@ fill_to = Vector2(0, 0)
 radius = 48.0
 
 [node name="TestLaneHitObject" type="Node2D"]
-script = ExtResource("1_4k6i5")
+script = ExtResource("1_fkpet")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_ybabj")

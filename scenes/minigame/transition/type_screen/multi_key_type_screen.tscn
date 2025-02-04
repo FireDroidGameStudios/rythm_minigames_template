@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk27ic37s1y33"]
+
+[ext_resource type="Script" path="res://scenes/minigame/transition/type_screen/default_type_screen.gd" id="1_53tqa"]
+[ext_resource type="Texture2D" uid="uid://cfxgf36irgh3r" path="res://assets/images/sprites/minigame_transitions/multi_key_mode_transition_background.png" id="2_grejs"]
+[ext_resource type="Texture2D" uid="uid://bwrrki7eonva8" path="res://assets/images/sprites/minigame_transitions/multi_key_mode_icon.png" id="3_1k36y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6mbpx"]
+texture = ExtResource("2_grejs")
+
+[node name="MultiKeyTypeScreen" type="CanvasLayer"]
+script = ExtResource("1_53tqa")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6mbpx")
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="PanelContainer/CenterContainer/Control"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+pivot_offset = Vector2(250, 250)
+texture = ExtResource("3_1k36y")
+expand_mode = 1
+stretch_mode = 5

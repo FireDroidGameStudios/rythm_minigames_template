@@ -1,180 +1,460 @@
-[gd_scene load_steps=26 format=3 uid="uid://d2ca8mtbol5ag"]
+[gd_scene load_steps=58 format=3 uid="uid://d2ca8mtbol5ag"]
 
 [ext_resource type="PackedScene" uid="uid://c7kjmkwnf5um3" path="res://scenes/level/level.tscn" id="1_2m27j"]
 [ext_resource type="Script" path="res://scenes/level/resources/hit_object_info.gd" id="2_1i7lb"]
-[ext_resource type="PackedScene" uid="uid://ceospd5qxmosv" path="res://test/test_lane_minigame.tscn" id="2_wmxoe"]
+[ext_resource type="PackedScene" uid="uid://ceospd5qxmosv" path="res://test/test_single_key_minigame.tscn" id="2_wmxoe"]
 [ext_resource type="AudioStream" uid="uid://n0ijv3b4gvbs" path="res://test/holiday_weasel.ogg" id="3_i8wa8"]
+[ext_resource type="Script" path="res://scenes/level/resources/minigame_transition_info.gd" id="3_ppyrm"]
+[ext_resource type="PackedScene" uid="uid://cmw70pxlc43iq" path="res://test/test_multi_key_minigame.tscn" id="6_1lc5a"]
 
-[sub_resource type="Resource" id="Resource_iv1j4"]
+[sub_resource type="Resource" id="Resource_dubkq"]
 script = ExtResource("2_1i7lb")
-hit_time = 4.07
+hit_time = 4.44
 speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
 spawn_position = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_bfulo"]
+[sub_resource type="Resource" id="Resource_kh1iu"]
 script = ExtResource("2_1i7lb")
-hit_time = 4.9
+hit_time = 5.28
 speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
 spawn_position = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_yt3yv"]
+[sub_resource type="Resource" id="Resource_iaolx"]
 script = ExtResource("2_1i7lb")
-hit_time = 5.7
-speed = 0.5
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 0
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_5b6ft"]
-script = ExtResource("2_1i7lb")
-hit_time = 6.5
-speed = 0.5
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 0
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_cfewr"]
-script = ExtResource("2_1i7lb")
-hit_time = 7.3
-speed = 0.5
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 0
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_j5u5g"]
-script = ExtResource("2_1i7lb")
-hit_time = 8.2
-speed = 0.5
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 0
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_lr28o"]
-script = ExtResource("2_1i7lb")
-hit_time = 9.0
-speed = 0.5
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 0
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_jad16"]
-script = ExtResource("2_1i7lb")
-hit_time = 10.64
+hit_time = 6.11
 speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 1
 spawn_position = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_1ipg8"]
+[sub_resource type="Resource" id="Resource_3noxh"]
 script = ExtResource("2_1i7lb")
-hit_time = 11.46
-speed = 0.6
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 0
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_ul80i"]
-script = ExtResource("2_1i7lb")
-hit_time = 12.32
-speed = 0.8
+hit_time = 6.94
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 1
 spawn_position = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_nkiqy"]
+[sub_resource type="Resource" id="Resource_mst38"]
 script = ExtResource("2_1i7lb")
-hit_time = 12.72
-speed = 0.8
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 1
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_vpgg6"]
-script = ExtResource("2_1i7lb")
-hit_time = 13.11
-speed = 0.4
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 1
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_h53oa"]
-script = ExtResource("2_1i7lb")
-hit_time = 13.91
-speed = 0.4
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 0
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_eot1i"]
-script = ExtResource("2_1i7lb")
-hit_time = 14.33
+hit_time = 7.76
 speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
 spawn_position = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_l8pc0"]
+[sub_resource type="Resource" id="Resource_i6l6g"]
 script = ExtResource("2_1i7lb")
-hit_time = 14.76
-speed = 0.4
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 1
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_ot2s8"]
-script = ExtResource("2_1i7lb")
-hit_time = 15.18
-speed = 0.4
-type = 0
-scene_path = "res://test/test_lane_hit_object.tscn"
-lane_index = 1
-spawn_position = Vector2(0, 0)
-
-[sub_resource type="Resource" id="Resource_ew27n"]
-script = ExtResource("2_1i7lb")
-hit_time = 15.55
-speed = 0.4
+hit_time = 8.58
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
 spawn_position = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_tiwbk"]
+[sub_resource type="Resource" id="Resource_lp1k5"]
 script = ExtResource("2_1i7lb")
-hit_time = 15.99
-speed = 0.4
+hit_time = 10.62
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 0
 spawn_position = Vector2(0, 0)
 
-[sub_resource type="Resource" id="Resource_ps4im"]
+[sub_resource type="Resource" id="Resource_eq8ha"]
 script = ExtResource("2_1i7lb")
-hit_time = 16.39
-speed = 0.3
+hit_time = 11.43
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_tauwe"]
+script = ExtResource("2_1i7lb")
+hit_time = 12.25
+speed = 0.5
 type = 0
 scene_path = "res://test/test_lane_hit_object.tscn"
 lane_index = 1
 spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_llk2f"]
+script = ExtResource("2_1i7lb")
+hit_time = 12.65
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_ia41a"]
+script = ExtResource("2_1i7lb")
+hit_time = 13.04
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_a3eif"]
+script = ExtResource("2_1i7lb")
+hit_time = 13.9
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_o8qdm"]
+script = ExtResource("2_1i7lb")
+hit_time = 14.32
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_0p553"]
+script = ExtResource("2_1i7lb")
+hit_time = 14.74
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_r7pgp"]
+script = ExtResource("2_1i7lb")
+hit_time = 15.57
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_x77y4"]
+script = ExtResource("2_1i7lb")
+hit_time = 15.97
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_ixasb"]
+script = ExtResource("2_1i7lb")
+hit_time = 16.37
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_k64kr"]
+script = ExtResource("2_1i7lb")
+hit_time = 17.19
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_81q3p"]
+script = ExtResource("2_1i7lb")
+hit_time = 18.0
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_or4bv"]
+script = ExtResource("2_1i7lb")
+hit_time = 18.87
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_7xod2"]
+script = ExtResource("2_1i7lb")
+hit_time = 19.26
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_3w7ms"]
+script = ExtResource("2_1i7lb")
+hit_time = 19.66
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_pwlkc"]
+script = ExtResource("2_1i7lb")
+hit_time = 20.5
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_vx4cd"]
+script = ExtResource("2_1i7lb")
+hit_time = 20.9
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_cdvkg"]
+script = ExtResource("2_1i7lb")
+hit_time = 21.32
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_1n61h"]
+script = ExtResource("2_1i7lb")
+hit_time = 22.13
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_v7p6k"]
+script = ExtResource("2_1i7lb")
+hit_time = 22.96
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_gsi7a"]
+script = ExtResource("2_1i7lb")
+hit_time = 23.79
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_pqwt7"]
+script = ExtResource("2_1i7lb")
+hit_time = 24.59
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_cnvo0"]
+script = ExtResource("2_1i7lb")
+hit_time = 25.45
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_agkof"]
+script = ExtResource("2_1i7lb")
+hit_time = 25.83
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_msmme"]
+script = ExtResource("2_1i7lb")
+hit_time = 26.21
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_0ojic"]
+script = ExtResource("2_1i7lb")
+hit_time = 27.08
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_1wafx"]
+script = ExtResource("2_1i7lb")
+hit_time = 27.47
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_y562r"]
+script = ExtResource("2_1i7lb")
+hit_time = 27.9
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_h46xg"]
+script = ExtResource("2_1i7lb")
+hit_time = 28.7
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_ifjjw"]
+script = ExtResource("2_1i7lb")
+hit_time = 29.14
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_0pxdd"]
+script = ExtResource("2_1i7lb")
+hit_time = 29.54
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_7fji0"]
+script = ExtResource("2_1i7lb")
+hit_time = 30.36
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_5tkt7"]
+script = ExtResource("2_1i7lb")
+hit_time = 31.17
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_165fn"]
+script = ExtResource("2_1i7lb")
+hit_time = 32.02
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_runik"]
+script = ExtResource("2_1i7lb")
+hit_time = 32.82
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_cmfab"]
+script = ExtResource("2_1i7lb")
+hit_time = 33.65
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_txavk"]
+script = ExtResource("2_1i7lb")
+hit_time = 34.45
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_r5u0n"]
+script = ExtResource("2_1i7lb")
+hit_time = 35.25
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_caec1"]
+script = ExtResource("2_1i7lb")
+hit_time = 35.69
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_jxa7j"]
+script = ExtResource("2_1i7lb")
+hit_time = 36.12
+speed = 0.5
+type = 0
+scene_path = "res://test/test_lane_hit_object.tscn"
+lane_index = 1
+spawn_position = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_oslxu"]
+script = ExtResource("3_ppyrm")
+start_time = 0.0
+type_screen_duration = 2.0
+scene_path = "res://addons/fire_droid_core/scenes/transitions/diamonds_transition.gd"
+additional_args = {}
+trans_type_in = 7
+ease_type_in = 1
+duration_in = 0.5
+trans_type_out = 7
+ease_type_out = 1
+duration_out = 0.5
+
+[sub_resource type="Resource" id="Resource_wknyg"]
+script = ExtResource("3_ppyrm")
+start_time = 36.9
+type_screen_duration = 3.4
+scene_path = "res://addons/fire_droid_core/scenes/transitions/diamonds_transition.gd"
+additional_args = {}
+trans_type_in = 7
+ease_type_in = 1
+duration_in = 0.8
+trans_type_out = 7
+ease_type_out = 1
+duration_out = 0.8
 
 [sub_resource type="Gradient" id="Gradient_36uwa"]
 
@@ -185,18 +465,21 @@ height = 648
 fill_to = Vector2(0, 1)
 
 [node name="TestLevel" instance=ExtResource("1_2m27j")]
-_hit_objects_infos = Array[ExtResource("2_1i7lb")]([SubResource("Resource_iv1j4"), SubResource("Resource_bfulo"), SubResource("Resource_yt3yv"), SubResource("Resource_5b6ft"), SubResource("Resource_cfewr"), SubResource("Resource_j5u5g"), SubResource("Resource_lr28o"), SubResource("Resource_jad16"), SubResource("Resource_1ipg8"), SubResource("Resource_ul80i"), SubResource("Resource_nkiqy"), SubResource("Resource_vpgg6"), SubResource("Resource_h53oa"), SubResource("Resource_eot1i"), SubResource("Resource_l8pc0"), SubResource("Resource_ot2s8"), SubResource("Resource_ew27n"), SubResource("Resource_tiwbk"), SubResource("Resource_ps4im")])
+_hit_objects_infos = Array[ExtResource("2_1i7lb")]([SubResource("Resource_dubkq"), SubResource("Resource_kh1iu"), SubResource("Resource_iaolx"), SubResource("Resource_3noxh"), SubResource("Resource_mst38"), SubResource("Resource_i6l6g"), SubResource("Resource_lp1k5"), SubResource("Resource_eq8ha"), SubResource("Resource_tauwe"), SubResource("Resource_llk2f"), SubResource("Resource_ia41a"), SubResource("Resource_a3eif"), SubResource("Resource_o8qdm"), SubResource("Resource_0p553"), SubResource("Resource_r7pgp"), SubResource("Resource_x77y4"), SubResource("Resource_ixasb"), SubResource("Resource_k64kr"), SubResource("Resource_81q3p"), SubResource("Resource_or4bv"), SubResource("Resource_7xod2"), SubResource("Resource_3w7ms"), SubResource("Resource_pwlkc"), SubResource("Resource_vx4cd"), SubResource("Resource_cdvkg"), SubResource("Resource_1n61h"), SubResource("Resource_v7p6k"), SubResource("Resource_gsi7a"), SubResource("Resource_pqwt7"), SubResource("Resource_cnvo0"), SubResource("Resource_agkof"), SubResource("Resource_msmme"), SubResource("Resource_0ojic"), SubResource("Resource_1wafx"), SubResource("Resource_y562r"), SubResource("Resource_h46xg"), SubResource("Resource_ifjjw"), SubResource("Resource_0pxdd"), SubResource("Resource_7fji0"), SubResource("Resource_5tkt7"), SubResource("Resource_165fn"), SubResource("Resource_runik"), SubResource("Resource_cmfab"), SubResource("Resource_txavk"), SubResource("Resource_r5u0n"), SubResource("Resource_caec1"), SubResource("Resource_jxa7j")])
+_transition_infos = Array[ExtResource("3_ppyrm")]([SubResource("Resource_oslxu"), SubResource("Resource_wknyg")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 texture = SubResource("GradientTexture2D_w2nuo")
 centered = false
 
-[node name="AudioStreamPlayer" parent="." index="2"]
+[node name="MusicPlayer" parent="." index="2"]
 stream = ExtResource("3_i8wa8")
 
-[node name="TestLaneMinigame" parent="Minigames" index="0" instance=ExtResource("2_wmxoe")]
+[node name="TestSingleKeyMinigame" parent="Minigames" index="0" instance=ExtResource("2_wmxoe")]
 
-[node name="LabelTime" type="Label" parent="." index="4"]
-offset_right = 40.0
+[node name="TestMultiKeyMinigame" parent="Minigames" index="1" instance=ExtResource("6_1lc5a")]
+
+[node name="LabelTime" type="Label" parent="." index="6"]
+offset_right = 78.0
 offset_bottom = 23.0
 text = "Time: 0.0s"
