@@ -4,7 +4,6 @@ extends Minigame
 
 var level: Level = null
 var _hit_areas_groups: Dictionary = {} # Grouped by input_action: {&"action": [area1, area2, ...]}
-var _total_time: float = 0.0
 
 @onready var lanes: Node2D = get_node("Lanes")
 @onready var hit_areas: Node2D = get_node("HitAreas")
@@ -15,7 +14,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	_total_time += _delta
+	pass
 
 
 func _physics_process(_delta: float) -> void:
