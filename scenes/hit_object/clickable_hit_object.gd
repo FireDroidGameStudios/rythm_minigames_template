@@ -16,6 +16,8 @@ var clickable_radius: float = 0.0
 @export_range(0.0, 300.0, 0.1, "or_greater")
 var perfect_click_tolerance: float = 0.0
 
+@export var spawn_position: Vector2 = Vector2(0, 0)
+
 
 func _init(
 	hit_time: float = 0.0, speed: float = 0.5,
