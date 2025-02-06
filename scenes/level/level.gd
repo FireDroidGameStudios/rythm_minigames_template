@@ -64,7 +64,7 @@ func transition_to_next_minigame() -> void:
 	FDCore.set_default_transition(transition.transition)
 	var type_screen_scene: PackedScene = (
 		_get_transition_type_scene(
-			get_minigame(_current_minigame_index + 1).get_type()
+			get_minigame(_current_minigame_index + 1).get_minigame_type()
 		)
 	)
 	var type_screen: CanvasLayer = type_screen_scene.instantiate()
@@ -172,7 +172,9 @@ func _change_to_minigame(index: int) -> void:
 
 func _set_to_initial_type_screen() -> void:
 	var type_screen: CanvasLayer = (
-		_get_transition_type_scene(get_minigame(0).get_type()).instantiate()
+		_get_transition_type_scene(
+			get_minigame(0)._get_minigame_type()
+		).instantiate()
 	)
 	type_scene_root.add_child(type_screen)
 

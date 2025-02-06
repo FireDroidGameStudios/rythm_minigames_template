@@ -15,6 +15,8 @@ signal success_hit(ratios: Dictionary)
 signal missed_hit(hit_object: HitObject)
 
 
+var level: Level = null
+
 var _is_enabled: bool = false
 
 
@@ -44,15 +46,15 @@ func disable() -> void:
 	set_visible(false)
 
 
-func get_type() -> Type:
-	return _get_type()
+func get_minigame_type() -> Type:
+	return _get_minigame_type()
 
 
 func _on_spawn_hit_object(hit_object: HitObject) -> void:
 	add_child(hit_object)
 
 
-func _get_type() -> Type:
+func _get_minigame_type() -> Type:
 	return Type.UNDEFINED
 
 
