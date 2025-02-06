@@ -2,7 +2,6 @@ class_name LaneMinigame
 extends Minigame
 
 
-var level: Level = null
 var _hit_areas_groups: Dictionary = {} # Grouped by input_action: {&"action": [area1, area2, ...]}
 
 @onready var lanes: Node2D = get_node("Lanes")
