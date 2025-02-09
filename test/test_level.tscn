@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://n0ijv3b4gvbs" path="res://test/holiday_weasel.ogg" id="3_i8wa8"]
 [ext_resource type="Script" path="res://scenes/level/resources/minigame_transition_info.gd" id="3_ppyrm"]
 [ext_resource type="PackedScene" uid="uid://cmw70pxlc43iq" path="res://test/test_multi_key_minigame.tscn" id="6_1lc5a"]
+[ext_resource type="PackedScene" uid="uid://pei7oo1o5wcy" path="res://test/test_click_minigame.tscn" id="7_3u380"]
 [ext_resource type="Script" path="res://scenes/sync_core/audacity_label_parser.gd" id="7_iochn"]
 
 [sub_resource type="Resource" id="Resource_mmspf"]
