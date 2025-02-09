@@ -20,7 +20,7 @@ func _physics_process(_delta: float) -> void:
 	_handle_input()
 
 
-func _on_spawn_hit_object(hit_object: HitObject, args: Dictionary = {}) -> void:
+func _on_spawn_hit_object(hit_object: HitObject) -> void:
 	var lane_index: int = (hit_object as LaneHitObject).lane_index
 	var lane: HitLane = lanes.get_child(lane_index)
 	if not lane:
