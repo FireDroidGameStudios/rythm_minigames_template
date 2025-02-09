@@ -27,7 +27,7 @@ func _on_spawn_hit_object(hit_object: HitObject) -> void:
 		FDCore.warning(
 			"LaneMinigame: Lane with index "
 			+ str(lane_index)
-			+ "not found! Spawn aborted."
+			+ " not found! Spawn aborted."
 		)
 		return
 	var lane_follower: LaneFollower = LaneFollower.new(
