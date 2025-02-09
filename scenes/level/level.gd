@@ -72,23 +72,9 @@ func transition_to_next_minigame() -> void:
 	await FDCore.play_transition(
 		func(): type_scene_root.add_child(type_screen), [], true
 	)
+	go_to_next_minigame()
 	await get_tree().create_timer(transition.type_screen_duration).timeout
-	await FDCore.play_transition(
-		func():
-			type_screen.queue_free()
-			await go_to_next_minigame(),
-		[], true
-	)
-	#if not _played_first_transition:
-		#await FDCore.play_transition(
-			#func(): type_screen.queue_free()
-		#)
-		#_played_first_transition = true
-		#return
-	#await FDCore.play_transition(
-		#func(): await go_to_next_minigame(),
-		#[], true
-	#)
+	await FDCore.play_transition(type_screen.queue_free, [], true)
 	FDCore.log_message("Finished transition to next minigame!", "cyan")
 
 
@@ -212,7 +198,10 @@ func _update_timeline_hit_objects() -> void:
 		var hit_object = (loaded_object as PackedScene).instantiate()
 		hit_object.hit_time = info.hit_time
 		hit_object.speed = info.speed
-		hit_object.lane_index = info.lane_index
+		if info.type == HitObjectInfo.Type.LANE:
+			hit_object.lane_index = info.lane_index
+		elif info.type == HitObjectInfo.Type.CLICK:
+			hit_object.spawn_position = info.spawn_position
 		hit_objects[index] = hit_object
 		index += 1
 	print(hit_objects)
