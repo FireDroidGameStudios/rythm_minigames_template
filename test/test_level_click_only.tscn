@@ -1,0 +1,214 @@
+[gd_scene load_steps=26 format=3 uid="uid://vgoogmaghku4"]
+
+[ext_resource type="PackedScene" uid="uid://c7kjmkwnf5um3" path="res://scenes/level/level.tscn" id="1_bhabh"]
+[ext_resource type="Script" path="res://scenes/level/resources/hit_object_info.gd" id="2_orenm"]
+[ext_resource type="Script" path="res://scenes/level/resources/minigame_transition_info.gd" id="3_wyyik"]
+[ext_resource type="AudioStream" uid="uid://c1aurw2cbyy8a" path="res://test/test_music_click_only.ogg" id="4_d2s6w"]
+[ext_resource type="PackedScene" uid="uid://pei7oo1o5wcy" path="res://test/test_click_minigame.tscn" id="7_x7omm"]
+[ext_resource type="Script" path="res://scenes/sync_core/audacity_label_parser.gd" id="8_ekam3"]
+
+[sub_resource type="Resource" id="Resource_dgsjp"]
+script = ExtResource("2_orenm")
+hit_time = 7.77129
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(1024, 320)
+
+[sub_resource type="Resource" id="Resource_vift4"]
+script = ExtResource("2_orenm")
+hit_time = 8.58955
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(448, 256)
+
+[sub_resource type="Resource" id="Resource_copwb"]
+script = ExtResource("2_orenm")
+hit_time = 8.97621
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(448, 256)
+
+[sub_resource type="Resource" id="Resource_f2cke"]
+script = ExtResource("2_orenm")
+hit_time = 10.2254
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(640, 320)
+
+[sub_resource type="Resource" id="Resource_rgj3e"]
+script = ExtResource("2_orenm")
+hit_time = 10.6187
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(640, 320)
+
+[sub_resource type="Resource" id="Resource_1a812"]
+script = ExtResource("2_orenm")
+hit_time = 11.8221
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(512, 448)
+
+[sub_resource type="Resource" id="Resource_ji42i"]
+script = ExtResource("2_orenm")
+hit_time = 12.2211
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(512, 448)
+
+[sub_resource type="Resource" id="Resource_chgcy"]
+script = ExtResource("2_orenm")
+hit_time = 13.4742
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(528, 344)
+
+[sub_resource type="Resource" id="Resource_3ywtn"]
+script = ExtResource("2_orenm")
+hit_time = 14.2911
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(1024, 320)
+
+[sub_resource type="Resource" id="Resource_lhbg5"]
+script = ExtResource("2_orenm")
+hit_time = 15.0792
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(448, 256)
+
+[sub_resource type="Resource" id="Resource_oq21v"]
+script = ExtResource("2_orenm")
+hit_time = 15.4913
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(448, 256)
+
+[sub_resource type="Resource" id="Resource_e34yc"]
+script = ExtResource("2_orenm")
+hit_time = 16.6915
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(640, 320)
+
+[sub_resource type="Resource" id="Resource_hlqqh"]
+script = ExtResource("2_orenm")
+hit_time = 17.1111
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(640, 320)
+
+[sub_resource type="Resource" id="Resource_6g3cc"]
+script = ExtResource("2_orenm")
+hit_time = 18.3206
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(512, 448)
+
+[sub_resource type="Resource" id="Resource_3w8eq"]
+script = ExtResource("2_orenm")
+hit_time = 18.7134
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(512, 448)
+
+[sub_resource type="Resource" id="Resource_f4svi"]
+script = ExtResource("2_orenm")
+hit_time = 19.9944
+speed = 0.5
+type = 1
+scene_path = "res://test/test_click_hit_object.tscn"
+lane_index = 0
+spawn_position = Vector2(528, 344)
+
+[sub_resource type="Resource" id="Resource_vfrkn"]
+script = ExtResource("3_wyyik")
+start_time = 0.0
+type_screen_duration = 3.4
+scene_path = "res://addons/fire_droid_core/scenes/transitions/diamonds_transition.gd"
+additional_args = {}
+trans_type_in = 7
+ease_type_in = 1
+duration_in = 0.8
+trans_type_out = 7
+ease_type_out = 1
+duration_out = 0.8
+
+[sub_resource type="Gradient" id="Gradient_36uwa"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w2nuo"]
+gradient = SubResource("Gradient_36uwa")
+width = 1152
+height = 648
+fill_to = Vector2(0, 1)
+
+[node name="TestLevelClickOnly" instance=ExtResource("1_bhabh")]
+_hit_objects_infos = Array[ExtResource("2_orenm")]([SubResource("Resource_dgsjp"), SubResource("Resource_vift4"), SubResource("Resource_copwb"), SubResource("Resource_f2cke"), SubResource("Resource_rgj3e"), SubResource("Resource_1a812"), SubResource("Resource_ji42i"), SubResource("Resource_chgcy"), SubResource("Resource_3ywtn"), SubResource("Resource_lhbg5"), SubResource("Resource_oq21v"), SubResource("Resource_e34yc"), SubResource("Resource_hlqqh"), SubResource("Resource_6g3cc"), SubResource("Resource_3w8eq"), SubResource("Resource_f4svi")])
+_transition_infos = Array[ExtResource("3_wyyik")]([SubResource("Resource_vfrkn")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = SubResource("GradientTexture2D_w2nuo")
+centered = false
+
+[node name="MusicPlayer" parent="." index="2"]
+stream = ExtResource("4_d2s6w")
+
+[node name="TestClickMinigame" parent="Minigames" index="0" instance=ExtResource("7_x7omm")]
+
+[node name="LabelTime" type="Label" parent="." index="6"]
+offset_right = 78.0
+offset_bottom = 23.0
+text = "Time: 0.0s"
+
+[node name="AudacityLabelParser" type="Node" parent="." index="8"]
+script = ExtResource("8_ekam3")
+label_file_content = "\"lane-0\" 7.771290 7.800290 \"CLK@(1024,320)\"
+\"lane-0\" 8.589550 8.618550 \"CLK@(448,256)\"
+\"lane-0\" 8.976210 9.005220 \"CLK@(448,256)\"
+\"lane-0\" 10.225400 10.254400 \"CLK@(640,320)\"
+\"lane-0\" 10.618700 10.647700 \"CLK@(640,320)\"
+\"lane-0\" 11.822100 11.851100 \"CLK@(512,448)\"
+\"lane-0\" 12.221100 12.250100 \"CLK@(512,448)\"
+\"lane-0\" 13.474200 13.503200 \"CLK@(528,344)\"
+\"lane-0\" 14.291100 14.320100 \"CLK@(1024,320)\"
+\"lane-0\" 15.079200 15.108200 \"CLK@(448,256)\"
+\"lane-0\" 15.491300 15.520300 \"CLK@(448,256)\"
+\"lane-0\" 16.691500 16.720500 \"CLK@(640,320)\"
+\"lane-0\" 17.111100 17.140100 \"CLK@(640,320)\"
+\"lane-0\" 18.320600 18.349600 \"CLK@(512,448)\"
+\"lane-0\" 18.713400 18.742400 \"CLK@(512,448)\"
+\"lane-0\" 19.994400 20.023400 \"CLK@(528,344)\""
+single_key_hit_object_scene_path = "res://test/test_lane_hit_object.tscn"
+multi_key_hit_object_scene_path = "res://test/test_lane_hit_object.tscn"
+click_hit_object_scene_path = "res://test/test_click_hit_object.tscn"
+result = Array[ExtResource("2_orenm")]([SubResource("Resource_dgsjp"), SubResource("Resource_vift4"), SubResource("Resource_copwb"), SubResource("Resource_f2cke"), SubResource("Resource_rgj3e"), SubResource("Resource_1a812"), SubResource("Resource_ji42i"), SubResource("Resource_chgcy"), SubResource("Resource_3ywtn"), SubResource("Resource_lhbg5"), SubResource("Resource_oq21v"), SubResource("Resource_e34yc"), SubResource("Resource_hlqqh"), SubResource("Resource_6g3cc"), SubResource("Resource_3w8eq"), SubResource("Resource_f4svi")])
