@@ -46,7 +46,8 @@ func _process_content() -> void:
 		result[line_index - null_infos_count] = info
 		line_index += 1
 	result = result.slice(0, result.size() - null_infos_count)
-	FDCore.log_message(
+	print(
+	#FDCore.log_message(
 		"Finished HitObjects parsing from Audacity Label Content."
 		+ " Processed " + str(result.size()) + " valid line(s) and "
 		+ str(null_infos_count) + " invalid lines.",
