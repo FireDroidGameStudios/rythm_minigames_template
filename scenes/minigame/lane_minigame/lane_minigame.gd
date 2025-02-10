@@ -57,4 +57,3 @@ func _handle_input() -> void:
 			missed_hit.emit()
 			return
 		success_hit.emit(detected_hits)
-	#
