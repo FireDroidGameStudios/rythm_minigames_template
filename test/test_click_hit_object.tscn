@@ -1,6 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://cskpocm1jbes8"]
+[gd_scene load_steps=7 format=3 uid="uid://cskpocm1jbes8"]
 
 [ext_resource type="Script" path="res://test/test_click_hit_object.gd" id="1_7glli"]
+[ext_resource type="PackedScene" uid="uid://b73dfbpqo8udt" path="res://scenes/hit_object/clickable_area/clickable_hit_object_area.tscn" id="2_gchm4"]
+
+[sub_resource type="Gradient" id="Gradient_pftny"]
+offsets = PackedFloat32Array(0.463636, 0.618182, 0.715151)
+colors = PackedColorArray(0, 0.560784, 0.886275, 0, 0, 0.559447, 0.884797, 1, 0, 0.560784, 0.886275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tkxgj"]
+gradient = SubResource("Gradient_pftny")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 0)
 
 [sub_resource type="Gradient" id="Gradient_4oy1b"]
 offsets = PackedFloat32Array(0.548611, 0.625, 0.701389)
@@ -14,17 +27,15 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0, 0)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lfcb5"]
-radius = 48.0
-
-[node name="TestLaneHitObject" type="Node2D"]
+[node name="TestClickHitObject" type="Node2D"]
 script = ExtResource("1_7glli")
+clickable_radius = 60.0
+perfect_click_tolerance = 15.0
+
+[node name="RatioVisualizer" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_tkxgj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_ybabj")
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_lfcb5")
+[node name="ClickableHitObjectArea" parent="." instance=ExtResource("2_gchm4")]
