@@ -82,7 +82,7 @@ func get_ratio() -> float:
 		return 0.0
 	return remap(
 		timeline.get_current_time(),
-		get_spawn_time(), hit_time,0.0, target_ratio
+		get_spawn_time(), hit_time, 0.0, target_ratio
 	)
 
 
