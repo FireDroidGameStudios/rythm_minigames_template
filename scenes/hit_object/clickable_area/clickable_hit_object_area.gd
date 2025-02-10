@@ -36,6 +36,8 @@ func _get_configuration_warnings() -> PackedStringArray:
 	return warnings
 
 
+## Return [code]true[/code] if the mouse is inside the clickable area, or
+## [code]false[/code] if not.
 func has_mouse_entered() -> bool:
 	return _mouse_entered
 

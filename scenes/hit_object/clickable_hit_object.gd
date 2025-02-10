@@ -56,6 +56,8 @@ func _to_string() -> String:
 	return string
 
 
+## Return the ratio value (between 0.0 and 1.0) for the distance to the mouse
+## global position.
 func get_mouse_ratio() -> float:
 	var distance: float = global_position.distance_to(get_global_mouse_position())
 	return clamp(
@@ -66,6 +68,8 @@ func get_mouse_ratio() -> float:
 	)
 
 
+## Return the calculated ratio (between 0.0 and 1.0) applying the weights for
+## mouse and time ratios.
 func get_final_ratio() -> float:
 	var mouse_ratio: float = get_mouse_ratio()
 	var time_ratio: float = clamp(get_ratio(), 0.0, 1.0)
@@ -75,10 +79,20 @@ func get_final_ratio() -> float:
 	return total_ratio
 
 
+## Return [code]true[/code] if the mouse is inside the clickable area, or
+## [code]false[/code] if not.[br][br]If there is no child of type
+## [ClickableHitObjectArea] named [code]"ClickableHitObjectArea"[/code], this
+## method returns [code]false[/code].
 func is_mouse_over() -> bool:
 	if not clickable_area:
 		return false
 	return clickable_area.has_mouse_entered()
+
+
+## Call the overridable method [method _on_clicked] passing the [param ratio]
+## as argument.
+func trigger_click(ratio: float) -> void:
+	await _on_clicked(ratio)
 
 
 # Overridable
