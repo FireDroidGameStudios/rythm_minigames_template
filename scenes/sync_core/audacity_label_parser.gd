@@ -46,6 +46,13 @@ func _process_content() -> void:
 		result[line_index - null_infos_count] = info
 		line_index += 1
 	result = result.slice(0, result.size() - null_infos_count)
+	print(
+	#FDCore.log_message(
+		"Finished HitObjects parsing from Audacity Label Content."
+		+ " Processed " + str(result.size()) + " valid line(s) and "
+		+ str(null_infos_count) + " invalid lines.",
+		"cyan"
+	)
 	_is_processing_file = true
 	self.result = result
 	_is_processing_file = false
@@ -53,7 +60,7 @@ func _process_content() -> void:
 
 
 func _process_line(line: String, index: int) -> HitObjectInfo:
-	var splitted: PackedStringArray = line.replace("\"", "").split(" ")
+	var splitted: PackedStringArray = line.replace("\"", "").split(" ", false)
 	if not splitted.size() == 4:
 		FDCore.warning(
 			"AudacityLabelParser: Line Process: Line has more than 4 parameters!"
@@ -61,12 +68,29 @@ func _process_line(line: String, index: int) -> HitObjectInfo:
 		return null
 	var info: HitObjectInfo = HitObjectInfo.new()
 	info.hit_time = float(splitted[1])
-	info.type = _MinigameMode.get(splitted[3],  HitObjectInfo.Type.UNDEFINED)
 	info.lane_index = int(splitted[0].split("-", true, 2)[1])
-	match splitted[3]:
+	var type_splitted: PackedStringArray = splitted[3].split("@", false)
+	if type_splitted.is_empty():
+		FDCore.warning(
+			"AudacityLabelParser: Line Process: "
+			+ "Type must be \"SK\", \"MK\" or \"CLK\"."
+		)
+		return null
+	var type_key: String = type_splitted[0]
+	match type_key:
 		"SK": info.scene_path = single_key_hit_object_scene_path
 		"MK": info.scene_path = multi_key_hit_object_scene_path
-		"CLK": info.scene_path = click_hit_object_scene_path
+		"CLK":
+			info.scene_path = click_hit_object_scene_path
+			if type_splitted.size() > 2:
+				FDCore.warning(
+					"AudacityLabelParser: Line Process: Invalid format for "
+					+ "\"CLK\". Usage (replace x,y by the coords): \"CLK@(x,y)\". "
+					+ "Ignoring parameters!"
+				)
+			elif type_splitted.size() == 2:
+				info.spawn_position = str_to_var("Vector2" + type_splitted[1])
+	info.type = _MinigameMode.get(type_key,  HitObjectInfo.Type.UNDEFINED)
 	return info
 
 

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bemlqdo047ggd"]
+
+[ext_resource type="Script" path="res://scenes/minigame/types/click_minigame.gd" id="1_mvyjr"]
+
+[node name="ClickMinigame" type="Node2D"]
+script = ExtResource("1_mvyjr")
+
+[node name="HitObjects" type="Node2D" parent="."]

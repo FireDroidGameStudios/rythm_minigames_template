@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://b73dfbpqo8udt"]
+
+[ext_resource type="Script" path="res://scenes/hit_object/clickable_area/clickable_hit_object_area.gd" id="1_qc1kp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqbjl"]
+resource_local_to_scene = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_h87x2"]
+radius = 15.0
+height = 30.0
+
+[sub_resource type="Gradient" id="Gradient_krr63"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.780392, 0.435294, 0, 0.419608)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_lbiib"]
+gradient = SubResource("Gradient_krr63")
+
+[node name="ClickableHitObjectArea" type="Node2D"]
+script = ExtResource("1_qc1kp")
+
+[node name="FullArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FullArea"]
+shape = SubResource("CircleShape2D_sqbjl")
+
+[node name="PerfectHitAreaVisualizer" type="MeshInstance2D" parent="."]
+mesh = SubResource("SphereMesh_h87x2")
+texture = SubResource("GradientTexture1D_lbiib")
+
+[connection signal="mouse_entered" from="FullArea" to="." method="_on_full_area_mouse_entered"]
+[connection signal="mouse_exited" from="FullArea" to="." method="_on_full_area_mouse_exited"]

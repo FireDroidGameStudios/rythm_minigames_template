@@ -2,9 +2,7 @@ class_name LaneMinigame
 extends Minigame
 
 
-var level: Level = null
 var _hit_areas_groups: Dictionary = {} # Grouped by input_action: {&"action": [area1, area2, ...]}
-var _total_time: float = 0.0
 
 @onready var lanes: Node2D = get_node("Lanes")
 @onready var hit_areas: Node2D = get_node("HitAreas")
@@ -15,21 +13,21 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	_total_time += _delta
+	pass
 
 
 func _physics_process(_delta: float) -> void:
 	_handle_input()
 
 
-func _on_spawn_hit_object(hit_object: HitObject, args: Dictionary = {}) -> void:
+func _on_spawn_hit_object(hit_object: HitObject) -> void:
 	var lane_index: int = (hit_object as LaneHitObject).lane_index
 	var lane: HitLane = lanes.get_child(lane_index)
 	if not lane:
 		FDCore.warning(
 			"LaneMinigame: Lane with index "
 			+ str(lane_index)
-			+ "not found! Spawn aborted."
+			+ " not found! Spawn aborted."
 		)
 		return
 	var lane_follower: LaneFollower = LaneFollower.new(
@@ -59,4 +57,3 @@ func _handle_input() -> void:
 			missed_hit.emit()
 			return
 		success_hit.emit(detected_hits)
-	#
