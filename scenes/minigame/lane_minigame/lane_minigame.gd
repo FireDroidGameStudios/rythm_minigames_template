@@ -37,6 +37,7 @@ func _on_spawn_hit_object(hit_object: HitObject) -> void:
 	lane.add_child(lane_follower)
 	hit_object.target_ratio = lane.hit_ratio
 	lane_follower.add_child(hit_object)
+	hit_object.reached_full_ratio.connect(func(): missed_hit.emit(hit_object))
 
 
 func _setup_hit_areas() -> void:
@@ -54,6 +55,6 @@ func _handle_input() -> void:
 		for hit_area: LaneHitArea in _hit_areas_groups[input_action]:
 			detected_hits.merge(hit_area.attempt_hit())
 		if detected_hits.is_empty():
-			missed_hit.emit()
+			failed_hit.emit()
 			return
 		success_hit.emit(detected_hits)

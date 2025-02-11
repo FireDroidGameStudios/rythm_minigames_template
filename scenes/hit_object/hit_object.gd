@@ -3,6 +3,7 @@ extends Node2D
 
 
 signal reached_hit_time(hit_object: HitObject)
+signal reached_full_ratio
 
 
 ## Time to [member ratio] reach the value of [member target_ratio]. Can define
@@ -117,3 +118,10 @@ func _handle_signal_notify() -> void:
 	if timeline.get_current_time() >= hit_time:
 		_has_notified_hit = true
 		reached_hit_time.emit(self)
+	_check_full_ratio_signal()
+
+
+# Overridable
+func _check_full_ratio_signal() -> void:
+	if get_ratio() >= 1.0:
+		reached_full_ratio.emit()

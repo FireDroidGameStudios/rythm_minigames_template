@@ -16,6 +16,7 @@ func _get_minigame_type() -> Type:
 func _on_spawn_hit_object(hit_object: HitObject) -> void:
 	hit_objects.add_child(hit_object)
 	hit_object.global_position = (hit_object as ClickableHitObject).spawn_position
+	hit_object.reached_full_ratio.connect(func(): missed_hit.emit(hit_object))
 
 
 func _handle_input() -> void:

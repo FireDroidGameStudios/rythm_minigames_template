@@ -137,8 +137,10 @@ func _get_transition_type_scene(type: Minigame.Type) -> PackedScene:
 		_: return null
 
 
-func _on_minigame_missed_hit() -> void:
-	print("Missed hit!")
+func _on_minigame_missed_hit(hit_object: HitObject) -> void:
+	FDCore.log_message("Missed hit!", "orange")
+	# <-- Here must calculate score or storage miss to later calculation
+	remove_hit_object_from_timeline(hit_object, true)
 
 
 func _on_minigame_success_hit(ratios: Dictionary) -> void:

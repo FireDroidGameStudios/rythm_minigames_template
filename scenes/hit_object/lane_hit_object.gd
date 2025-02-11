@@ -14,3 +14,7 @@ func _init(hit_time: float = 0.0, speed: float = 0.5, lane_index: int = 0) -> vo
 func _on_despawn(is_missed: bool) -> void:
 	if get_parent() is LaneFollower:
 		get_parent().queue_free()
+
+
+func _check_full_ratio_signal() -> void:
+	return
