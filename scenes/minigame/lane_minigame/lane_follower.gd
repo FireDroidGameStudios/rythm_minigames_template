@@ -7,6 +7,8 @@ extends PathFollow2D
 @export var lane: HitLane = null
 @export var level: Level = null
 
+var _has_emitted_missed_signal: bool = false
+
 
 func _init(hit_object: LaneHitObject, lane: HitLane, level: Level) -> void:
 	rotates = false
@@ -24,6 +26,9 @@ func _process(delta: float) -> void:
 	if not hit_object or not level:
 		return
 	progress_ratio = hit_object.get_ratio()
+	if progress_ratio >= 1.0 and not _has_emitted_missed_signal:
+		_has_emitted_missed_signal = true
+		hit_object.reached_full_ratio.emit()
 
 
 func _physics_process(delta: float) -> void:
