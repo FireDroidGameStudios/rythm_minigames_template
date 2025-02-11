@@ -8,4 +8,5 @@ func _on_despawn(is_missed: bool) -> void:
 	var level: Level = timeline.get_parent()
 	if not level:
 		return
-	level.play_sound_effect(preload("res://test/bubble_pop_04.wav"))
+	if not is_missed:
+		level.play_sound_effect(preload("res://test/bubble_pop_04.wav"))
