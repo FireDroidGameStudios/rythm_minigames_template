@@ -36,6 +36,10 @@ func spawn_hit_object(hit_object: HitObject) -> void:
 	_on_spawn_hit_object(hit_object)
 
 
+func is_enabled() -> bool:
+	return _is_enabled
+
+
 func enable() -> void:
 	_is_enabled = true
 	set_visible(true)
