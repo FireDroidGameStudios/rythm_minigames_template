@@ -144,14 +144,15 @@ func _on_minigame_missed_hit(hit_object: HitObject) -> void:
 
 
 func _on_minigame_success_hit(ratios: Dictionary) -> void:
-	print("Success hit! Ratios: ", ratios)
+	FDCore.log_message("Success hit! Hit count: " + str(ratios.size()), "green")
 	for hit_object: HitObject in ratios.keys():
 		# <-- Here must calculate score or storage ratio to later calculation
 		remove_hit_object_from_timeline(hit_object, false)
 
 
 func _on_minigame_failed_hit() -> void:
-	print("Failed hit!")
+	FDCore.log_message("Failed hit!", "red")
+	# <-- Here must calculate score or storage fail to later calculation
 
 
 func _change_to_minigame(index: int) -> void:
@@ -206,8 +207,11 @@ func _update_timeline_hit_objects() -> void:
 			hit_object.spawn_position = info.spawn_position
 		hit_objects[index] = hit_object
 		index += 1
-	print(hit_objects)
 	timeline.set_hit_objects(hit_objects)
+	FDCore.log_message(
+		"Updated Timeline HitObjects! Found "
+		+ str(hit_objects.size()) + " HitObjects.", "cyan"
+	)
 
 
 func _update_timeline_transitions() -> void:
