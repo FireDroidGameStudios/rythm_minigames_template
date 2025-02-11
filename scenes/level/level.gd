@@ -10,6 +10,7 @@ signal finished_minigames
 
 var _current_minigame_index: int = 0
 var _played_first_transition: bool = false
+var _is_playing_transition: bool = false
 
 @onready var timeline: Timeline = get_node("Timeline")
 @onready var music_player: AudioStreamPlayer = get_node("MusicPlayer")
@@ -39,9 +40,9 @@ func start() -> void:
 		return
 	for minigame: Minigame in minigames.get_children():
 		minigame.level = self
-		minigame.missed_hit.connect(_on_minigame_missed_hit)
-		minigame.success_hit.connect(_on_minigame_success_hit)
-		minigame.failed_hit.connect(_on_minigame_failed_hit)
+		minigame.missed_hit.connect(_on_minigame_missed_hit.bind(minigame))
+		minigame.success_hit.connect(_on_minigame_success_hit.bind(minigame))
+		minigame.failed_hit.connect(_on_minigame_failed_hit.bind(minigame))
 	await _update_timeline_hit_objects()
 	await _update_timeline_transitions()
 	_current_minigame_index = 0
@@ -69,12 +70,14 @@ func transition_to_next_minigame() -> void:
 		)
 	)
 	var type_screen: CanvasLayer = type_screen_scene.instantiate()
+	_is_playing_transition = true
 	await FDCore.play_transition(
 		func(): type_scene_root.add_child(type_screen), [], true
 	)
 	go_to_next_minigame()
 	await get_tree().create_timer(transition.type_screen_duration).timeout
 	await FDCore.play_transition(type_screen.queue_free, [], true)
+	_is_playing_transition = false
 	FDCore.log_message("Finished transition to next minigame!", "cyan")
 
 
@@ -137,20 +140,26 @@ func _get_transition_type_scene(type: Minigame.Type) -> PackedScene:
 		_: return null
 
 
-func _on_minigame_missed_hit(hit_object: HitObject) -> void:
+func _on_minigame_missed_hit(hit_object: HitObject, minigame: Minigame) -> void:
+	if not minigame.is_enabled() or _is_playing_transition:
+		return
 	FDCore.log_message("Missed hit!", "orange")
 	# <-- Here must calculate score or storage miss to later calculation
 	remove_hit_object_from_timeline(hit_object, true)
 
 
-func _on_minigame_success_hit(ratios: Dictionary) -> void:
+func _on_minigame_success_hit(ratios: Dictionary, minigame: Minigame) -> void:
+	if not minigame.is_enabled() or _is_playing_transition:
+		return
 	FDCore.log_message("Success hit! Hit count: " + str(ratios.size()), "green")
 	for hit_object: HitObject in ratios.keys():
 		# <-- Here must calculate score or storage ratio to later calculation
 		remove_hit_object_from_timeline(hit_object, false)
 
 
-func _on_minigame_failed_hit() -> void:
+func _on_minigame_failed_hit(minigame: Minigame) -> void:
+	if not minigame.is_enabled() or _is_playing_transition:
+		return
 	FDCore.log_message("Failed hit!", "red")
 	# <-- Here must calculate score or storage fail to later calculation
 
@@ -178,6 +187,7 @@ func _initial_transition() -> void:
 	var type_screen: CanvasLayer = type_scene_root.get_child(0)
 	var initial_transition_info: MinigameTransitionInfo = _transition_infos[0]
 	FDCore.log_message("Starting type_screen timer...", "cyan")
+	_is_playing_transition = true
 	await get_tree().create_timer(
 		initial_transition_info.type_screen_duration
 	).timeout
@@ -185,6 +195,7 @@ func _initial_transition() -> void:
 	FDCore.set_default_transition(timeline.get_transition(0).transition)
 	FDCore.log_message("Starting type_screen transition...", "cyan")
 	await FDCore.play_transition(func(): type_screen.queue_free(), [], true)
+	_is_playing_transition = false
 	FDCore.log_message("Finished type_screen transition!", "cyan")
 
 
