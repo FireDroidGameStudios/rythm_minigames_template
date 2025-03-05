@@ -2,6 +2,11 @@ class_name Level
 extends Node
 
 
+const MIN_HIT_SCORE: float = 50.0
+const MAX_HIT_SCORE: float = 100.0
+const ULTRA_HIT_SCORE: float = 150.0
+
+
 signal finished_minigames
 
 
@@ -11,6 +16,7 @@ signal finished_minigames
 var _current_minigame_index: int = 0
 var _played_first_transition: bool = false
 var _is_playing_transition: bool = false
+var _score: Dictionary = {} # {minigame_index: {&"hit": [], &"miss": int, &"fail": int}, ...}
 
 @onready var timeline: Timeline = get_node("Timeline")
 @onready var music_player: AudioStreamPlayer = get_node("MusicPlayer")
@@ -84,6 +90,11 @@ func transition_to_next_minigame() -> void:
 func go_to_next_minigame() -> void:
 	if _current_minigame_index + 1 >= minigames.get_child_count():
 		finished_minigames.emit()
+		FDCore.log_message("Level: Finished Minigames!", "purple")
+		FDCore.log_message("Level: Score: " + str(_score), "purple")
+		FDCore.log_message(
+			"Level: Total Score: " + str(_calculate_score()), "purple"
+		)
 		return
 	_current_minigame_index += 1
 	_change_to_minigame(_current_minigame_index)
@@ -140,11 +151,46 @@ func _get_transition_type_scene(type: Minigame.Type) -> PackedScene:
 		_: return null
 
 
+# Overridable
+func _calculate_score() -> float:
+	var total_score: float = 0.0
+	for score: Dictionary in _score.values:
+		var hits_score: float = 0.0
+		for ratio: float in score.get(&"hit", []):
+			if is_equal_approx(ratio, 1.0):
+				hits_score += ULTRA_HIT_SCORE
+			else:
+				hits_score += cubic_interpolate(
+					MIN_HIT_SCORE, MAX_HIT_SCORE, 0.5, 0.5, ratio
+				)
+		# <-- Here can handle hits_score for each minigame individually
+		total_score += hits_score
+	return total_score
+
+
+func _add_hits_to_score(hits_ratios: Array) -> void:
+	if not _score.has(_current_minigame_index):
+		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
+	_score[_current_minigame_index][&"hit"].append(hits_ratios)
+
+
+func _add_miss_to_score() -> void:
+	if not _score.has(_current_minigame_index):
+		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
+	_score[_current_minigame_index][&"miss"] += 1
+
+
+func _add_fail_to_score() -> void:
+	if not _score.has(_current_minigame_index):
+		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
+	_score[_current_minigame_index][&"fail"] += 1
+
+
 func _on_minigame_missed_hit(hit_object: HitObject, minigame: Minigame) -> void:
 	if not minigame.is_enabled() or _is_playing_transition:
 		return
 	FDCore.log_message("Missed hit!", "orange")
-	# <-- Here must calculate score or storage miss to later calculation
+	_add_miss_to_score()
 	remove_hit_object_from_timeline(hit_object, true)
 
 
@@ -152,8 +198,8 @@ func _on_minigame_success_hit(ratios: Dictionary, minigame: Minigame) -> void:
 	if not minigame.is_enabled() or _is_playing_transition:
 		return
 	FDCore.log_message("Success hit! Hit count: " + str(ratios.size()), "green")
+	_add_hits_to_score(ratios.values())
 	for hit_object: HitObject in ratios.keys():
-		# <-- Here must calculate score or storage ratio to later calculation
 		remove_hit_object_from_timeline(hit_object, false)
 
 
@@ -161,7 +207,7 @@ func _on_minigame_failed_hit(minigame: Minigame) -> void:
 	if not minigame.is_enabled() or _is_playing_transition:
 		return
 	FDCore.log_message("Failed hit!", "red")
-	# <-- Here must calculate score or storage fail to later calculation
+	_add_fail_to_score()
 
 
 func _change_to_minigame(index: int) -> void:
