@@ -7,7 +7,7 @@ const MAX_HIT_SCORE: float = 100.0
 const ULTRA_HIT_SCORE: float = 150.0
 
 
-signal finished_minigames
+signal finished
 
 
 @export var _hit_objects_infos: Array[HitObjectInfo] = []
@@ -89,12 +89,7 @@ func transition_to_next_minigame() -> void:
 
 func go_to_next_minigame() -> void:
 	if _current_minigame_index + 1 >= minigames.get_child_count():
-		finished_minigames.emit()
-		FDCore.log_message("Level: Finished Minigames!", "purple")
-		FDCore.log_message("Level: Score: " + str(_score), "purple")
-		FDCore.log_message(
-			"Level: Total Score: " + str(_calculate_score()), "purple"
-		)
+		finish()
 		return
 	_current_minigame_index += 1
 	_change_to_minigame(_current_minigame_index)
@@ -118,6 +113,11 @@ func play_sound_effect(sound_effect: AudioStream) -> void:
 
 func get_minigame(index: int) -> Minigame:
 	return minigames.get_child(index)
+
+
+func finish() -> void:
+	finished.emit()
+	_on_finished()
 
 
 # Overridable
@@ -166,6 +166,15 @@ func _calculate_score() -> float:
 		# <-- Here can handle hits_score for each minigame individually
 		total_score += hits_score
 	return total_score
+
+
+# Overridable
+func _on_finished() -> void:
+	FDCore.log_message("Level: Level Finished!", "purple")
+	FDCore.log_message("Level: Score: " + str(_score), "purple")
+	FDCore.log_message(
+		"Level: Total Score: " + str(_calculate_score()), "purple"
+	)
 
 
 func _add_hits_to_score(hits_ratios: Array) -> void:

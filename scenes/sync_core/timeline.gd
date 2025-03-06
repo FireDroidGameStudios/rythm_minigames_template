@@ -26,7 +26,14 @@ func _physics_process(delta: float) -> void:
 
 func start() -> void:
 	_handle_transitions()
+	if audio_player:
+		audio_player.finished.connect(stop)
 	set_process(true)
+
+
+func stop() -> void:
+	level.finish()
+	set_process(false)
 
 
 func get_current_time() -> float:
