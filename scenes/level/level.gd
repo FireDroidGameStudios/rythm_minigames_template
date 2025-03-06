@@ -5,6 +5,12 @@ extends Node
 const MIN_HIT_SCORE: float = 50.0
 const MAX_HIT_SCORE: float = 100.0
 const ULTRA_HIT_SCORE: float = 150.0
+const COMBO_MULTIPLIER_INCREMENT: float = 0.1
+const DEFAULT_COMBO_MULTIPLIER: float = 1.0
+const MAX_COMBO_MULTIPLIER: float = 2.0
+const COMBO_MULTIPLIER_COUNT_TO_MAX: float = (
+	(MAX_COMBO_MULTIPLIER - DEFAULT_COMBO_MULTIPLIER) / float(COMBO_MULTIPLIER_INCREMENT)
+)
 
 
 signal finished
@@ -12,6 +18,10 @@ signal finished
 
 @export var _hit_objects_infos: Array[HitObjectInfo] = []
 @export var _transition_infos: Array[MinigameTransitionInfo] = []
+
+var _combo_multiplier: float = 1.0
+var _current_combo: int = 0
+var _max_combo: int = 0
 
 var _current_minigame_index: int = 0
 var _played_first_transition: bool = false
@@ -115,6 +125,14 @@ func get_minigame(index: int) -> Minigame:
 	return minigames.get_child(index)
 
 
+func get_combo_multiplier() -> float:
+	return _combo_multiplier
+
+
+func get_max_combo() -> int:
+	return _max_combo
+
+
 func finish() -> void:
 	finished.emit()
 	_on_finished()
@@ -154,7 +172,7 @@ func _get_transition_type_scene(type: Minigame.Type) -> PackedScene:
 # Overridable
 func _calculate_score() -> float:
 	var total_score: float = 0.0
-	for score: Dictionary in _score.values:
+	for score: Dictionary in _score.values():
 		var hits_score: float = 0.0
 		for ratio: float in score.get(&"hit", []):
 			if is_equal_approx(ratio, 1.0):
@@ -169,6 +187,14 @@ func _calculate_score() -> float:
 
 
 # Overridable
+func _handle_combo_change(old_combo: int, old_multiplier: float) -> void:
+	FDCore.log_message(
+		"Current combo: " + str(_current_combo) + "(max: " + str(_max_combo)
+		+ ") | Combo multiplier: " + str(_combo_multiplier), "orange"
+	)
+
+
+# Overridable
 func _on_finished() -> void:
 	FDCore.log_message("Level: Level Finished!", "purple")
 	FDCore.log_message("Level: Score: " + str(_score), "purple")
@@ -177,22 +203,43 @@ func _on_finished() -> void:
 	)
 
 
+func _set_current_combo(new_combo: int) -> void:
+	var old_combo: int = _current_combo
+	var old_multiplier: float = _combo_multiplier
+	_current_combo = new_combo
+	_max_combo = max(_max_combo, _current_combo)
+	_combo_multiplier = clamp(
+		remap(
+			_current_combo, 0, COMBO_MULTIPLIER_COUNT_TO_MAX,
+			DEFAULT_COMBO_MULTIPLIER, MAX_COMBO_MULTIPLIER
+		),
+		DEFAULT_COMBO_MULTIPLIER, MAX_COMBO_MULTIPLIER
+	)
+	if not old_combo == _current_combo:
+		_handle_combo_change(old_combo, old_multiplier)
+
+
 func _add_hits_to_score(hits_ratios: Array) -> void:
 	if not _score.has(_current_minigame_index):
 		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
-	_score[_current_minigame_index][&"hit"].append(hits_ratios)
+	_score[_current_minigame_index][&"hit"].append(
+		hits_ratios.map(func(ratio): return ratio * _combo_multiplier)
+	)
+	_set_current_combo(_current_combo + 1)
 
 
 func _add_miss_to_score() -> void:
 	if not _score.has(_current_minigame_index):
 		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
 	_score[_current_minigame_index][&"miss"] += 1
+	_set_current_combo(0)
 
 
 func _add_fail_to_score() -> void:
 	if not _score.has(_current_minigame_index):
 		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
 	_score[_current_minigame_index][&"fail"] += 1
+	_set_current_combo(0)
 
 
 func _on_minigame_missed_hit(hit_object: HitObject, minigame: Minigame) -> void:
