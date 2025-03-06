@@ -174,9 +174,11 @@ func _calculate_score() -> float:
 	var total_score: float = 0.0
 	for score: Dictionary in _score.values():
 		var hits_score: float = 0.0
-		for ratio: float in score.get(&"hit", []):
-			if is_equal_approx(ratio, 1.0):
-				hits_score += ULTRA_HIT_SCORE
+		for hit_info: Dictionary in score.get(&"hit", []):
+			var ratio: float = hit_info[&"ratio"]
+			var is_perfect_hit: float = hit_info[&"is_perfect_hit"]
+			if is_perfect_hit:
+				hits_score += ratio * ULTRA_HIT_SCORE
 			else:
 				hits_score += cubic_interpolate(
 					MIN_HIT_SCORE, MAX_HIT_SCORE, 0.5, 0.5, ratio
@@ -222,9 +224,13 @@ func _set_current_combo(new_combo: int) -> void:
 func _add_hits_to_score(hits_ratios: Array) -> void:
 	if not _score.has(_current_minigame_index):
 		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
-	_score[_current_minigame_index][&"hit"].append(
-		hits_ratios.map(func(ratio): return ratio * _combo_multiplier)
+	var processed_array: Array = hits_ratios.map(func(ratio):
+		return ({
+			&"ratio": ratio * _combo_multiplier,
+			&"is_perfect_hit": ratio >= 1.0
+		})
 	)
+	_score[_current_minigame_index][&"hit"].append_array(processed_array)
 	_set_current_combo(_current_combo + 1)
 
 
