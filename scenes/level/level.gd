@@ -31,6 +31,7 @@ var _score: Dictionary = {} # {minigame_index: {&"hit": [], &"miss": int, &"fail
 @onready var timeline: Timeline = get_node("Timeline")
 @onready var music_player: AudioStreamPlayer = get_node("MusicPlayer")
 @onready var minigames: Node = get_node("Minigames")
+@onready var score_popups: Node = get_node("ScorePopups")
 @onready var sound_effects: Node = get_node("SoundEffects")
 @onready var type_scene_root: Node = get_node("TypeSceneRoot")
 @onready var transition_objects: Node = get_node("TransitionObjects")
@@ -136,6 +137,12 @@ func get_max_combo() -> int:
 func finish() -> void:
 	finished.emit()
 	_on_finished()
+
+
+func spawn_score_popup(popup: ScorePopup, origin: Vector2) -> void:
+	score_popups.add_child(popup)
+	popup.global_position = origin
+	popup.play()
 
 
 # Overridable
@@ -249,6 +256,9 @@ func _on_minigame_missed_hit(hit_object: HitObject, minigame: Minigame) -> void:
 		return
 	FDCore.log_message("Missed hit!", "orange")
 	_add_miss_to_score()
+	spawn_score_popup(
+		minigame.get_miss_score_popup(), hit_object.global_position # Experimental
+	)
 	remove_hit_object_from_timeline(hit_object, true)
 
 
@@ -258,6 +268,11 @@ func _on_minigame_success_hit(ratios: Dictionary, minigame: Minigame) -> void:
 	FDCore.log_message("Success hit! Hit count: " + str(ratios.size()), "green")
 	_add_hits_to_score(ratios)
 	for hit_object: HitObject in ratios.keys():
+		var hit_info: Dictionary = ratios[hit_object]
+		await spawn_score_popup(
+			minigame.get_hit_score_popup(hit_info[&"precision"]),
+			hit_object.global_position
+		)
 		remove_hit_object_from_timeline(hit_object, false)
 
 
@@ -265,6 +280,7 @@ func _on_minigame_failed_hit(minigame: Minigame) -> void:
 	if not minigame.is_enabled() or _is_playing_transition:
 		return
 	FDCore.log_message("Failed hit!", "red")
+	spawn_score_popup(minigame.get_fail_score_popup(), Vector2(0, 0)) # Experimental
 	_add_fail_to_score()
 
 
