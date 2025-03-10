@@ -2,19 +2,36 @@ class_name Level
 extends Node
 
 
-signal finished_minigames
+const MIN_HIT_SCORE: float = 50.0
+const MAX_HIT_SCORE: float = 100.0
+const ULTRA_HIT_SCORE: float = 150.0
+const COMBO_MULTIPLIER_INCREMENT: float = 0.1
+const DEFAULT_COMBO_MULTIPLIER: float = 1.0
+const MAX_COMBO_MULTIPLIER: float = 2.0
+const COMBO_MULTIPLIER_COUNT_TO_MAX: float = (
+	(MAX_COMBO_MULTIPLIER - DEFAULT_COMBO_MULTIPLIER) / float(COMBO_MULTIPLIER_INCREMENT)
+)
+
+
+signal finished
 
 
 @export var _hit_objects_infos: Array[HitObjectInfo] = []
 @export var _transition_infos: Array[MinigameTransitionInfo] = []
 
+var _combo_multiplier: float = 1.0
+var _current_combo: int = 0
+var _max_combo: int = 0
+
 var _current_minigame_index: int = 0
 var _played_first_transition: bool = false
 var _is_playing_transition: bool = false
+var _score: Dictionary = {} # {minigame_index: {&"hit": [], &"miss": int, &"fail": int}, ...}
 
 @onready var timeline: Timeline = get_node("Timeline")
 @onready var music_player: AudioStreamPlayer = get_node("MusicPlayer")
 @onready var minigames: Node = get_node("Minigames")
+@onready var score_popups: Node = get_node("ScorePopups")
 @onready var sound_effects: Node = get_node("SoundEffects")
 @onready var type_scene_root: Node = get_node("TypeSceneRoot")
 @onready var transition_objects: Node = get_node("TransitionObjects")
@@ -83,7 +100,7 @@ func transition_to_next_minigame() -> void:
 
 func go_to_next_minigame() -> void:
 	if _current_minigame_index + 1 >= minigames.get_child_count():
-		finished_minigames.emit()
+		finish()
 		return
 	_current_minigame_index += 1
 	_change_to_minigame(_current_minigame_index)
@@ -107,6 +124,25 @@ func play_sound_effect(sound_effect: AudioStream) -> void:
 
 func get_minigame(index: int) -> Minigame:
 	return minigames.get_child(index)
+
+
+func get_combo_multiplier() -> float:
+	return _combo_multiplier
+
+
+func get_max_combo() -> int:
+	return _max_combo
+
+
+func finish() -> void:
+	finished.emit()
+	_on_finished()
+
+
+func spawn_score_popup(popup: ScorePopup, origin: Vector2) -> void:
+	score_popups.add_child(popup)
+	popup.global_position = origin
+	popup.play()
 
 
 # Overridable
@@ -140,11 +176,87 @@ func _get_transition_type_scene(type: Minigame.Type) -> PackedScene:
 		_: return null
 
 
+# Overridable
+func _calculate_score() -> float:
+	var total_score: float = 0.0
+	for score: Dictionary in _score.values():
+		var hits_score: float = 0.0
+		for hit_info: Dictionary in score.get(&"hit", []):
+			var ratio: float = hit_info[&"ratio"]
+			var is_perfect_hit: float = (
+				hit_info[&"precision"] == Minigame.HitPrecision.PERFECT
+			)
+			if is_perfect_hit:
+				hits_score += ratio * ULTRA_HIT_SCORE
+			else:
+				hits_score += lerp(MIN_HIT_SCORE, MAX_HIT_SCORE, ratio)
+		# <-- Here can handle hits_score for each minigame individually
+		total_score += hits_score
+	return total_score
+
+
+# Overridable
+func _handle_combo_change(old_combo: int, old_multiplier: float) -> void:
+	FDCore.log_message(
+		"Current combo: " + str(_current_combo) + "(max: " + str(_max_combo)
+		+ ") | Combo multiplier: " + str(_combo_multiplier), "orange"
+	)
+
+
+# Overridable
+func _on_finished() -> void:
+	FDCore.log_message("Level: Level Finished!", "purple")
+	FDCore.log_message("Level: Score: " + str(_score), "purple")
+	FDCore.log_message(
+		"Level: Total Score: " + str(_calculate_score()), "purple"
+	)
+
+
+func _set_current_combo(new_combo: int) -> void:
+	var old_combo: int = _current_combo
+	var old_multiplier: float = _combo_multiplier
+	_current_combo = new_combo
+	_max_combo = max(_max_combo, _current_combo)
+	_combo_multiplier = clamp(
+		remap(
+			_current_combo, 0, COMBO_MULTIPLIER_COUNT_TO_MAX,
+			DEFAULT_COMBO_MULTIPLIER, MAX_COMBO_MULTIPLIER
+		),
+		DEFAULT_COMBO_MULTIPLIER, MAX_COMBO_MULTIPLIER
+	)
+	if not old_combo == _current_combo:
+		_handle_combo_change(old_combo, old_multiplier)
+
+
+func _add_hits_to_score(ratios: Dictionary) -> void:
+	if not _score.has(_current_minigame_index):
+		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
+	_score[_current_minigame_index][&"hit"].append_array(ratios.values())
+	_set_current_combo(_current_combo + 1)
+
+
+func _add_miss_to_score() -> void:
+	if not _score.has(_current_minigame_index):
+		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
+	_score[_current_minigame_index][&"miss"] += 1
+	_set_current_combo(0)
+
+
+func _add_fail_to_score() -> void:
+	if not _score.has(_current_minigame_index):
+		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
+	_score[_current_minigame_index][&"fail"] += 1
+	_set_current_combo(0)
+
+
 func _on_minigame_missed_hit(hit_object: HitObject, minigame: Minigame) -> void:
 	if not minigame.is_enabled() or _is_playing_transition:
 		return
 	FDCore.log_message("Missed hit!", "orange")
-	# <-- Here must calculate score or storage miss to later calculation
+	_add_miss_to_score()
+	spawn_score_popup(
+		minigame.get_miss_score_popup(), hit_object.global_position # Experimental
+	)
 	remove_hit_object_from_timeline(hit_object, true)
 
 
@@ -152,8 +264,13 @@ func _on_minigame_success_hit(ratios: Dictionary, minigame: Minigame) -> void:
 	if not minigame.is_enabled() or _is_playing_transition:
 		return
 	FDCore.log_message("Success hit! Hit count: " + str(ratios.size()), "green")
+	_add_hits_to_score(ratios)
 	for hit_object: HitObject in ratios.keys():
-		# <-- Here must calculate score or storage ratio to later calculation
+		var hit_info: Dictionary = ratios[hit_object]
+		await spawn_score_popup(
+			minigame.get_hit_score_popup(hit_info[&"precision"]),
+			hit_object.global_position
+		)
 		remove_hit_object_from_timeline(hit_object, false)
 
 
@@ -161,7 +278,8 @@ func _on_minigame_failed_hit(minigame: Minigame) -> void:
 	if not minigame.is_enabled() or _is_playing_transition:
 		return
 	FDCore.log_message("Failed hit!", "red")
-	# <-- Here must calculate score or storage fail to later calculation
+	spawn_score_popup(minigame.get_fail_score_popup(), Vector2(0, 0)) # Experimental
+	_add_fail_to_score()
 
 
 func _change_to_minigame(index: int) -> void:

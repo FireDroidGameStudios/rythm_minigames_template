@@ -79,6 +79,14 @@ func get_final_ratio() -> float:
 	return total_ratio
 
 
+func get_processed_ratio() -> Dictionary:
+	var ratio: float = get_final_ratio()
+	return {
+		&"ratio": ratio,
+		&"precision": Minigame.calculate_hit_precision(ratio)
+	}
+
+
 ## Return [code]true[/code] if the mouse is inside the clickable area, or
 ## [code]false[/code] if not.[br][br]If there is no child of type
 ## [ClickableHitObjectArea] named [code]"ClickableHitObjectArea"[/code], this

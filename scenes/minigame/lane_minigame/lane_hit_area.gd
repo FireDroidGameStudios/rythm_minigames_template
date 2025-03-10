@@ -150,7 +150,11 @@ func _get_hit_attempt_info_dictionary() -> Dictionary:
 		return {}
 	var hit_info: Dictionary = {} # Key = HitObject | Value = hit_ratio
 	for object: LaneHitObject in _touching_objects:
-		hit_info[object] = _calculate_hit_ratio(object)
+		var ratio: float = _calculate_hit_ratio(object)
+		hit_info[object] = {
+			&"ratio": ratio,
+			&"precision": Minigame.calculate_hit_precision(ratio),
+		}
 	return hit_info
 
 
