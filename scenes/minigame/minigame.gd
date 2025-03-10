@@ -8,6 +8,12 @@ enum Type {
 	MULTI_KEY,
 	CLICK,
 }
+enum HitPrecision {
+	OK,
+	GOOD,
+	EXCELENT,
+	PERFECT,
+}
 
 
 signal failed_hit
@@ -30,6 +36,16 @@ func _process(_delta: float) -> void:
 
 func _physics_process(_delta: float) -> void:
 	pass
+
+
+static func calculate_hit_precision(ratio: float) -> HitPrecision:
+	if ratio >= 1.0:
+		return HitPrecision.PERFECT
+	elif ratio > 0.60:
+		return HitPrecision.EXCELENT
+	elif ratio > 0.25:
+		return HitPrecision.GOOD
+	return HitPrecision.OK
 
 
 func spawn_hit_object(hit_object: HitObject) -> void:

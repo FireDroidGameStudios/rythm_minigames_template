@@ -32,4 +32,4 @@ func _handle_input() -> void:
 	if not clicked_object:
 		failed_hit.emit()
 		return
-	success_hit.emit({clicked_object: clicked_object.get_final_ratio()})
+	success_hit.emit({clicked_object: clicked_object.get_processed_ratio()})

@@ -176,7 +176,9 @@ func _calculate_score() -> float:
 		var hits_score: float = 0.0
 		for hit_info: Dictionary in score.get(&"hit", []):
 			var ratio: float = hit_info[&"ratio"]
-			var is_perfect_hit: float = hit_info[&"is_perfect_hit"]
+			var is_perfect_hit: float = (
+				hit_info[&"precision"] == Minigame.HitPrecision.PERFECT
+			)
 			if is_perfect_hit:
 				hits_score += ratio * ULTRA_HIT_SCORE
 			else:
@@ -221,16 +223,10 @@ func _set_current_combo(new_combo: int) -> void:
 		_handle_combo_change(old_combo, old_multiplier)
 
 
-func _add_hits_to_score(hits_ratios: Array) -> void:
+func _add_hits_to_score(ratios: Dictionary) -> void:
 	if not _score.has(_current_minigame_index):
 		_score[_current_minigame_index] = { &"hit": [], &"miss": 0, &"fail": 0 }
-	var processed_array: Array = hits_ratios.map(func(ratio):
-		return ({
-			&"ratio": ratio * _combo_multiplier,
-			&"is_perfect_hit": ratio >= 1.0
-		})
-	)
-	_score[_current_minigame_index][&"hit"].append_array(processed_array)
+	_score[_current_minigame_index][&"hit"].append_array(ratios.values())
 	_set_current_combo(_current_combo + 1)
 
 
@@ -260,7 +256,7 @@ func _on_minigame_success_hit(ratios: Dictionary, minigame: Minigame) -> void:
 	if not minigame.is_enabled() or _is_playing_transition:
 		return
 	FDCore.log_message("Success hit! Hit count: " + str(ratios.size()), "green")
-	_add_hits_to_score(ratios.values())
+	_add_hits_to_score(ratios)
 	for hit_object: HitObject in ratios.keys():
 		remove_hit_object_from_timeline(hit_object, false)
 
