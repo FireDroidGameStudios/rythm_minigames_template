@@ -189,9 +189,7 @@ func _calculate_score() -> float:
 			if is_perfect_hit:
 				hits_score += ratio * ULTRA_HIT_SCORE
 			else:
-				hits_score += cubic_interpolate(
-					MIN_HIT_SCORE, MAX_HIT_SCORE, 0.5, 0.5, ratio
-				)
+				hits_score += lerp(MIN_HIT_SCORE, MAX_HIT_SCORE, ratio)
 		# <-- Here can handle hits_score for each minigame individually
 		total_score += hits_score
 	return total_score
