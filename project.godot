@@ -27,7 +27,8 @@ enabled=PackedStringArray("res://addons/fire_droid_core/plugin.cfg")
 [fd_core]
 
 intro_paths=[]
-initial_scene="res://test/test_level.tscn"
+initial_scene="res://scenes/gui/main_screen.tscn"
+project_manager="res://scenes/managers/project_manager.gd"
 
 [input]
 
