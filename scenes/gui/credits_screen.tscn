@@ -1,0 +1,174 @@
+[gd_scene load_steps=7 format=3 uid="uid://w4evwy12a8sd"]
+
+[ext_resource type="Script" path="res://addons/fire_droid_core/scenes/gui/action_hud.gd" id="1_vcmp0"]
+[ext_resource type="Script" path="res://addons/fire_droid_core/scenes/gui/action_button.gd" id="2_wsb6d"]
+
+[sub_resource type="Gradient" id="Gradient_lvgcb"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6sf13"]
+gradient = SubResource("Gradient_lvgcb")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_xldmp"]
+color = Color(1, 1, 1, 1)
+thickness = 3
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_hiuno"]
+color = Color(1, 1, 1, 1)
+thickness = 3
+vertical = true
+
+[node name="CreditsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_6sf13")
+
+[node name="ActionHUD" type="CanvasLayer" parent="."]
+script = ExtResource("1_vcmp0")
+action_context = &"credits_screen"
+animation_in = 3
+animation_out = 3
+enable_autoshow = true
+enable_trigger_key = false
+
+[node name="MarginContainer" type="MarginContainer" parent="ActionHUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ActionHUD/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ActionHUD/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ActionButton" type="Button" parent="ActionHUD/MarginContainer/HBoxContainer/VBoxContainer" node_paths=PackedStringArray("parent_hud")]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Return"
+script = ExtResource("2_wsb6d")
+parent_hud = NodePath("../../../..")
+action_on_pressed = &"return"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ActionHUD"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ActionHUD/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="ActionHUD/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ActionHUD/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_xldmp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ActionHUD/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="ActionHUD/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_hiuno")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ActionHUD/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="LabelTitle" type="Label" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.230315, 0.230315, 0.230315, 1)
+theme_override_font_sizes/font_size = 14
+text = "Title Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelName" type="Label" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Name Surname"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="LabelTitle" type="Label" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer2"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.230315, 0.230315, 0.230315, 1)
+theme_override_font_sizes/font_size = 14
+text = "Title Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelName" type="Label" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer2"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Name Surname"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="LabelTitle" type="Label" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer3"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.230315, 0.230315, 0.230315, 1)
+theme_override_font_sizes/font_size = 14
+text = "Title Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelName" type="Label" parent="ActionHUD/VBoxContainer/HBoxContainer/VBoxContainer2/VBoxContainer3"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Name Surname"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="ActionHUD/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_hiuno")
